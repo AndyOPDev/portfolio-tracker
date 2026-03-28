@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Tracker</title>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/recharts@2.12.7/umd/Recharts.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #000; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif; }
+    input::placeholder { color: #636366; }
+    input { color: #fff; }
+    ::-webkit-scrollbar { width: 0; }
+  </style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useState, useEffect, useCallback } = React;
+const { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, LineChart, Line, XAxis, YAxis } = Recharts;
+
+const PROXY_URL = "https://script.google.com/macros/s/AKfycbyYQqZ7YixtKVU9LS-sGeVuMj1xO65U3uco0kJ_JrzxbX2IaNvNg30Sm7z0yqn_pvVl/exec";
+const COLORS = ["#0A84FF","#30D158","#FF9F0A","#BF5AF2","#FF375F","#5AC8FA","#FF6B35","#636366"];
+
+function fmt(n, dec=2) { return Number(n).toLocaleString("es-ES",{minimumFractionDigits:dec,maximumFractionDigits:dec}); }
+function pct(n) { return (n>=0?"+":"-")+fmt(Math.abs(n))+"%"; }
+
+function App() {
+  const [tab, setTab] = useState("Dashboard");
+  const [prices, setPrices] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [lastUpdate, setLastUpdate] = useState(null);
+  const [history, setHistory] = useState([]);
+  const [showAdd, setShowAdd] = useState(false);
+  const [positions, setPositions] = useState(() => {
+    try { return JSON.parse(localStorage.getItem("ptPos")||"[]"); } catch { return []; }
+  });
+  const [newPos, setNewPos] = useState({ticker:"",nombre:"",unidades:"",precioMedio:""});
+
+  const savePos = p => { setPositions(p); localStorage.setItem("ptPos", JSON.stringify(p)); };
+
+  const fetchPrices = useCallback(async () => {
+    setLoading(true); setError(null);
+    try {
+      const res = await fetch(PROXY_URL);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      const map = {};
+      (data.precios||[]).forEach(({ticker,precio,moneda}) => {
+        if (ticker) map[ticker.toUpperCase().trim()] = { precio: parseFloat(precio)||0, moneda: moneda||"EUR" };
+      });
+      setPrices(map);
+      const now = new Date();
+      setLastUpdate(now);
+      setHistory(h => [...h.slice(-29), {
+        time: now.toLocaleTimeString("es-ES",{hour:"2-digit",minute:"2-digit"}),
+        valor: 0, ts: Date.now()
+      }]);
+    } catch(e) { setError(e.message); }
+    setLoading(false);
+  }, []);
+
+  useEffect(() => { fetchPrices(); }, [fetchPrices]);
+
+  const enriched = positions.map(p => {
+    const info = prices[p.ticker?.toUpperCase()] || {};
+    const pa = info.precio || 0;
+    const va = pa * p.unidades;
+    const co = p.precioMedio * p.unidades;
+    const pl = va - co;
+    const plp = co > 0 ? (pl/co)*100 : 0;
+    return {...p, precioActual:pa, moneda:info.moneda||"EUR", valorActual:va, coste:co, pl, plPct:plp};
+  });
+
+  const totalValor = enriched.reduce((s,p)=>s+p.valorActual,0);
+  const totalCoste = enriched.reduce((s,p)=>s+p.coste,0);
+  const totalPL = totalValor - totalCoste;
+  const totalPLPct = totalCoste>0?(totalPL/totalCoste)*100:0;
+  const histData = history.map((h,i)=>i===history.length-1?{...h,valor:totalValor}:h).filter(h=>h.valor>0);
+  const pieData = enriched.filter(p=>p.valorActual>0).map(p=>({
+    name:p.ticker, value:parseFloat(((p.valorActual/totalValor)*100).toFixed(2))
+  }));
+
+  const addPos = () => {
+    if (!newPos.ticker||!newPos.unidades||!newPos.precioMedio) return;
+    savePos([...positions,{
+      ticker:newPos.ticker.toUpperCase().trim(),
+      nombre:newPos.nombre,
+      unidades:parseFloat(newPos.unidades),
+      precioMedio:parseFloat(newPos.precioMedio)
+    }]);
+    setNewPos({ticker:"",nombre:"",unidades:"",precioMedio:""});
+    setShowAdd(false);
+  };
+
+  const tabs = ["Dashboard","Distribución","Histórico","Posiciones"];
+
+  const s = {
+    card: { background:"#1C1C1E", borderRadius:16, padding:"4px 16px", marginBottom:12 },
+    cardFlat: { background:"#1C1C1E", borderRadius:16, padding:"16px", marginBottom:12 },
+    row: i => ({ display:"flex", alignItems:"center", padding:"13px 0", borderBottom: i ? "0.5px solid #2C2C2E" : "none" }),
+    input: { background:"#2C2C2E", border:"none", borderRadius:12, padding:"12px 14px", fontSize:15, outline:"none", width:"100%", marginBottom:10 },
+    btnBlue: { background:"#0A84FF", color:"#fff", border:"none", borderRadius:14, padding:"15px", fontSize:16, fontWeight:600, cursor:"pointer", width:"100%" },
+    segBtn: a => ({ flex:1, padding:"8px 4px", border:"none", borderRadius:10, fontSize:13, fontWeight:a?600:400, cursor:"pointer", background:a?"#2C2C2E":"transparent", color:a?"#fff":"#636366", boxShadow:a?"0 1px 4px rgba(0,0,0,0.5)":"none" }),
+  };
+
+  return (
+    <div style={{background:"#000",minHeight:"100vh",paddingBottom:40}}>
+      <div style={{padding:"24px 20px 16px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+        <div>
+          <div style={{fontSize:30,fontWeight:700,color:"#fff",letterSpacing:-0.5}}>Portfolio</div>
+          <div style={{fontSize:12,color:"#636366",marginTop:3}}>
+            {lastUpdate ? "Actualizado "+lastUpdate.toLocaleTimeString("es-ES",{hour:"2-digit",minute:"2-digit"}) : loading ? "Cargando..." : error ? "Error al cargar" : "Sin datos"}
+          </div>
+        </div>
+        <button onClick={fetchPrices} disabled={loading}
+          style={{background:loading?"#1C3A5E":"#0A84FF",color:loading?"#636366":"#fff",border:"none",borderRadius:20,padding:"8px 18px",fontSize:14,fontWeight:600,cursor:loading?"not-allowed":"pointer"}}>
+          {loading?"Cargando...":"↻ Actualizar"}
+        </button>
+      </div>
+
+      {error && <div style={{margin:"0 16px 12px",background:"#2C1A1A",borderRadius:12,padding:"12px 14px",fontSize:13,color:"#FF375F"}}>{error}</div>}
+
+      <div style={{padding:"0 16px 16px",display:"flex",gap:10}}>
+        {[
+          ["Valor total","€"+fmt(totalValor),"Coste €"+fmt(totalCoste),"#fff"],
+          ["P&L",(totalPL>=0?"+":"")+  "€"+fmt(Math.abs(totalPL)),pct(totalPLPct),totalPL>=0?"#30D158":"#FF375F"],
+          ["Posiciones",""+positions.length,Object.keys(prices).length+" en sheet","#fff"]
+        ].map(([label,val,sub,color])=>(
+          <div key={label} style={{background:"#1C1C1E",borderRadius:16,padding:"14px 12px",flex:1}}>
+            <div style={{fontSize:12,color:"#636366",marginBottom:4}}>{label}</div>
+            <div style={{fontSize:20,fontWeight:700,color}}>{val}</div>
+            <div style={{fontSize:11,color:"#636366",marginTop:2}}>{sub}</div>
+          </div>
+        ))}
+      </div>
+
+      <div style={{display:"flex",background:"#1C1C1E",borderRadius:12,padding:3,margin:"0 16px 16px"}}>
+        {tabs.map(t=><button key={t} style={s.segBtn(tab===t)} onClick={()=>setTab(t)}>{t}</button>)}
+      </div>
+
+      <div style={{padding:"0 16px"}}>
+        {tab==="Dashboard" && (
+          enriched.length===0
+            ? <div style={{...s.cardFlat,textAlign:"center",padding:"40px 20px",color:"#636366",fontSize:15}}>Sin posiciones.<br/>Ve a Posiciones para añadir.</div>
+            : <div style={s.card}>
+                {enriched.map((p,i)=>(
+                  <div key={i} style={s.row(i<enriched.length-1)}>
+                    <div style={{width:40,height:40,borderRadius:12,background:COLORS[i%COLORS.length]+"22",display:"flex",alignItems:"center",justifyContent:"center",marginRight:14,flexShrink:0}}>
+                      <span style={{fontSize:11,fontWeight:700,color:COLORS[i%COLORS.length]}}>{p.ticker.slice(0,4)}</span>
+                    </div>
+                    <div style={{flex:1}}>
+                      <div style={{fontSize:15,fontWeight:600,color:"#fff"}}>{p.ticker}</div>
+                      <div style={{fontSize:12,color:"#636366"}}>{p.nombre||"—"} · {fmt(p.unidades,4)} uds</div>
+                    </div>
+                    <div style={{textAlign:"right"}}>
+                      <div style={{fontSize:15,fontWeight:600,color:"#fff"}}>{p.precioActual>0?"€"+fmt(p.valorActual):"—"}</div>
+                      <div style={{fontSize:12,color:p.plPct>=0?"#30D158":"#FF375F",fontWeight:500}}>{p.precioActual>0?pct(p.plPct):"sin precio"}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+        )}
+
+        {tab==="Distribución" && (
+          pieData.length===0
+            ? <div style={{...s.cardFlat,textAlign:"center",padding:"40px 20px",color:"#636366",fontSize:15}}>Sin datos.</div>
+            : <div style={s.cardFlat}>
+                <ResponsiveContainer width="100%" height={220}>
+                  <PieChart>
+                    <Pie data={pieData} cx="50%" cy="50%" innerRadius={60} outerRadius={95} dataKey="value" paddingAngle={3}>
+                      {pieData.map((_,i)=><Cell key={i} fill={COLORS[i%COLORS.length]}/>)}
+                    </Pie>
+                    <Tooltip contentStyle={{background:"#2C2C2E",border:"none",borderRadius:12,color:"#fff"}} formatter={v=>v.toFixed(2)+"%"}/>
+                  </PieChart>
+                </ResponsiveContainer>
+                <div style={{display:"flex",flexWrap:"wrap",gap:"10px 20px",marginTop:8}}>
+                  {pieData.map((dd,i)=>(
+                    <div key={i} style={{display:"flex",alignItems:"center",gap:6,fontSize:13}}>
+                      <span style={{width:10,height:10,borderRadius:3,background:COLORS[i%COLORS.length],display:"inline-block"}}></span>
+                      <span style={{fontWeight:600,color:"#fff"}}>{dd.name}</span>
+                      <span style={{color:"#636366"}}>{dd.value.toFixed(1)}%</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+        )}
+
+        {tab==="Histórico" && (
+          histData.length<2
+            ? <div style={{...s.cardFlat,textAlign:"center",padding:"40px 20px",color:"#636366",fontSize:15}}>Actualiza varias veces<br/>para ver la evolución.</div>
+            : <div style={s.cardFlat}>
+                <ResponsiveContainer width="100%" height={220}>
+                  <LineChart data={histData}>
+                    <XAxis dataKey="time" tick={{fontSize:11,fill:"#636366"}} axisLine={false} tickLine={false}/>
+                    <YAxis tick={{fontSize:11,fill:"#636366"}} tickFormatter={v=>"€"+Math.round(v/1000)+"k"} width={50} axisLine={false} tickLine={false}/>
+                    <Tooltip contentStyle={{background:"#2C2C2E",border:"none",borderRadius:12,color:"#fff"}} formatter={v=>"€"+fmt(v)}/>
+                    <Line type="monotone" dataKey="valor" stroke="#0A84FF" strokeWidth={2.5} dot={false}/>
+                  </LineChart>
+                </ResponsiveContainer>
+              </div>
+        )}
+
+        {tab==="Posiciones" && (
+          <div>
+            <button style={{...s.btnBlue,marginBottom:12}} onClick={()=>setShowAdd(true)}>+ Añadir posición</button>
+            {positions.length===0
+              ? <div style={{...s.cardFlat,textAlign:"center",padding:"40px 20px",color:"#636366",fontSize:15}}>Sin posiciones todavía.</div>
+              : <div style={s.card}>
+                  {positions.map((p,i)=>(
+                    <div key={i} style={s.row(i<positions.length-1)}>
+                      <div style={{width:36,height:36,borderRadius:10,background:COLORS[i%COLORS.length]+"22",display:"flex",alignItems:"center",justifyContent:"center",marginRight:12,flexShrink:0}}>
+                        <span style={{fontSize:11,fontWeight:700,color:COLORS[i%COLORS.length]}}>{p.ticker.slice(0,4)}</span>
+                      </div>
+                      <div style={{flex:1}}>
+                        <div style={{fontSize:15,fontWeight:600,color:"#fff"}}>{p.ticker}</div>
+                        <div style={{fontSize:12,color:"#636366"}}>{fmt(p.unidades,4)} uds · PM €{fmt(p.precioMedio)}</div>
+                      </div>
+                      <button onClick={()=>savePos(positions.filter((_,idx)=>idx!==i))}
+                        style={{background:"transparent",color:"#FF375F",border:"none",fontSize:13,cursor:"pointer",padding:"4px 8px",fontWeight:500}}>
+                        Eliminar
+                      </button>
+                    </div>
+                  ))}
+                </div>
+            }
+          </div>
+        )}
+      </div>
+
+      {showAdd && (
+        <div style={{position:"fixed",top:0,left:0,right:0,bottom:0,background:"rgba(0,0,0,0.7)",zIndex:100,display:"flex",alignItems:"flex-end"}} onClick={()=>setShowAdd(false)}>
+          <div style={{background:"#1C1C1E",borderRadius:"24px 24px 0 0",padding:"20px 20px 40px",width:"100%"}} onClick={e=>e.stopPropagation()}>
+            <div style={{width:36,height:5,background:"#3A3A3C",borderRadius:3,margin:"0 auto 20px"}}></div>
+            <div style={{fontSize:18,fontWeight:700,color:"#fff",marginBottom:16}}>Nueva posición</div>
+            {[["ticker","Ticker (ej. XNAS, BTC)"],["nombre","Nombre (opcional)"],["unidades","Unidades"],["precioMedio","Precio medio de compra (€)"]].map(([k,ph])=>(
+              <input key={k} placeholder={ph} value={newPos[k]}
+                onChange={e=>setNewPos(p=>({...p,[k]:e.target.value}))}
+                style={s.input}/>
+            ))}
+            <button style={s.btnBlue} onClick={addPos}>Añadir</button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+</body>
+</html>
