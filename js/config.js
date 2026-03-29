@@ -9,6 +9,11 @@ export const MOVEMENTS_URL = isLocal
   ? '/data/movements.json'
   : 'https://raw.githubusercontent.com/AndyOPDev/portfolio-tracker/main/data/movements.json';
 
+  // config.js (añade esto)
+export const UNDERLYING_URL = isLocal
+  ? '/data/underlying.json'
+  : 'https://raw.githubusercontent.com/AndyOPDev/portfolio-tracker/main/data/underlying.json';
+
 // Fallback color palette (when no specific color is defined)
 export const COLORS = ["#0A84FF", "#30D158", "#FF9F0A", "#BF5AF2", "#FF375F", "#5AC8FA", "#FF6B35", "#98989D"];
 

@@ -1,4 +1,5 @@
 import { fmt } from '../utils.js';
+import { UNDERLYING_URL } from '../config.js';
 
 const { createElement: h, useState, useEffect } = React;
 
@@ -15,7 +16,7 @@ export function UnderlyingTab({ cardStyle, emptyCard }) {
   const fetchUnderlying = async () => {
     setLoading(true);
     try {
-      const response = await fetch('/data/underlying.json');
+      const response = await fetch(UNDERLYING_URL);
       if (response.ok) {
         const data = await response.json();
         setUnderlying(data.underlying || []);
