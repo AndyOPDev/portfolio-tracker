@@ -8,6 +8,7 @@ import { DistributionTab } from './DistributionTab.js';
 import { PositionsTab } from './PositionsTab.js';
 import { PricesTab } from './PricesTab.js';
 import { getTickerColor } from '../config.js';
+import { UnderlyingTab } from './UnderlyingTab.js';
 
 const { createElement: h, useState, useEffect, useCallback } = React;
 
@@ -73,7 +74,7 @@ const enriched = positions.map((p, i) => {
   };
 });
 
-  const totalValue = enriched.reduce((s, p) => s + p.currentValue, 0);
+  const totalValue = enriched.reduce((s, p) => s + (p.currentValue || 0), 0);
   const totalInvested = enriched.reduce((s, p) => s + p.totalInvested, 0);
   const totalPL = totalValue - totalInvested;
   const totalPLPct = totalInvested > 0 ? (totalPL / totalInvested) * 100 : 0;
@@ -82,7 +83,7 @@ const enriched = positions.map((p, i) => {
     .filter(p => p.currentValue > 0)
     .map(p => ({ name: getDisplayName(p.ticker), value: parseFloat(((p.currentValue / totalValue) * 100).toFixed(2)) }));
 
-  const tabs = ["Dashboard", "Distribution", "Positions", "Prices"];
+  const tabs = ["Dashboard", "Positions", "Distribution", "Underlying"];
 
   // Shared styles
   const cardStyle = { background: "#1C1C1E", borderRadius: 16, padding: "4px 16px", marginBottom: 12 };
@@ -110,8 +111,8 @@ const enriched = positions.map((p, i) => {
     h("div", { style: { padding: "0 16px" } },
       tab === "Dashboard" && h(DashboardTab, { enriched, cardStyle, rowStyle, emptyCard }),
       tab === "Distribution" && h(DistributionTab, { pieData, enriched, totalValue, COLORS, cardFlatStyle, emptyCard }),
-      tab === "Positions" && h(PositionsTab, { enriched, cardStyle, rowStyle, emptyCard }),
-      tab === "Prices" && h(PricesTab, { enriched, lastUpdate, cardStyle, rowStyle, emptyCard })
+      tab === "Positions" && h(PositionsTab, { enriched, totalValue, cardStyle, emptyCard }),
+      tab === "Underlying" && h(UnderlyingTab, { cardStyle, emptyCard })
     )
   );
 }

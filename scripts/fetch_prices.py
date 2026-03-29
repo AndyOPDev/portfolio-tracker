@@ -171,6 +171,8 @@ def save_prices(data):
     print(f"📈 {len(data['precios'])} precios actualizados")
     print(f"🕒 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
+
+
 if __name__ == "__main__":
     tickers = get_tickers_from_movements()
     if tickers:
