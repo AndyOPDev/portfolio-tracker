@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Data (opcional - comenta si quieres versionar los precios)
+# data/prices.json
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
