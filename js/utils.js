@@ -8,6 +8,10 @@ export function fmt(n, d = 2) {
   return Number(n).toLocaleString("es-ES", { minimumFractionDigits: d, maximumFractionDigits: d });
 }
 
+export function fmtEur(n) {
+  return Math.round(n).toLocaleString("es-ES");
+}
+
 export function pct(n) {
   return (n >= 0 ? "+" : "-") + fmt(Math.abs(n)) + "%";
 }

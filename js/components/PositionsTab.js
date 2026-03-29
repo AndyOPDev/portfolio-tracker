@@ -1,5 +1,4 @@
-import { getDisplayName, fmt, pct } from '../utils.js';
-
+import { getDisplayName, fmt, fmtEur, pct } from '../utils.js';
 const { createElement: h } = React;
 
 export function PositionsTab({ enriched, totalValue, cardStyle, emptyCard }) {
@@ -14,8 +13,10 @@ export function PositionsTab({ enriched, totalValue, cardStyle, emptyCard }) {
     return emptyCard("No positions found. Check your movements sheet.");
   }
 
+  const isMobile = window.innerWidth < 640;
+
   return h("div", { style: cardStyle },
-    // Header row - 6 columns
+    // Header row
     h("div", { style: { 
       display: "flex", 
       padding: "12px 0", 
@@ -30,16 +31,15 @@ export function PositionsTab({ enriched, totalValue, cardStyle, emptyCard }) {
       zIndex: 1
     } },
       h("div", { style: { flex: 2 } }, "Asset"),
-      h("div", { style: { flex: 0.8, textAlign: "right" } }, "Units"),
-      h("div", { style: { flex: 0.8, textAlign: "right" } }, "Avg Price"),
-      h("div", { style: { flex: 0.8, textAlign: "right" } }, "Curr Price"),
-      h("div", { style: { flex: 0.7, textAlign: "right" } }, "P&L %"),
-      h("div", { style: { flex: 0.7, textAlign: "right" } }, "% Portfolio")
+      h("div", { style: { flex: 1, textAlign: "right" } }, "Units"),
+      h("div", { style: { flex: 1, textAlign: "right" } }, "Avg Price"),
+      h("div", { style: { flex: 1, textAlign: "right" } }, "Curr Price")
     ),
     
     // Data rows
     sortedPositions.map((p, i) => {
-      const portfolioPct = totalValue > 0 ? (p.currentValue / totalValue) * 100 : 0;
+      // Bitcoin needs more decimals for units
+      const unitsDecimals = p.ticker === "BTC" ? 6 : 2;
       
       return h("div", { 
         key: p.ticker, 
@@ -51,33 +51,22 @@ export function PositionsTab({ enriched, totalValue, cardStyle, emptyCard }) {
           fontSize: 13
         } 
       },
-        // Asset (name + ticker)
-        h("div", { style: { flex: 2, display: "flex", alignItems: "center", gap: 8 } },
-          h("div", { style: { width: 28, height: 28, borderRadius: 8, background: p.color + "22", display: "flex", alignItems: "center", justifyContent: "center" } },
-            h("span", { style: { fontSize: 11, fontWeight: 700, color: p.color } }, p.ticker.slice(0, 3))
+        // Asset
+        h("div", { style: { flex: 2, display: "flex", alignItems: "center", gap: 8, minWidth: 0 } },
+          h("div", { style: { width: 28, height: 28, borderRadius: 8, background: p.color + "22", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 } },
+            h("span", { style: { fontSize: 11, fontWeight: 700, color: p.color } }, p.ticker.slice(0, 4))
           ),
-          h("div", null,
-            h("div", { style: { fontSize: 14, fontWeight: 600 } }, getDisplayName(p.ticker)),
-            h("div", { style: { fontSize: 10, color: "#636366" } }, p.ticker)
+          h("div", { style: { minWidth: 0 } },
+            h("div", { style: { fontSize: 14, fontWeight: 600 } }, getDisplayName(p.ticker))
           )
         ),
-        // Units
-        h("div", { style: { flex: 0.8, textAlign: "right", fontSize: 12 } }, fmt(p.units, 4)),
-        // Avg Price
-        h("div", { style: { flex: 0.8, textAlign: "right", fontSize: 12 } }, `€${fmt(p.avgPrice)}`),
+        // Units (more decimals for BTC)
+        h("div", { style: { flex: 1, textAlign: "right", fontSize: 12 } }, fmt(p.units, unitsDecimals)),
+        // Avg Price 
+        h("div", { style: { flex: 1, textAlign: "right", fontSize: 12 } }, `€${fmt(p.avgPrice, 2)}`),
         // Current Price
-        h("div", { style: { flex: 0.8, textAlign: "right", fontSize: 12, fontWeight: 500 } }, 
+        h("div", { style: { flex: 1, textAlign: "right", fontSize: 12, fontWeight: 500 } }, 
           p.currentPrice > 0 ? `€${fmt(p.currentPrice)}` : "—"
-        ),
-        // P&L %
-        h("div", { style: { flex: 0.7, textAlign: "right", fontSize: 12, fontWeight: 600, color: p.plPct >= 0 ? "#30D158" : "#FF375F" } },
-          pct(p.plPct)
-        ),
-        // % Portfolio
-        h("div", { style: { flex: 0.7, textAlign: "right", fontSize: 12, fontWeight: 500 } },
-          h("span", { style: { background: "#2C2C2E", padding: "2px 8px", borderRadius: 12, fontSize: 11 } },
-            isNaN(portfolioPct) ? "0.0%" : portfolioPct.toFixed(1) + "%"
-          )
         )
       );
     })
