@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -24,205 +24,254 @@ const {createElement:h, useState, useEffect, useRef, useCallback} = React;
 const PROXY = "https://script.google.com/macros/s/AKfycbyYQqZ7YixtKVU9LS-sGeVuMj1xO65U3uco0kJ_JrzxbX2IaNvNg30Sm7z0yqn_pvVl/exec";
 const COLORS = ["#0A84FF","#30D158","#FF9F0A","#BF5AF2","#FF375F","#5AC8FA","#FF6B35","#98989D"];
 
-function fmt(n,d=2){return Number(n).toLocaleString("es-ES",{minimumFractionDigits:d,maximumFractionDigits:d});}
-function pct(n){return(n>=0?"+":"-")+fmt(Math.abs(n))+"%";}
+// Map ISINs or non-standard identifiers to readable tickers
+const TICKER_MAP = {
+  "IE00BYWYCC39": "EMRG"
+};
 
-function DonutChart({data}){
-  const ref=useRef();const chart=useRef();
-  useEffect(()=>{
-    if(!ref.current)return;
-    if(chart.current)chart.current.destroy();
-    chart.current=new Chart(ref.current,{
-      type:"doughnut",
-      data:{labels:data.map(d=>d.name),datasets:[{data:data.map(d=>d.value),backgroundColor:COLORS,borderWidth:0,hoverOffset:4}]},
-      options:{responsive:true,maintainAspectRatio:false,cutout:"65%",plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.label+": "+c.parsed.toFixed(1)+"%"}}}}
-    });
-    return()=>{if(chart.current)chart.current.destroy();};
-  },[data]);
-  return h("canvas",{ref,style:{maxHeight:200}});
-}
+function fmt(n, d=2){ return Number(n).toLocaleString("es-ES",{minimumFractionDigits:d,maximumFractionDigits:d}); }
+function pct(n){ return (n>=0?"+":"-")+fmt(Math.abs(n))+"%"; }
 
-function LineChart({data}){
-  const ref=useRef();const chart=useRef();
-  useEffect(()=>{
-    if(!ref.current||data.length<2)return;
-    if(chart.current)chart.current.destroy();
-    chart.current=new Chart(ref.current,{
-      type:"line",
-      data:{labels:data.map(d=>d.time),datasets:[{data:data.map(d=>d.valor),borderColor:"#0A84FF",borderWidth:2.5,pointRadius:0,tension:0.4,fill:true,backgroundColor:"rgba(10,132,255,0.08)"}]},
-      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>"€"+fmt(c.parsed.y)}}},scales:{x:{grid:{color:"rgba(255,255,255,0.05)"},ticks:{color:"#636366",font:{size:11}}},y:{grid:{color:"rgba(255,255,255,0.05)"},ticks:{color:"#636366",font:{size:11},callback:v=>"€"+Math.round(v/1000)+"k"}}}}
-    });
-    return()=>{if(chart.current)chart.current.destroy();};
-  },[data]);
-  return h("canvas",{ref,style:{maxHeight:200}});
-}
+// Calculate positions from raw movements using weighted average price
+function calcPositions(movements) {
+  const map = {};
 
-function App(){
-  const [tab,setTab]=useState("Dashboard");
-  const [prices,setPrices]=useState({});
-  const [loading,setLoading]=useState(false);
-  const [error,setError]=useState(null);
-  const [lastUpdate,setLastUpdate]=useState(null);
-  const [history,setHistory]=useState([]);
-  const [showAdd,setShowAdd]=useState(false);
-  const [positions,setPositions]=useState(()=>{try{return JSON.parse(localStorage.getItem("ptPos")||"[]");}catch{return [];}});
-  const [newPos,setNewPos]=useState({ticker:"",nombre:"",unidades:"",precioMedio:""});
+  movements.forEach(m => {
+    const raw = m.ticker;
+    const ticker = TICKER_MAP[raw] || raw;
+    const isBuy = m.way === "BUY";
+    const isSell = m.way === "SELL";
+    if (!isBuy && !isSell) return;
 
-  const savePos=p=>{setPositions(p);localStorage.setItem("ptPos",JSON.stringify(p));};
+    if (!map[ticker]) map[ticker] = { ticker, units: 0, totalEur: 0 };
+    const pos = map[ticker];
 
-  const fetchPrices=useCallback(async()=>{
-    setLoading(true);setError(null);
-    try{
-      const res=await fetch(PROXY);
-      if(!res.ok)throw new Error("HTTP "+res.status);
-      const data=await res.json();
-      const map={};
-      (data.precios||[]).forEach(({ticker,precio,moneda})=>{
-        if(ticker)map[ticker.toUpperCase().trim()]={precio:parseFloat(precio)||0,moneda:moneda||"EUR"};
-      });
-      setPrices(map);
-      const now=new Date();
-      setLastUpdate(now);
-      setHistory(h=>[...h.slice(-29),{time:now.toLocaleTimeString("es-ES",{hour:"2-digit",minute:"2-digit"}),valor:0,ts:Date.now()}]);
-    }catch(e){setError(e.message);}
-    setLoading(false);
-  },[]);
+    // Fee in EUR: add to cost. Fee in base currency (e.g. BTC): deduct from units received
+    let units = m.baseAmt;
+    let eurSpent = m.quoteAmt;
 
-  useEffect(()=>{fetchPrices();},[fetchPrices]);
+    if (m.feeCur === ticker) {
+      // Fee paid in base asset — reduce units received
+      units = m.baseAmt - m.feeAmt;
+    } else if (m.feeCur === "EUR" && isBuy) {
+      // Fee paid in EUR — add to cost basis
+      eurSpent = m.quoteAmt + m.feeAmt;
+    }
 
-  const enriched=positions.map(p=>{
-    const info=prices[p.ticker?.toUpperCase()]||{};
-    const pa=info.precio||0;
-    const va=pa*p.unidades;
-    const co=p.precioMedio*p.unidades;
-    const pl=va-co;
-    const plp=co>0?(pl/co)*100:0;
-    return{...p,precioActual:pa,valorActual:va,coste:co,pl,plPct:plp};
+    if (isBuy) {
+      pos.totalEur += eurSpent;
+      pos.units += units;
+    } else if (isSell) {
+      // Proportional cost reduction on sell
+      const avgPrice = pos.units > 0 ? pos.totalEur / pos.units : 0;
+      pos.units -= units;
+      pos.totalEur -= avgPrice * units;
+      if (pos.units < 0) pos.units = 0;
+      if (pos.totalEur < 0) pos.totalEur = 0;
+    }
   });
 
-  const totalValor=enriched.reduce((s,p)=>s+p.valorActual,0);
-  const totalCoste=enriched.reduce((s,p)=>s+p.coste,0);
-  const totalPL=totalValor-totalCoste;
-  const totalPLPct=totalCoste>0?(totalPL/totalCoste)*100:0;
-  const histData=history.map((hh,i)=>i===history.length-1?{...hh,valor:totalValor}:hh).filter(hh=>hh.valor>0);
-  const pieData=enriched.filter(p=>p.valorActual>0).map(p=>({name:p.ticker,value:parseFloat(((p.valorActual/totalValor)*100).toFixed(2))}));
+  return Object.values(map)
+    .filter(p => p.units > 0.000001)
+    .map(p => ({
+      ticker: p.ticker,
+      units: p.units,
+      avgPrice: p.units > 0 ? p.totalEur / p.units : 0,
+      totalInvested: p.totalEur
+    }));
+}
 
-  const addPos=()=>{
-    if(!newPos.ticker||!newPos.unidades||!newPos.precioMedio)return;
-    savePos([...positions,{ticker:newPos.ticker.toUpperCase().trim(),nombre:newPos.nombre,unidades:parseFloat(newPos.unidades),precioMedio:parseFloat(newPos.precioMedio)}]);
-    setNewPos({ticker:"",nombre:"",unidades:"",precioMedio:""});
-    setShowAdd(false);
-  };
+function DonutChart({data}) {
+  const ref = useRef(); const chart = useRef();
+  useEffect(() => {
+    if (!ref.current) return;
+    if (chart.current) chart.current.destroy();
+    chart.current = new Chart(ref.current, {
+      type: "doughnut",
+      data: {
+        labels: data.map(d => d.name),
+        datasets: [{ data: data.map(d => d.value), backgroundColor: COLORS, borderWidth: 0, hoverOffset: 4 }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false, cutout: "65%",
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: c => c.label+": "+c.parsed.toFixed(1)+"%" } }
+        }
+      }
+    });
+    return () => { if (chart.current) chart.current.destroy(); };
+  }, [data]);
+  return h("canvas", { ref, style: { maxHeight: 200 } });
+}
 
-  const tabs=["Dashboard","Distribución","Histórico","Posiciones"];
+function App() {
+  const [tab, setTab] = useState("Dashboard");
+  const [prices, setPrices] = useState({});
+  const [positions, setPositions] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [lastUpdate, setLastUpdate] = useState(null);
 
-  const card=(children,extra={})=>h("div",{style:{background:"#1C1C1E",borderRadius:16,padding:"4px 16px",marginBottom:12,...extra}},children);
-  const cardFlat=(children,extra={})=>h("div",{style:{background:"#1C1C1E",borderRadius:16,padding:16,marginBottom:12,...extra}},children);
-  const empty=(msg)=>cardFlat(h("div",{style:{textAlign:"center",padding:"40px 20px",color:"#636366",fontSize:15}},msg),{});
+  const fetchAll = useCallback(async () => {
+    setLoading(true); setError(null);
+    try {
+      // Fetch prices and movements in parallel
+      const [pricesRes, movsRes] = await Promise.all([
+        fetch(PROXY + "?sheet=prices"),
+        fetch(PROXY + "?sheet=movements")
+      ]);
+      if (!pricesRes.ok) throw new Error("Prices HTTP " + pricesRes.status);
+      if (!movsRes.ok) throw new Error("Movements HTTP " + movsRes.status);
 
-  return h("div",{style:{minHeight:"100vh",paddingBottom:40}},
+      const pricesData = await pricesRes.json();
+      const movsData = await movsRes.json();
+
+      // Build prices map
+      const priceMap = {};
+      (pricesData.precios || []).forEach(({ ticker, precio, moneda }) => {
+        if (ticker) priceMap[ticker.toUpperCase().trim()] = { precio: parseFloat(precio) || 0, moneda: moneda || "EUR" };
+      });
+      setPrices(priceMap);
+
+      // Calculate positions from movements
+      const pos = calcPositions(movsData.movements || []);
+      setPositions(pos);
+      setLastUpdate(new Date());
+    } catch(e) { setError(e.message); }
+    setLoading(false);
+  }, []);
+
+  useEffect(() => { fetchAll(); }, [fetchAll]);
+
+  // Enrich positions with current prices and P&L
+  const enriched = positions.map((p, i) => {
+    const info = prices[p.ticker] || {};
+    const currentPrice = info.precio || 0;
+    const currentValue = currentPrice * p.units;
+    const pl = currentValue - p.totalInvested;
+    const plPct = p.totalInvested > 0 ? (pl / p.totalInvested) * 100 : 0;
+    return { ...p, currentPrice, currentValue, pl, plPct, color: COLORS[i % COLORS.length] };
+  });
+
+  const totalValue = enriched.reduce((s, p) => s + p.currentValue, 0);
+  const totalInvested = enriched.reduce((s, p) => s + p.totalInvested, 0);
+  const totalPL = totalValue - totalInvested;
+  const totalPLPct = totalInvested > 0 ? (totalPL / totalInvested) * 100 : 0;
+
+  const pieData = enriched
+    .filter(p => p.currentValue > 0)
+    .map(p => ({ name: p.ticker, value: parseFloat(((p.currentValue / totalValue) * 100).toFixed(2)) }));
+
+  const tabs = ["Dashboard", "Distribution", "Positions"];
+
+  const cardStyle = { background: "#1C1C1E", borderRadius: 16, padding: "4px 16px", marginBottom: 12 };
+  const cardFlatStyle = { background: "#1C1C1E", borderRadius: 16, padding: 16, marginBottom: 12 };
+  const rowStyle = (border) => ({ display: "flex", alignItems: "center", padding: "13px 0", borderBottom: border ? "0.5px solid #2C2C2E" : "none" });
+  const emptyCard = (msg) => h("div", { style: { ...cardFlatStyle, textAlign: "center", padding: "40px 20px", color: "#636366", fontSize: 15 } }, msg);
+  const segBtn = (active) => ({ flex: 1, padding: "8px 4px", border: "none", borderRadius: 10, fontSize: 13, fontWeight: active ? 600 : 400, background: active ? "#2C2C2E" : "transparent", color: active ? "#fff" : "#636366", boxShadow: active ? "0 1px 4px rgba(0,0,0,0.5)" : "none" });
+
+  return h("div", { style: { minHeight: "100vh", paddingBottom: 40 } },
+
     // Header
-    h("div",{style:{padding:"24px 20px 16px",display:"flex",alignItems:"center",justifyContent:"space-between"}},
-      h("div",null,
-        h("div",{style:{fontSize:30,fontWeight:700,letterSpacing:-0.5}},"Portfolio"),
-        h("div",{style:{fontSize:12,color:"#636366",marginTop:3}},
-          lastUpdate?"Actualizado "+lastUpdate.toLocaleTimeString("es-ES",{hour:"2-digit",minute:"2-digit"}):loading?"Cargando...":error?"Error al cargar":"Sin datos"
+    h("div", { style: { padding: "24px 20px 16px", display: "flex", alignItems: "center", justifyContent: "space-between" } },
+      h("div", null,
+        h("div", { style: { fontSize: 30, fontWeight: 700, letterSpacing: -0.5 } }, "Portfolio"),
+        h("div", { style: { fontSize: 12, color: "#636366", marginTop: 3 } },
+          lastUpdate ? "Updated " + lastUpdate.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })
+            : loading ? "Loading..." : error ? "Error loading data" : "No data"
         )
       ),
-      h("button",{onClick:fetchPrices,disabled:loading,style:{background:loading?"#1C3A5E":"#0A84FF",color:loading?"#636366":"#fff",border:"none",borderRadius:20,padding:"8px 18px",fontSize:14,fontWeight:600}},
-        loading?"Cargando...":"↻ Actualizar"
-      )
+      h("button", {
+        onClick: fetchAll, disabled: loading,
+        style: { background: loading ? "#1C3A5E" : "#0A84FF", color: loading ? "#636366" : "#fff", border: "none", borderRadius: 20, padding: "8px 18px", fontSize: 14, fontWeight: 600 }
+      }, loading ? "Loading..." : "↻ Refresh")
     ),
 
-    // Error
-    error&&h("div",{style:{margin:"0 16px 12px",background:"#2C1A1A",borderRadius:12,padding:"12px 14px",fontSize:13,color:"#FF375F"}},error),
+    // Error banner
+    error && h("div", { style: { margin: "0 16px 12px", background: "#2C1A1A", borderRadius: 12, padding: "12px 14px", fontSize: 13, color: "#FF375F" } }, error),
 
     // Metric cards
-    h("div",{style:{padding:"0 16px 16px",display:"flex",gap:10}},
-      [["Valor total","€"+fmt(totalValor),"Coste €"+fmt(totalCoste),"#fff"],
-       ["P&L",(totalPL>=0?"+":"")+"€"+fmt(Math.abs(totalPL)),pct(totalPLPct),totalPL>=0?"#30D158":"#FF375F"],
-       ["Posiciones",""+positions.length,Object.keys(prices).length+" en sheet","#fff"]
-      ].map(([label,val,sub,color])=>
-        h("div",{key:label,style:{background:"#1C1C1E",borderRadius:16,padding:"14px 12px",flex:1}},
-          h("div",{style:{fontSize:12,color:"#636366",marginBottom:4}},label),
-          h("div",{style:{fontSize:20,fontWeight:700,color}},val),
-          h("div",{style:{fontSize:11,color:"#636366",marginTop:2}},sub)
+    h("div", { style: { padding: "0 16px 16px", display: "flex", gap: 10 } },
+      [
+        ["Total value", "€" + fmt(totalValue), "Invested €" + fmt(totalInvested), "#fff"],
+        ["P&L", (totalPL >= 0 ? "+" : "") + "€" + fmt(Math.abs(totalPL)), pct(totalPLPct), totalPL >= 0 ? "#30D158" : "#FF375F"],
+        ["Positions", "" + positions.length, Object.keys(prices).length + " priced", "#fff"]
+      ].map(([label, val, sub, color]) =>
+        h("div", { key: label, style: { background: "#1C1C1E", borderRadius: 16, padding: "14px 12px", flex: 1 } },
+          h("div", { style: { fontSize: 12, color: "#636366", marginBottom: 4 } }, label),
+          h("div", { style: { fontSize: 20, fontWeight: 700, color } }, val),
+          h("div", { style: { fontSize: 11, color: "#636366", marginTop: 2 } }, sub)
         )
       )
     ),
 
     // Segmented control
-    h("div",{style:{display:"flex",background:"#1C1C1E",borderRadius:12,padding:3,margin:"0 16px 16px"}},
-      tabs.map(t=>h("button",{key:t,onClick:()=>setTab(t),style:{flex:1,padding:"8px 4px",border:"none",borderRadius:10,fontSize:13,fontWeight:tab===t?600:400,background:tab===t?"#2C2C2E":"transparent",color:tab===t?"#fff":"#636366",boxShadow:tab===t?"0 1px 4px rgba(0,0,0,0.5)":"none"}},t))
+    h("div", { style: { display: "flex", background: "#1C1C1E", borderRadius: 12, padding: 3, margin: "0 16px 16px" } },
+      tabs.map(t => h("button", { key: t, onClick: () => setTab(t), style: segBtn(tab === t) }, t))
     ),
 
-    // Content
-    h("div",{style:{padding:"0 16px"}},
-      tab==="Dashboard"&&(
-        enriched.length===0?empty("Sin posiciones.\nVe a Posiciones para añadir."):
-        card(enriched.map((p,i)=>
-          h("div",{key:i,style:{display:"flex",alignItems:"center",padding:"13px 0",borderBottom:i<enriched.length-1?"0.5px solid #2C2C2E":"none"}},
-            h("div",{style:{width:40,height:40,borderRadius:12,background:COLORS[i%COLORS.length]+"22",display:"flex",alignItems:"center",justifyContent:"center",marginRight:14,flexShrink:0}},
-              h("span",{style:{fontSize:11,fontWeight:700,color:COLORS[i%COLORS.length]}},p.ticker.slice(0,4))
-            ),
-            h("div",{style:{flex:1}},
-              h("div",{style:{fontSize:15,fontWeight:600}},p.ticker),
-              h("div",{style:{fontSize:12,color:"#636366"}},(p.nombre||"—")+" · "+fmt(p.unidades,4)+" uds")
-            ),
-            h("div",{style:{textAlign:"right"}},
-              h("div",{style:{fontSize:15,fontWeight:600}},p.precioActual>0?"€"+fmt(p.valorActual):"—"),
-              h("div",{style:{fontSize:12,color:p.plPct>=0?"#30D158":"#FF375F",fontWeight:500}},p.precioActual>0?pct(p.plPct):"sin precio")
+    // Tab content
+    h("div", { style: { padding: "0 16px" } },
+
+      tab === "Dashboard" && (
+        enriched.length === 0 ? emptyCard("No positions found.\nCheck your movements sheet.") :
+        h("div", { style: cardStyle },
+          enriched.map((p, i) =>
+            h("div", { key: p.ticker, style: rowStyle(i < enriched.length - 1) },
+              h("div", { style: { width: 40, height: 40, borderRadius: 12, background: p.color + "22", display: "flex", alignItems: "center", justifyContent: "center", marginRight: 14, flexShrink: 0 } },
+                h("span", { style: { fontSize: 11, fontWeight: 700, color: p.color } }, p.ticker.slice(0, 4))
+              ),
+              h("div", { style: { flex: 1 } },
+                h("div", { style: { fontSize: 15, fontWeight: 600 } }, p.ticker),
+                h("div", { style: { fontSize: 12, color: "#636366" } }, fmt(p.units, 6) + " units · avg €" + fmt(p.avgPrice))
+              ),
+              h("div", { style: { textAlign: "right" } },
+                h("div", { style: { fontSize: 15, fontWeight: 600 } }, p.currentPrice > 0 ? "€" + fmt(p.currentValue) : "—"),
+                h("div", { style: { fontSize: 12, color: p.plPct >= 0 ? "#30D158" : "#FF375F", fontWeight: 500 } },
+                  p.currentPrice > 0 ? pct(p.plPct) : "no price"
+                )
+              )
             )
           )
-        ))
+        )
       ),
 
-      tab==="Distribución"&&(
-        pieData.length===0?empty("Sin datos. Añade posiciones y actualiza."):
-        cardFlat([
-          h("div",{key:"chart",style:{position:"relative",height:200,marginBottom:16}},h(DonutChart,{data:pieData})),
-          h("div",{key:"legend",style:{display:"flex",flexWrap:"wrap",gap:"10px 20px"}},
-            pieData.map((dd,i)=>h("div",{key:i,style:{display:"flex",alignItems:"center",gap:6,fontSize:13}},
-              h("span",{style:{width:10,height:10,borderRadius:3,background:COLORS[i%COLORS.length],display:"inline-block"}}),
-              h("span",{style:{fontWeight:600}},dd.name),
-              h("span",{style:{color:"#636366"}},dd.value.toFixed(1)+"%")
-            ))
+      tab === "Distribution" && (
+        pieData.length === 0 ? emptyCard("No data. Refresh to load.") :
+        h("div", { style: cardFlatStyle },
+          h("div", { style: { position: "relative", height: 200, marginBottom: 16 } }, h(DonutChart, { data: pieData })),
+          h("div", { style: { display: "flex", flexWrap: "wrap", gap: "10px 20px" } },
+            pieData.map((d, i) =>
+              h("div", { key: i, style: { display: "flex", alignItems: "center", gap: 6, fontSize: 13 } },
+                h("span", { style: { width: 10, height: 10, borderRadius: 3, background: COLORS[i % COLORS.length], display: "inline-block" } }),
+                h("span", { style: { fontWeight: 600 } }, d.name),
+                h("span", { style: { color: "#636366" } }, d.value.toFixed(1) + "%")
+              )
+            )
           )
-        ])
+        )
       ),
 
-      tab==="Histórico"&&(
-        histData.length<2?empty("Actualiza varias veces\npara ver la evolución."):
-        cardFlat(h("div",{style:{position:"relative",height:200}},h(LineChart,{data:histData})))
-      ),
-
-      tab==="Posiciones"&&h("div",null,
-        h("button",{onClick:()=>setShowAdd(true),style:{background:"#0A84FF",color:"#fff",border:"none",borderRadius:14,padding:15,fontSize:16,fontWeight:600,width:"100%",marginBottom:12}},"+ Añadir posición"),
-        positions.length===0?empty("Sin posiciones todavía."):
-        card(positions.map((p,i)=>
-          h("div",{key:i,style:{display:"flex",alignItems:"center",padding:"13px 0",borderBottom:i<positions.length-1?"0.5px solid #2C2C2E":"none"}},
-            h("div",{style:{width:36,height:36,borderRadius:10,background:COLORS[i%COLORS.length]+"22",display:"flex",alignItems:"center",justifyContent:"center",marginRight:12,flexShrink:0}},
-              h("span",{style:{fontSize:11,fontWeight:700,color:COLORS[i%COLORS.length]}},p.ticker.slice(0,4))
-            ),
-            h("div",{style:{flex:1}},
-              h("div",{style:{fontSize:15,fontWeight:600}},p.ticker),
-              h("div",{style:{fontSize:12,color:"#636366"}},fmt(p.unidades,4)+" uds · PM €"+fmt(p.precioMedio))
-            ),
-            h("button",{onClick:()=>savePos(positions.filter((_,idx)=>idx!==i)),style:{background:"transparent",color:"#FF375F",border:"none",fontSize:13,fontWeight:500,padding:"4px 8px"}},"Eliminar")
+      tab === "Positions" && (
+        positions.length === 0 ? emptyCard("No positions calculated yet.\nRefresh to load movements.") :
+        h("div", { style: cardStyle },
+          enriched.map((p, i) =>
+            h("div", { key: p.ticker, style: rowStyle(i < enriched.length - 1) },
+              h("div", { style: { width: 36, height: 36, borderRadius: 10, background: p.color + "22", display: "flex", alignItems: "center", justifyContent: "center", marginRight: 12, flexShrink: 0 } },
+                h("span", { style: { fontSize: 11, fontWeight: 700, color: p.color } }, p.ticker.slice(0, 4))
+              ),
+              h("div", { style: { flex: 1 } },
+                h("div", { style: { fontSize: 15, fontWeight: 600 } }, p.ticker),
+                h("div", { style: { fontSize: 12, color: "#636366" } }, fmt(p.units, 6) + " units")
+              ),
+              h("div", { style: { textAlign: "right" } },
+                h("div", { style: { fontSize: 14, fontWeight: 600 } }, "avg €" + fmt(p.avgPrice)),
+                h("div", { style: { fontSize: 12, color: "#636366" } }, "invested €" + fmt(p.totalInvested))
+              )
+            )
           )
-        ))
-      )
-    ),
-
-    // Modal añadir posición
-    showAdd&&h("div",{onClick:()=>setShowAdd(false),style:{position:"fixed",top:0,left:0,right:0,bottom:0,background:"rgba(0,0,0,0.7)",zIndex:100,display:"flex",alignItems:"flex-end"}},
-      h("div",{onClick:e=>e.stopPropagation(),style:{background:"#1C1C1E",borderRadius:"24px 24px 0 0",padding:"20px 20px 40px",width:"100%"}},
-        h("div",{style:{width:36,height:5,background:"#3A3A3C",borderRadius:3,margin:"0 auto 20px"}}),
-        h("div",{style:{fontSize:18,fontWeight:700,marginBottom:16}},"Nueva posición"),
-        [["ticker","Ticker (ej. XNAS, BTC)"],["nombre","Nombre (opcional)"],["unidades","Unidades"],["precioMedio","Precio medio de compra (€)"]].map(([k,ph])=>
-          h("input",{key:k,placeholder:ph,value:newPos[k],onChange:e=>setNewPos(p=>({...p,[k]:e.target.value}))})
-        ),
-        h("button",{onClick:addPos,style:{background:"#0A84FF",color:"#fff",border:"none",borderRadius:14,padding:15,fontSize:16,fontWeight:600,width:"100%",marginTop:4}},"Añadir")
+        )
       )
     )
   );
