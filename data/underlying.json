@@ -3,14 +3,14 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "value": 3082.07,
-      "pct": 15.44,
+      "value": 3078.89,
+      "pct": 15.43,
       "sector": "Crypto",
       "location": "Global"
     },
     {
       "ticker": "NVDA",
-      "name": "Nvidia Corp",
+      "name": "NVIDIA CORP",
       "value": 1208.76,
       "pct": 6.06,
       "sector": "Information Technology",
@@ -42,7 +42,7 @@
     },
     {
       "ticker": "AVGO",
-      "name": "Broadcom Inc",
+      "name": "BROADCOM INC",
       "value": 499.22,
       "pct": 2.5,
       "sector": "Information Technology",
@@ -76,7 +76,7 @@
       "ticker": "META",
       "name": "META PLATFORMS INC CLASS A",
       "value": 424.14,
-      "pct": 2.12,
+      "pct": 2.13,
       "sector": "Communication",
       "location": "United States"
     },
@@ -90,7 +90,7 @@
     },
     {
       "ticker": "MU",
-      "name": "Micron Technology Inc",
+      "name": "MICRON TECHNOLOGY INC",
       "value": 397.0,
       "pct": 1.99,
       "sector": "Information Technology",
@@ -98,7 +98,7 @@
     },
     {
       "ticker": "AMD",
-      "name": "Advanced Micro Devices Inc",
+      "name": "ADVANCED MICRO DEVICES INC",
       "value": 337.39,
       "pct": 1.69,
       "sector": "Information Technology",
@@ -122,7 +122,7 @@
     },
     {
       "ticker": "AMAT",
-      "name": "Applied Materials Inc",
+      "name": "APPLIED MATERIAL INC",
       "value": 272.52,
       "pct": 1.37,
       "sector": "Information Technology",
@@ -130,7 +130,7 @@
     },
     {
       "ticker": "LRCX",
-      "name": "Lam Research Corp",
+      "name": "LAM RESEARCH CORP",
       "value": 266.66,
       "pct": 1.34,
       "sector": "Information Technology",
@@ -154,7 +154,7 @@
     },
     {
       "ticker": "INTC",
-      "name": "Intel Corp",
+      "name": "INTEL CORPORATION CORP",
       "value": 221.38,
       "pct": 1.11,
       "sector": "Information Technology",
@@ -162,15 +162,15 @@
     },
     {
       "ticker": "ASML",
-      "name": "Asml Holding Nv",
+      "name": "ASML HOLDING ADR REPRESENTING NV",
       "value": 204.9,
       "pct": 1.03,
       "sector": "Information Technology",
-      "location": "Europe"
+      "location": "Netherlands"
     },
     {
       "ticker": "KLAC",
-      "name": "Kla Corp",
+      "name": "KLA CORP",
       "value": 186.97,
       "pct": 0.94,
       "sector": "Information Technology",
@@ -178,7 +178,7 @@
     },
     {
       "ticker": "TXN",
-      "name": "Texas Instruments Inc",
+      "name": "TEXAS INSTRUMENT INC",
       "value": 177.62,
       "pct": 0.89,
       "sector": "Information Technology",
@@ -202,7 +202,7 @@
     },
     {
       "ticker": "ADI",
-      "name": "Analog Devices Inc",
+      "name": "ANALOG DEVICES INC",
       "value": 154.36,
       "pct": 0.77,
       "sector": "Information Technology",
@@ -226,7 +226,7 @@
     },
     {
       "ticker": "QCOM",
-      "name": "Qualcomm Inc",
+      "name": "QUALCOMM INC",
       "value": 137.11,
       "pct": 0.69,
       "sector": "Information Technology",
@@ -276,7 +276,7 @@
       "ticker": "BKNG",
       "name": "BOOKING HOLDINGS INC",
       "value": 96.8,
-      "pct": 0.48,
+      "pct": 0.49,
       "sector": "Consumer Discretionary",
       "location": "United States"
     },
@@ -314,17 +314,9 @@
     },
     {
       "ticker": "MRVL",
-      "name": "Marvell Technology Inc",
+      "name": "MARVELL TECHNOLOGY INC",
       "value": 82.87,
       "pct": 0.42,
-      "sector": "Information Technology",
-      "location": "United States"
-    },
-    {
-      "ticker": "SNPS",
-      "name": "Synopsys Inc",
-      "value": 77.7,
-      "pct": 0.39,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -337,8 +329,16 @@
       "location": "United States"
     },
     {
+      "ticker": "SNPS",
+      "name": "SYNOPSYS INC",
+      "value": 77.7,
+      "pct": 0.39,
+      "sector": "Information Technology",
+      "location": "United States"
+    },
+    {
       "ticker": "CDNS",
-      "name": "Cadence Design Systems Inc",
+      "name": "CADENCE DESIGN SYSTEMS INC",
       "value": 77.58,
       "pct": 0.39,
       "sector": "Information Technology",
@@ -474,7 +474,7 @@
     },
     {
       "ticker": "MPWR",
-      "name": "Monolithic Power Systems Inc",
+      "name": "MONOLITHIC POWER SYSTEMS INC",
       "value": 48.98,
       "pct": 0.25,
       "sector": "Information Technology",
@@ -506,7 +506,7 @@
     },
     {
       "ticker": "NXPI",
-      "name": "Nxp Semiconductors Nv",
+      "name": "NXP SEMICONDUCTORS NV",
       "value": 46.55,
       "pct": 0.23,
       "sector": "Information Technology",
@@ -602,7 +602,7 @@
     },
     {
       "ticker": "MCHP",
-      "name": "Microchip Technology Inc",
+      "name": "MICROCHIP TECHNOLOGY INC",
       "value": 34.09,
       "pct": 0.17,
       "sector": "Information Technology",
@@ -897,6 +897,6 @@
       "location": "United States"
     }
   ],
-  "total_value": 19961.394560638146,
-  "updated": "2026-03-29T18:55:53.123780"
+  "total_value": 19958.214285884656,
+  "updated": "2026-03-29T17:39:17.676947"
 }
