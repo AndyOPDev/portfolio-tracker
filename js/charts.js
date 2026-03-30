@@ -1,8 +1,9 @@
 import { COLORS } from './config.js';
+import { fmt } from './utils.js';
 
 const { createElement: h, useEffect, useRef } = React;
 
-export function DonutChart({ data, colors, showLabels = false }) {
+export function DonutChart({ data, colors }) {
   const ref = useRef();
   const chart = useRef();
   
@@ -21,29 +22,42 @@ export function DonutChart({ data, colors, showLabels = false }) {
           backgroundColor: chartColors,
           borderWidth: 2,
           borderColor: "#000",
-          hoverOffset: 8,
-          cutout: "60%"
+          hoverOffset: 8
         }]
       },
       options: {
         responsive: true,
         maintainAspectRatio: true,
+        cutout: "60%",
         plugins: {
           legend: { display: false },
           tooltip: { 
             callbacks: { 
-              label: (context) => {
-                const label = context.label || '';
-                const value = context.parsed;
-                return `${label}: ${value.toFixed(1)}%`;
+              title: (tooltipItems) => {
+                const index = tooltipItems[0].dataIndex;
+                return data[index]?.name || "";
+              },
+              label: (tooltipItem) => {
+                const index = tooltipItem.dataIndex;
+                const item = data[index];
+                if (!item) return "";
+                const value = tooltipItem.raw;
+                const currentValue = item.currentValue;
+                return [
+                  `€${fmt(currentValue)}`,
+                  `${value.toFixed(1)}%`
+                ];
               }
-            }
+            },
+            bodyAlign: "left",
+            titleAlign: "center"
           }
         }
       }
     });
+    
     return () => { if (chart.current) chart.current.destroy(); };
-  }, [data, colors, showLabels]);
+  }, [data, colors]);
   
   return h("canvas", { ref, style: { width: "100%", height: "100%" } });
 }
@@ -56,7 +70,6 @@ export function HorizontalBarChart({ data, colors }) {
     if (!ref.current) return;
     if (chart.current) chart.current.destroy();
     
-    // Sort data from highest to lowest percentage
     const sortedData = [...data].sort((a, b) => b.value - a.value);
     const sortedColors = colors ? 
       sortedData.map((item, idx) => {
@@ -87,7 +100,7 @@ export function HorizontalBarChart({ data, colors }) {
           legend: { display: false },
           tooltip: { 
             callbacks: { 
-              label: (context) => `${context.raw.toFixed(1)}% of portfolio`
+              label: (context) => `${context.raw.toFixed(1)}%`
             }
           }
         },

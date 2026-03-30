@@ -1,4 +1,3 @@
-// DistributionTab.js
 import { getDisplayName, fmt, useIsMobile } from '../utils.js';
 import { DonutChart } from '../charts.js';
 import { getTickerColor, getSectorColor, getLocationColor } from '../config.js';
@@ -12,8 +11,8 @@ export function DistributionTab({ enriched, totalValue, cardFlatStyle, emptyCard
     return emptyCard("No underlying data available");
   }
 
-  // --- Data by Asset ---
-  const assetData = enriched
+  // --- Data by Asset (filter out < 0.5%) ---
+  const assetDataRaw = enriched
     .filter(p => p.currentValue > 0)
     .map(p => ({
       name: getDisplayName(p.ticker),
@@ -23,8 +22,11 @@ export function DistributionTab({ enriched, totalValue, cardFlatStyle, emptyCard
       currentValue: p.currentValue
     }))
     .sort((a, b) => b.value - a.value);
+  
+  // Filter out assets with less than 0.5%
+  const assetData = assetDataRaw.filter(item => item.value >= 0.5);
 
-  // --- Data by Sector ---
+  // --- Data by Sector (filter out < 0.5%) ---
   const sectorMap = {};
   underlying.forEach(u => {
     const sector = u.sector || "Unknown";
@@ -32,127 +34,151 @@ export function DistributionTab({ enriched, totalValue, cardFlatStyle, emptyCard
     sectorMap[sector] += u.value;
   });
   const totalUnderlyingValue = underlying.reduce((s, u) => s + u.value, 0);
-  const sectorData = Object.entries(sectorMap)
+  const sectorDataRaw = Object.entries(sectorMap)
     .map(([name, value]) => ({
       name,
       value: parseFloat(((value / totalUnderlyingValue) * 100).toFixed(2)),
-      color: getSectorColor(name)
+      color: getSectorColor(name),
+      currentValue: value
     }))
     .sort((a, b) => b.value - a.value);
+  
+  // Filter out sectors with less than 0.5%
+  const sectorData = sectorDataRaw.filter(item => item.value >= 0.5);
 
-  // --- Data by Location ---
+  // --- Data by Location (filter out < 0.5%) ---
   const locMap = {};
   underlying.forEach(u => {
     const loc = u.location || "Other";
     if (!locMap[loc]) locMap[loc] = 0;
     locMap[loc] += u.value;
   });
-  const locationData = Object.entries(locMap)
+  const locationDataRaw = Object.entries(locMap)
     .map(([name, value]) => ({
       name,
       value: parseFloat(((value / totalUnderlyingValue) * 100).toFixed(2)),
-      color: getLocationColor(name)
+      color: getLocationColor(name),
+      currentValue: value
     }))
     .sort((a, b) => b.value - a.value);
+  
+  // Filter out locations with less than 0.5%
+  const locationData = locationDataRaw.filter(item => item.value >= 0.5);
 
-  // Componente de barras con animación controlada
-  const AnimatedBar = ({ item, maxValue, delay }) => {
+  // Bar item component
+  const BarItem = ({ item, maxValue, idx }) => {
+    const [showTooltip, setShowTooltip] = useState(false);
     const [width, setWidth] = useState(0);
-    const ref = useRef(null);
-
+    
     useEffect(() => {
-      // Pequeño retraso para que sea progresivo
       const timer = setTimeout(() => {
         const widthPercent = (item.value / maxValue) * 100;
         setWidth(widthPercent);
-      }, delay);
+      }, idx * 50);
       return () => clearTimeout(timer);
-    }, [item.value, maxValue, delay]);
+    }, [item.value, maxValue, idx]);
 
     return h("div", {
       style: { 
-        width: `${width}%`, 
-        height: "100%", 
-        background: item.color, 
-        borderRadius: 8,
-        transition: "width 0.6s cubic-bezier(0.22, 0.97, 0.36, 1)",
-        boxShadow: "0 2px 4px rgba(0,0,0,0.2)"
-      } 
-    });
-  };
-
-  // Helper to render bars with sequential animation
-  const renderBars = (data) => {
-    if (!data || data.length === 0) return null;
-    const maxValue = Math.max(...data.map(d => d.value));
-
-    return h("div", { style: { flex: 1, width: "100%" } },
-      data.map((item, idx) => {
-        const widthPercent = (item.value / maxValue) * 100;
-
-        return h("div", {
-          key: item.name + idx,
-          style: { 
-            marginBottom: 14, 
-            display: "flex", 
-            alignItems: "center", 
-            gap: isMobile ? 10 : 12,
-            width: "100%"
-          }
+        marginBottom: 14, 
+        display: "flex", 
+        alignItems: "center", 
+        gap: isMobile ? 10 : 12,
+        width: "100%",
+        position: "relative"
+      }
+    },
+      h("div", { 
+        style: { 
+          width: isMobile ? 100 : 110, 
+          flexShrink: 0, 
+          display: "flex", 
+          alignItems: "center", 
+          gap: 8, 
+          fontSize: isMobile ? 12 : 13,
+          overflow: "hidden",
+          textOverflow: "ellipsis",
+          whiteSpace: "nowrap"
+        } 
+      },
+        h("div", { style: { width: 10, height: 10, borderRadius: 2, background: item.color, flexShrink: 0 } }),
+        h("span", { 
+          style: { color: "#fff", overflow: "hidden", textOverflow: "ellipsis" },
+          title: `${item.name}\n€${fmt(item.currentValue)} (${item.value.toFixed(1)}%)`
+        }, item.name)
+      ),
+      h("div", { 
+        style: { 
+          flex: 1, 
+          height: 32, 
+          background: "#2C2C2E", 
+          borderRadius: 8, 
+          position: "relative"
         },
-          // Label with color dot
-          h("div", { 
-            style: { 
-              width: isMobile ? 100 : 110, 
-              flexShrink: 0, 
-              display: "flex", 
-              alignItems: "center", 
-              gap: 8, 
-              fontSize: isMobile ? 12 : 13,
-              overflow: "hidden",
-              textOverflow: "ellipsis",
-              whiteSpace: "nowrap"
-            } 
-          },
-            h("div", { style: { width: 10, height: 10, borderRadius: 2, background: item.color, flexShrink: 0 } }),
-            h("span", { 
-              style: { color: "#fff", overflow: "hidden", textOverflow: "ellipsis" },
-              title: item.name
-            }, item.name)
-          ),
-          // Animated bar container
-          h("div", { 
-            style: { 
-              flex: 1, 
-              height: 32, 
-              background: "#2C2C2E", 
-              borderRadius: 8, 
-              overflow: "hidden",
-              position: "relative"
-            } 
-          },
-            h(AnimatedBar, { item, maxValue, delay: idx * 50 })
-          ),
-          // Percentage value
-          h("div", { 
-            style: { 
-              width: 50, 
-              textAlign: "right", 
-              fontSize: isMobile ? 12 : 13, 
-              fontWeight: 500, 
-              color: "#fff", 
-              flexShrink: 0,
-              fontFeatureSettings: "'tnum'"
-            } 
-          },
-            `${item.value.toFixed(1)}%`
-          )
-        );
-      })
+        onMouseEnter: () => setShowTooltip(true),
+        onMouseLeave: () => setShowTooltip(false)
+      },
+        h("div", { 
+          style: { 
+            width: `${width}%`, 
+            height: "100%", 
+            background: item.color, 
+            borderRadius: 8,
+            transition: "width 0.6s cubic-bezier(0.22, 0.97, 0.36, 1)",
+            boxShadow: "0 2px 4px rgba(0,0,0,0.2)"
+          } 
+        }),
+        showTooltip && h("div", {
+          style: {
+            position: "absolute",
+            top: -30,
+            left: `${Math.min(width, 90)}%`,
+            transform: "translateX(-50%)",
+            background: "#1C1C1E",
+            color: "#fff",
+            padding: "4px 10px",
+            borderRadius: 6,
+            fontSize: 12,
+            fontWeight: 500,
+            whiteSpace: "nowrap",
+            zIndex: 100,
+            boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
+            pointerEvents: "none",
+            border: "1px solid #2C2C2E"
+          }
+        }, `€${fmt(item.currentValue)}`)
+      ),
+      h("div", { 
+        style: { 
+          width: 50, 
+          textAlign: "right", 
+          fontSize: isMobile ? 12 : 13, 
+          fontWeight: 500, 
+          color: "#fff", 
+          flexShrink: 0,
+          fontFeatureSettings: "'tnum'"
+        } 
+      },
+        `${item.value.toFixed(1)}%`
+      )
     );
   };
 
-  // Block component with responsive layout
+  // Helper to render bars
+  const renderBars = (data) => {
+    if (!data || data.length === 0) {
+      return h("div", { style: { padding: "20px", textAlign: "center", color: "#636366" } }, 
+        "No data (all items below 0.5%)"
+      );
+    }
+    const maxValue = Math.max(...data.map(d => d.value));
+
+    return h("div", { style: { flex: 1, width: "100%" } },
+      data.map((item, idx) => h(BarItem, { key: item.name + idx, item, maxValue, idx }))
+    );
+  };
+
+  // Block component
   const DistributionBlock = ({ title, data }) => {
     if (!data || data.length === 0) return null;
     
@@ -168,15 +194,21 @@ export function DistributionTab({ enriched, totalValue, cardFlatStyle, emptyCard
       ? { width: "100%" }
       : { flex: 1 };
     
+    const titleStyle = isMobile
+      ? { fontSize: 16, fontWeight: 600, color: "#fff", textAlign: "center", width: "100%" }
+      : { fontSize: 18, fontWeight: 600, color: "#fff" };
+    
     return h("div", { style: { marginBottom: 48 } },
       h("div", { style: { marginBottom: 20 } },
-        h("div", { style: { fontSize: isMobile ? 16 : 18, fontWeight: 600, color: "#fff" } }, title),
-        //h("div", { style: { fontSize: 12, color: "#636366", marginTop: 4 } }, `${data.length} items`)
+        h("div", { style: titleStyle }, title),
+        data.length < 5 && h("div", { style: { fontSize: 11, color: "#636366", marginTop: 4, textAlign: "center" } }, 
+          `${data.length} items shown (items below 0.5% hidden)`
+        )
       ),
       h("div", { style: containerStyle },
         h("div", { style: donutStyle },
           h(DonutChart, { 
-            data: data.map(d => ({ name: d.name, value: d.value })), 
+            data: data.map(d => ({ name: d.name, value: d.value, currentValue: d.currentValue })), 
             colors: data.map(d => d.color)
           })
         ),

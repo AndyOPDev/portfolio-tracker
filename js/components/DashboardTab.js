@@ -108,10 +108,10 @@ export function DashboardTab({ enriched, cardStyle, emptyCard }) {
           )
         )
       );
-    }),
-
+    })
+     /*--
     // Best & Worst Performers section - inside same card
-    h("div", { style: { 
+    ,h("div", { style: { 
       display: "grid", 
       gridTemplateColumns: "1fr 1fr", 
       gap: 12, 
@@ -163,6 +163,6 @@ export function DashboardTab({ enriched, cardStyle, emptyCard }) {
           )
         )
       )
-    )
+    ) */
   );
 }
