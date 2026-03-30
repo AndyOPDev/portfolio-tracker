@@ -1,4 +1,4 @@
-import { getDisplayName, fmt, fmtEur, pct } from '../utils.js';
+import { getDisplayName, fmt, fmtEur, pct, formatNumber } from '../utils.js';
 
 const { createElement: h } = React;
 
@@ -9,11 +9,6 @@ export function DashboardTab({ enriched, cardStyle, emptyCard }) {
 
   // Sort by current value (highest first)
   const sortedHoldings = [...enriched].sort((a, b) => b.currentValue - a.currentValue);
-
-  // Best and worst performers by P&L %
-  const sortedByPL = [...enriched].sort((a, b) => b.plPct - a.plPct);
-  const bestPerformer = sortedByPL[0];
-  const worstPerformer = sortedByPL[sortedByPL.length - 1];
 
   const isMobile = window.innerWidth < 640;
 
@@ -68,14 +63,27 @@ export function DashboardTab({ enriched, cardStyle, emptyCard }) {
             )
           ),
           h("div", { style: { flex: 0.8, textAlign: "right", fontSize: 12 } }, formatUnits(p.ticker, p.units)),
-          h("div", { style: { flex: 0.8, textAlign: "right", fontSize: 12 } }, `€${fmt(p.avgPrice)}`),
-          h("div", { style: { flex: 0.8, textAlign: "right", fontSize: 12, fontWeight: 500 } }, `€${fmt(p.currentPrice)}`),
-          h("div", { style: { flex: 0.8, textAlign: "right", fontSize: 13, fontWeight: 500 } }, `€${fmtEur(p.currentValue)}`),
+          h("div", { style: { flex: 0.8, textAlign: "right", fontSize: 12 } }, `${fmt(p.avgPrice)} €`),
+          h("div", { style: { flex: 0.8, textAlign: "right", fontSize: 12, fontWeight: 500 } }, `${fmt(p.currentPrice)} €`),
+          h("div", { style: { flex: 0.8, textAlign: "right", fontSize: 13, fontWeight: 500 } }, `${formatNumber(p.currentValue)} €`),
           h("div", { style: { flex: 0.7, textAlign: "right", fontSize: 13, fontWeight: 500, color: isPositive ? "#30D158" : "#FF375F" } },
-            `${isPositive ? "+" : "-"}€${fmtEur(plAmountAbs)}`
+            `${isPositive ? "+" : "-"}${formatNumber(plAmountAbs)} €`
           ),
-          h("div", { style: { flex: 0.7, textAlign: "right", fontSize: 13, fontWeight: 600, color: isPositive ? "#30D158" : "#FF375F" } },
-            pct(p.plPct)
+          // P&L % with subtle card style - borderRadius 8 (less rounded)
+          h("div", { style: { flex: 0.7, textAlign: "right" } },
+            h("span", { 
+              style: { 
+                background: isPositive ? "rgba(48, 209, 88, 0.15)" : "rgba(255, 55, 95, 0.15)",
+                borderRadius: 8,
+                padding: "4px 10px",
+                fontSize: 12,
+                fontWeight: 600,
+                color: isPositive ? "#30D158" : "#FF375F",
+                display: "inline-block"
+              } 
+            }, 
+              pct(p.plPct)
+            )
           )
         );
       }
@@ -96,73 +104,32 @@ export function DashboardTab({ enriched, cardStyle, emptyCard }) {
             h("div", { style: { flex: 1 } },
               h("div", { style: { fontSize: 16, fontWeight: 600, marginBottom: 4 } }, getDisplayName(p.ticker)),
               h("div", { style: { fontSize: 12, color: "#fff" } },
-                `${formatUnits(p.ticker, p.units)}  |  €${fmt(p.currentPrice)}`
+                `${formatUnits(p.ticker, p.units)}  |  ${fmt(p.currentPrice)} €`
               )
             )
           ),
           h("div", { style: { textAlign: "right", flexShrink: 0 } },
-            h("div", { style: { fontSize: 18, fontWeight: 700, color: "#fff" } }, `€${fmtEur(p.currentValue)}`),
-            h("div", { style: { fontSize: 13, fontWeight: 600, color: isPositive ? "#30D158" : "#FF375F" } },
-              `${isPositive ? "+" : "-"}€${fmtEur(plAmountAbs)} ${pct(p.plPct)}`
+            h("div", { style: { fontSize: 18, fontWeight: 700, color: "#fff" } }, `${formatNumber(p.currentValue)} €`),
+            h("div", { style: { display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 6, marginTop: 4 } },
+              h("span", { style: { fontSize: 13, fontWeight: 600, color: isPositive ? "#30D158" : "#FF375F" } },
+                `${isPositive ? "+" : "-"}${formatNumber(plAmountAbs)} €`
+              ),
+              h("span", { 
+                style: { 
+                  background: isPositive ? "rgba(48, 209, 88, 0.15)" : "rgba(255, 55, 95, 0.15)",
+                  borderRadius: 8,
+                  padding: "3px 8px",
+                  fontSize: 11,
+                  fontWeight: 600,
+                  color: isPositive ? "#30D158" : "#FF375F"
+                } 
+              }, 
+                pct(p.plPct)
+              )
             )
           )
         )
       );
     })
-     /*--
-    // Best & Worst Performers section - inside same card
-    ,h("div", { style: { 
-      display: "grid", 
-      gridTemplateColumns: "1fr 1fr", 
-      gap: 12, 
-      padding: "16px",
-      borderTop: "1px solid #2C2C2E",
-      marginTop: 4
-    } },
-      // Best performer card
-      h("div", { style: { 
-        background: "#2C2C2E", 
-        borderRadius: 12, 
-        padding: 14,
-        width: "100%",
-        boxSizing: "border-box",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center"
-      } },
-        h("div", { style: { fontSize: 12, color: "#636366", marginBottom: 4, textAlign: "center" } }, "Best Performer"),
-        h("div", { style: { fontSize: 16, fontWeight: 600, textAlign: "center" } }, getDisplayName(bestPerformer?.ticker || "-")),
-        h("div", { style: { display: "flex", alignItems: "baseline", gap: 8, marginTop: 6, flexWrap: "wrap", justifyContent: "center" } },
-          h("span", { style: { fontSize: 20, fontWeight: 700, color: "#30D158" } }, 
-            bestPerformer ? `${bestPerformer.pl >= 0 ? "+" : "-"}€${fmtEur(Math.abs(bestPerformer.pl))}` : "-"
-          ),
-          h("span", { style: { fontSize: 16, fontWeight: 600, color: bestPerformer?.plPct >= 0 ? "#30D158" : "#FF375F" } }, 
-            bestPerformer ? `(${pct(bestPerformer.plPct)})` : "-"
-          )
-        )
-      ),
-      // Worst performer card
-      h("div", { style: { 
-        background: "#2C2C2E", 
-        borderRadius: 12, 
-        padding: 14,
-        width: "100%",
-        boxSizing: "border-box",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center"
-      } },
-        h("div", { style: { fontSize: 12, color: "#636366", marginBottom: 4, textAlign: "center" } }, "Worst Performer"),
-        h("div", { style: { fontSize: 16, fontWeight: 600, textAlign: "center" } }, getDisplayName(worstPerformer?.ticker || "-")),
-        h("div", { style: { display: "flex", alignItems: "baseline", gap: 8, marginTop: 6, flexWrap: "wrap", justifyContent: "center" } },
-          h("span", { style: { fontSize: 20, fontWeight: 700, color: "#FF375F" } }, 
-            worstPerformer ? `${worstPerformer.pl >= 0 ? "+" : "-"}€${fmtEur(Math.abs(worstPerformer.pl))}` : "-"
-          ),
-          h("span", { style: { fontSize: 16, fontWeight: 600, color: worstPerformer?.plPct >= 0 ? "#30D158" : "#FF375F" } }, 
-            worstPerformer ? `(${pct(worstPerformer.plPct)})` : "-"
-          )
-        )
-      )
-    ) */
   );
 }

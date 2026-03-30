@@ -18,6 +18,11 @@ export function pct(n) {
   return (n >= 0 ? "+" : "-") + fmt(Math.abs(n)) + "%";
 }
 
+// Add this function to utils.js
+export function formatNumber(n) {
+  return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
 // Hook to detect mobile screen size
 export function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false);

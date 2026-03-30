@@ -1,4 +1,4 @@
-import { fmt, fmtEur } from '../utils.js';
+import { fmt, fmtEur, formatNumber } from '../utils.js';
 import { UNDERLYING_URL } from '../config.js';
 import { getTickerColor, getSectorColor, getLocationColor } from '../config.js';
 
@@ -41,7 +41,7 @@ export function UnderlyingTab({ cardStyle, emptyCard }) {
   const displayHoldings = underlying.slice(0, 100);
   const isMobile = window.innerWidth < 640;
 
-  // Helper for truncated text (only for mobile)
+  // Helper for truncated text
   const truncate = (text, maxLength) => {
     if (!text) return "—";
     if (text.length <= maxLength) return text;
@@ -73,15 +73,12 @@ export function UnderlyingTab({ cardStyle, emptyCard }) {
       const sectorColor = getSectorColor(sector);
       const locationColor = getLocationColor(location);
       
-      // Get ticker color with sector fallback
       const tickerColor = getTickerColor(item.ticker, sector);
-      
       const isLast = i === displayHoldings.length - 1;
       
-      // Truncate long names (only for mobile, desktop shows full)
       const truncatedName = truncate(item.name, isMobile ? 25 : 50);
-      const truncatedSector = isMobile ? truncate(sector, 15) : sector;
-      const truncatedLocation = isMobile ? truncate(location, 15) : location;
+      const truncatedSector = isMobile ? truncate(sector, 12) : sector;
+      const truncatedLocation = isMobile ? truncate(location, 12) : location;
       
       // Desktop layout
       if (!isMobile) {
@@ -104,28 +101,26 @@ export function UnderlyingTab({ cardStyle, emptyCard }) {
               )
             )
           ),
-          // Sector - full text on desktop
           h("div", { style: { flex: 1, display: "flex", alignItems: "center", gap: 6, minWidth: 0 } },
             h("div", { style: { width: 6, height: 6, borderRadius: 1.5, background: sectorColor, flexShrink: 0 } }),
             h("span", { style: { fontSize: 11, color: "#8e8e93", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", title: sector } }, 
               truncatedSector
             )
           ),
-          // Location - full text on desktop
           h("div", { style: { flex: 1, display: "flex", alignItems: "center", gap: 6, minWidth: 0 } },
             h("div", { style: { width: 6, height: 6, borderRadius: 1.5, background: locationColor, flexShrink: 0 } }),
             h("span", { style: { fontSize: 11, color: "#8e8e93", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", title: location } }, 
               truncatedLocation
             )
           ),
-          h("div", { style: { flex: 1, textAlign: "right", fontSize: 13, fontWeight: 500, color: "#fff" } }, `€${fmtEur(item.value)}`),
+          h("div", { style: { flex: 1, textAlign: "right", fontSize: 13, fontWeight: 500, color: "#fff" } }, `${formatNumber(item.value)} €`),
           h("div", { style: { flex: 0.8, textAlign: "right" } },
             h("span", { style: { background: "#2C2C2E", padding: "2px 8px", borderRadius: 12, fontSize: 11, color: "#fff" } }, item.pct.toFixed(2) + "%")
           )
         );
       }
       
-      // Mobile layout - Dashboard style
+      // Mobile layout - sector and location on same line
       return h("div", { 
         key: item.ticker, 
         style: { 
@@ -134,7 +129,7 @@ export function UnderlyingTab({ cardStyle, emptyCard }) {
         } 
       },
         h("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start" } },
-          // Left side: badge + info (name, sector, location) stacked vertically
+          // Left side: badge + name
           h("div", { style: { display: "flex", alignItems: "flex-start", gap: 12, flex: 1, minWidth: 0 } },
             h("div", { style: { width: 40, height: 40, borderRadius: 10, background: tickerColor + "22", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 } },
               h("span", { style: { fontSize: 14, fontWeight: 700, color: tickerColor } }, item.ticker.slice(0, 4))
@@ -143,26 +138,23 @@ export function UnderlyingTab({ cardStyle, emptyCard }) {
               h("div", { style: { fontSize: 16, fontWeight: 600, color: "#fff", marginBottom: 6, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", title: item.name } }, 
                 truncatedName
               ),
-              h("div", { style: { display: "flex", gap: 12, flexWrap: "wrap" } },
-                h("div", { style: { display: "flex", alignItems: "center", gap: 5, fontSize: 11, color: "#636366" } },
-                  h("div", { style: { width: 5, height: 5, borderRadius: 1.5, background: sectorColor } }),
-                  h("span", { style: { whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", maxWidth: 100, title: sector } }, 
-                    truncatedSector
-                  )
+              // Sector and location on same row
+              h("div", { style: { display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" } },
+                h("div", { style: { display: "flex", alignItems: "center", gap: 5, fontSize: 11, color: "#8e8e93" } },
+                  h("div", { style: { width: 6, height: 6, borderRadius: 1.5, background: sectorColor } }),
+                  h("span", { title: sector }, truncatedSector)
                 ),
-                h("div", { style: { display: "flex", alignItems: "center", gap: 5, fontSize: 11, color: "#636366" } },
-                  h("div", { style: { width: 5, height: 5, borderRadius: 1.5, background: locationColor } }),
-                  h("span", { style: { whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", maxWidth: 100, title: location } }, 
-                    truncatedLocation
-                  )
+                h("div", { style: { display: "flex", alignItems: "center", gap: 5, fontSize: 11, color: "#8e8e93" } },
+                  h("div", { style: { width: 6, height: 6, borderRadius: 1.5, background: locationColor } }),
+                  h("span", { title: location }, truncatedLocation)
                 )
               )
             )
           ),
-          // Right side: percentage and value stacked vertically
+          // Right side: percentage and value
           h("div", { style: { textAlign: "right", flexShrink: 0 } },
             h("div", { style: { fontSize: 20, fontWeight: 700, color: "#fff" } }, `${item.pct.toFixed(1)}%`),
-            h("div", { style: { fontSize: 11, color: "#636366", marginTop: 2 } }, `€${fmtEur(item.value)}`)
+            h("div", { style: { fontSize: 11, color: "#636366", marginTop: 2 } }, `${formatNumber(item.value)} €`)
           )
         )
       );
@@ -173,7 +165,7 @@ export function UnderlyingTab({ cardStyle, emptyCard }) {
       h("div", { style: { flex: 2.5 } }, "TOTAL"),
       !isMobile && h("div", { style: { flex: 1 } }, ""),
       !isMobile && h("div", { style: { flex: 1 } }, ""),
-      h("div", { style: { flex: 1, textAlign: "right", fontSize: 14, fontWeight: 700, color: "#fff" } }, `€${fmtEur(totalValue)}`),
+      h("div", { style: { flex: 1, textAlign: "right", fontSize: 14, fontWeight: 700, color: "#fff" } }, `${formatNumber(totalValue)} €`),
       h("div", { style: { flex: 0.8, textAlign: "right", fontSize: 14, fontWeight: 700, color: "#fff" } }, "100%")
     )
   );

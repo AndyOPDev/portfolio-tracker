@@ -4,6 +4,11 @@ import { getTickerColor, getSectorColor, getLocationColor } from '../config.js';
 
 const { createElement: h, useState, useEffect, useRef } = React;
 
+// Helper function for thousands separator
+const formatNumber = (num) => {
+  return Math.round(num).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+};
+
 export function DistributionTab({ enriched, totalValue, cardFlatStyle, emptyCard, underlying }) {
   const isMobile = useIsMobile();
 
@@ -11,8 +16,8 @@ export function DistributionTab({ enriched, totalValue, cardFlatStyle, emptyCard
     return emptyCard("No underlying data available");
   }
 
-  // --- Data by Asset (filter out < 0.5%) ---
-  const assetDataRaw = enriched
+  // --- Data by Asset (NO filter, show all) ---
+  const assetData = enriched
     .filter(p => p.currentValue > 0)
     .map(p => ({
       name: getDisplayName(p.ticker),
@@ -22,9 +27,6 @@ export function DistributionTab({ enriched, totalValue, cardFlatStyle, emptyCard
       currentValue: p.currentValue
     }))
     .sort((a, b) => b.value - a.value);
-  
-  // Filter out assets with less than 0.5%
-  const assetData = assetDataRaw.filter(item => item.value >= 0.5);
 
   // --- Data by Sector (filter out < 0.5%) ---
   const sectorMap = {};
@@ -34,6 +36,7 @@ export function DistributionTab({ enriched, totalValue, cardFlatStyle, emptyCard
     sectorMap[sector] += u.value;
   });
   const totalUnderlyingValue = underlying.reduce((s, u) => s + u.value, 0);
+  
   const sectorDataRaw = Object.entries(sectorMap)
     .map(([name, value]) => ({
       name,
@@ -43,29 +46,48 @@ export function DistributionTab({ enriched, totalValue, cardFlatStyle, emptyCard
     }))
     .sort((a, b) => b.value - a.value);
   
-  // Filter out sectors with less than 0.5%
   const sectorData = sectorDataRaw.filter(item => item.value >= 0.5);
 
-  // --- Data by Location (filter out < 0.5%) ---
+  // --- Data by Location (group < 1% into "Other") ---
   const locMap = {};
   underlying.forEach(u => {
     const loc = u.location || "Other";
     if (!locMap[loc]) locMap[loc] = 0;
     locMap[loc] += u.value;
   });
-  const locationDataRaw = Object.entries(locMap)
-    .map(([name, value]) => ({
-      name,
-      value: parseFloat(((value / totalUnderlyingValue) * 100).toFixed(2)),
-      color: getLocationColor(name),
-      currentValue: value
-    }))
-    .sort((a, b) => b.value - a.value);
   
-  // Filter out locations with less than 0.5%
-  const locationData = locationDataRaw.filter(item => item.value >= 0.5);
+  const LOCATION_THRESHOLD = 1;
+  const mainLocations = [];
+  let otherValue = 0;
+  
+  Object.entries(locMap).forEach(([name, value]) => {
+    const percentage = (value / totalUnderlyingValue) * 100;
+    if (percentage >= LOCATION_THRESHOLD) {
+      mainLocations.push({
+        name,
+        value: parseFloat(percentage.toFixed(2)),
+        color: getLocationColor(name),
+        currentValue: value
+      });
+    } else {
+      otherValue += value;
+    }
+  });
+  
+  mainLocations.sort((a, b) => b.value - a.value);
+  
+  const locationData = [...mainLocations];
+  if (otherValue > 0) {
+    const otherPercentage = (otherValue / totalUnderlyingValue) * 100;
+    locationData.push({
+      name: "Other",
+      value: parseFloat(otherPercentage.toFixed(2)),
+      color: "#636366",
+      currentValue: otherValue
+    });
+  }
 
-  // Bar item component
+  // Bar item component with formatted tooltip
   const BarItem = ({ item, maxValue, idx }) => {
     const [showTooltip, setShowTooltip] = useState(false);
     const [width, setWidth] = useState(0);
@@ -77,6 +99,8 @@ export function DistributionTab({ enriched, totalValue, cardFlatStyle, emptyCard
       }, idx * 50);
       return () => clearTimeout(timer);
     }, [item.value, maxValue, idx]);
+
+    const formattedValue = `€${formatNumber(item.currentValue)}`;
 
     return h("div", {
       style: { 
@@ -104,7 +128,7 @@ export function DistributionTab({ enriched, totalValue, cardFlatStyle, emptyCard
         h("div", { style: { width: 10, height: 10, borderRadius: 2, background: item.color, flexShrink: 0 } }),
         h("span", { 
           style: { color: "#fff", overflow: "hidden", textOverflow: "ellipsis" },
-          title: `${item.name}\n€${fmt(item.currentValue)} (${item.value.toFixed(1)}%)`
+          title: `${item.name}\n€${formatNumber(item.currentValue)} (${item.value.toFixed(1)}%)`
         }, item.name)
       ),
       h("div", { 
@@ -146,7 +170,7 @@ export function DistributionTab({ enriched, totalValue, cardFlatStyle, emptyCard
             pointerEvents: "none",
             border: "1px solid #2C2C2E"
           }
-        }, `€${fmt(item.currentValue)}`)
+        }, formattedValue)
       ),
       h("div", { 
         style: { 
@@ -165,11 +189,14 @@ export function DistributionTab({ enriched, totalValue, cardFlatStyle, emptyCard
   };
 
   // Helper to render bars
-  const renderBars = (data) => {
+  const renderBars = (data, showEmptyMessage = true) => {
     if (!data || data.length === 0) {
-      return h("div", { style: { padding: "20px", textAlign: "center", color: "#636366" } }, 
-        "No data (all items below 0.5%)"
-      );
+      if (showEmptyMessage) {
+        return h("div", { style: { padding: "20px", textAlign: "center", color: "#636366" } }, 
+          "No data (all items below threshold)"
+        );
+      }
+      return null;
     }
     const maxValue = Math.max(...data.map(d => d.value));
 
@@ -179,7 +206,7 @@ export function DistributionTab({ enriched, totalValue, cardFlatStyle, emptyCard
   };
 
   // Block component
-  const DistributionBlock = ({ title, data }) => {
+  const DistributionBlock = ({ title, data, showEmptyMessage = true, note }) => {
     if (!data || data.length === 0) return null;
     
     const containerStyle = isMobile
@@ -201,9 +228,7 @@ export function DistributionTab({ enriched, totalValue, cardFlatStyle, emptyCard
     return h("div", { style: { marginBottom: 48 } },
       h("div", { style: { marginBottom: 20 } },
         h("div", { style: titleStyle }, title),
-        data.length < 5 && h("div", { style: { fontSize: 11, color: "#636366", marginTop: 4, textAlign: "center" } }, 
-          `${data.length} items shown (items below 0.5% hidden)`
-        )
+        note && h("div", { style: { fontSize: 11, color: "#636366", marginTop: 4, textAlign: "center" } }, note)
       ),
       h("div", { style: containerStyle },
         h("div", { style: donutStyle },
@@ -213,15 +238,23 @@ export function DistributionTab({ enriched, totalValue, cardFlatStyle, emptyCard
           })
         ),
         h("div", { style: barsStyle },
-          renderBars(data)
+          renderBars(data, showEmptyMessage)
         )
       )
     );
   };
 
+  const sectorNote = sectorDataRaw.length !== sectorData.length 
+    ? `${sectorDataRaw.length - sectorData.length} sectors below 0.5% hidden`
+    : null;
+  
+  const locationNote = locationData.some(l => l.name === "Other")
+    ? `Locations below 1% grouped as "Other"`
+    : null;
+
   return h("div", { style: cardFlatStyle },
-    h(DistributionBlock, { title: "Asset Allocation", data: assetData }),
-    sectorData.length > 0 && h(DistributionBlock, { title: "Sector Breakdown", data: sectorData }),
-    locationData.length > 0 && h(DistributionBlock, { title: "Geographic Distribution", data: locationData })
+    h(DistributionBlock, { title: "Asset Allocation", data: assetData, showEmptyMessage: false }),
+    sectorData.length > 0 && h(DistributionBlock, { title: "Sector Breakdown", data: sectorData, note: sectorNote }),
+    locationData.length > 0 && h(DistributionBlock, { title: "Geographic Distribution", data: locationData, note: locationNote })
   );
 }

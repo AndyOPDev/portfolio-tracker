@@ -1,7 +1,11 @@
 import { COLORS } from './config.js';
-import { fmt } from './utils.js';
 
 const { createElement: h, useEffect, useRef } = React;
+
+// Helper function to format numbers with thousands separator
+const formatNumber = (num) => {
+  return Math.round(num).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+};
 
 export function DonutChart({ data, colors }) {
   const ref = useRef();
@@ -42,9 +46,9 @@ export function DonutChart({ data, colors }) {
                 const item = data[index];
                 if (!item) return "";
                 const value = tooltipItem.raw;
-                const currentValue = item.currentValue;
+                const formattedValue = formatNumber(item.currentValue);
                 return [
-                  `€${fmt(currentValue)}`,
+                  `€${formattedValue}`,
                   `${value.toFixed(1)}%`
                 ];
               }
