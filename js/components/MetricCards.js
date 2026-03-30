@@ -1,14 +1,9 @@
-import { fmt, pct } from '../utils.js';
+import { fmt, pct, formatNumber } from '../utils.js';
 
 const { createElement: h } = React;
 
-export function MetricCards({ totalValue, totalPL, totalPLPct, lastGitHubUpdate }) {
+export function MetricCards({ totalValue, totalPL, totalPLPct, hasLivePrices }) {
   const isPositive = totalPL >= 0;
-
-  // Format timestamp
-  const formattedTime = lastGitHubUpdate 
-    ? new Date(lastGitHubUpdate).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })
-    : "";
 
   return h("div", {
     style: {
@@ -28,26 +23,28 @@ export function MetricCards({ totalValue, totalPL, totalPLPct, lastGitHubUpdate 
         position: "relative"
       }
     },
-      // Timestamp in top-right corner
-      formattedTime && h("div", { 
+      // Live prices indicator in top-left corner
+      hasLivePrices && h("div", { 
         style: { 
           position: "absolute", 
           top: 12, 
-          right: 16, 
+          left: 16, 
           fontSize: 10, 
-          color: "#636366",
-          fontFamily: "monospace"
+          color: "#30D158",
+          display: "flex",
+          alignItems: "center",
+          gap: 4
         } 
       }, 
-        `Updated ${formattedTime}`
+        h("span", { style: { fontSize: 8, color: "#30D158" } }, "●"),
+        "Live prices"
       ),
       
       h("div", { style: { fontSize: 12, color: "#636366", marginBottom: 4 } }, "Total Worth"),
       h("div", { style: { fontSize: 36, fontWeight: 700, color: "#fff", letterSpacing: -0.5 } }, 
-        `${fmt(totalValue)} €`
+        `${formatNumber(totalValue)} €`
       ),
       
-      // P&L row
       h("div", { 
         style: { 
           display: "flex", 
@@ -64,12 +61,12 @@ export function MetricCards({ totalValue, totalPL, totalPLPct, lastGitHubUpdate 
             color: isPositive ? "#30D158" : "#FF375F"
           } 
         }, 
-          `${totalPL >= 0 ? "+" : "-"}${fmt(Math.abs(totalPL))}`
+          `${totalPL >= 0 ? "+" : "-"}${formatNumber(Math.abs(totalPL))} €`
         ),
         h("span", { 
           style: { 
             background: isPositive ? "rgba(48, 209, 88, 0.15)" : "rgba(255, 55, 95, 0.15)",
-            borderRadius: 6,
+            borderRadius: 8,
             padding: "4px 10px",
             fontSize: 14,
             fontWeight: 600,

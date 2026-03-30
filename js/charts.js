@@ -33,6 +33,12 @@ export function DonutChart({ data, colors }) {
         responsive: true,
         maintainAspectRatio: true,
         cutout: "60%",
+        animation: {
+          animateScale: true,
+          animateRotate: true,
+          duration: 1000,
+          easing: 'easeOutCubic'
+        },
         plugins: {
           legend: { display: false },
           tooltip: { 
@@ -48,7 +54,7 @@ export function DonutChart({ data, colors }) {
                 const value = tooltipItem.raw;
                 const formattedValue = formatNumber(item.currentValue);
                 return [
-                  `€${formattedValue}`,
+                  `${formattedValue} €`,
                   `${value.toFixed(1)}%`
                 ];
               }
@@ -100,6 +106,10 @@ export function HorizontalBarChart({ data, colors }) {
         indexAxis: 'y',
         responsive: true,
         maintainAspectRatio: false,
+        animation: {
+          duration: 800,
+          easing: 'easeOutCubic'
+        },
         plugins: {
           legend: { display: false },
           tooltip: { 

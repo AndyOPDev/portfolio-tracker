@@ -1,6 +1,6 @@
 // App.js
-import { PRICES_URL, MOVEMENTS_URL, UNDERLYING_URL, COLORS } from '../config.js';
-import { getDisplayName, fmt, pct } from '../utils.js';
+import { PRICES_URL, MOVEMENTS_URL, UNDERLYING_URL, WORKER_URL, COLORS } from '../config.js';
+import { getDisplayName, fmt, pct, formatNumber } from '../utils.js';
 import { calcPositions } from '../calculations.js';
 import { Header } from './Header.js';
 import { MetricCards } from './MetricCards.js';
@@ -19,12 +19,88 @@ export function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [lastGitHubUpdate, setLastGitHubUpdate] = useState(null);
-  const [hasNewData, setHasNewData] = useState(false);
+  
+  // Precios en vivo
+  const [livePrices, setLivePrices] = useState({});
+  const [livePricesLoading, setLivePricesLoading] = useState(false);
+  const [livePricesError, setLivePricesError] = useState(false);
+  const [hasLivePrices, setHasLivePrices] = useState(false);
+  const [lastLiveUpdate, setLastLiveUpdate] = useState(null);
+
+  // Obtener precios en vivo con caché en app (60 segundos)
+  const fetchLivePrices = useCallback(async () => {
+    const now = Date.now();
+    const timeSinceLastUpdate = lastLiveUpdate ? (now - lastLiveUpdate) / 1000 : null;
+    
+    console.log("🔍 [CACHE CHECK] lastLiveUpdate:", lastLiveUpdate);
+    console.log("🔍 [CACHE CHECK] time since last update:", timeSinceLastUpdate, "seconds");
+    
+    // Si ya tenemos precios y han pasado menos de 60 segundos, no llamar al worker
+    if (lastLiveUpdate && timeSinceLastUpdate < 60) {
+      console.log("📡 [CACHE HIT] Using cached live prices (", timeSinceLastUpdate.toFixed(1), "seconds old)");
+      return;
+    }
+    
+    console.log("🔄 [CACHE MISS] Fetching fresh live prices from worker...");
+    setLivePricesLoading(true);
+    setLivePricesError(false);
+    
+    const tickers = ['XNAS', 'VVSM', 'BTC']; // EMRG no se pide (usa fallback diario)
+    const results = {};
+    let hasError = false;
+    
+    for (let i = 0; i < tickers.length; i++) {
+      const ticker = tickers[i];
+      try {
+        // Delay de 1 segundo entre cada petición para evitar rate limit
+        if (i > 0) {
+          console.log(`⏱️ Waiting 1 second before fetching ${ticker}...`);
+          await new Promise(resolve => setTimeout(resolve, 1000));
+        }
+        
+        console.log(`📡 Fetching ${ticker} from worker...`);
+        const response = await fetch(`${WORKER_URL}/price?ticker=${ticker}`);
+        if (response.ok) {
+          const data = await response.json();
+          if (data.price) {
+            results[ticker] = {
+              price: data.price,
+              change: data.change,
+              changePercent: data.changePercent,
+              live: true
+            };
+            console.log(`✅ ${ticker}: €${data.price}`);
+          } else {
+            console.warn(`⚠️ ${ticker}: No price in response`);
+            hasError = true;
+          }
+        } else {
+          console.warn(`⚠️ ${ticker}: HTTP ${response.status}`);
+          hasError = true;
+        }
+      } catch (error) {
+        console.error(`❌ Error fetching ${ticker}:`, error.message);
+        hasError = true;
+      }
+    }
+    
+    if (Object.keys(results).length > 0) {
+      setLivePrices(results);
+      setHasLivePrices(true);
+      setLastLiveUpdate(Date.now());
+      console.log("💾 [CACHE SAVE] Saved live prices, next update available after 60 seconds");
+    }
+    if (hasError) {
+      setLivePricesError(true);
+    }
+    setLivePricesLoading(false);
+  }, [lastLiveUpdate]);
 
   const fetchAll = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
+      console.log("📡 Fetching static data from GitHub...");
       const [pricesRes, movsRes, undRes] = await Promise.all([
         fetch(PRICES_URL),
         fetch(MOVEMENTS_URL),
@@ -35,17 +111,8 @@ export function App() {
       if (!movsRes.ok) throw new Error(`Movements HTTP ${movsRes.status}`);
       if (!undRes.ok) throw new Error(`Underlying HTTP ${undRes.status}`);
 
-      // Get last-modified from GitHub
       const lastModified = pricesRes.headers.get('last-modified');
       const gitHubDate = lastModified ? new Date(lastModified) : null;
-      
-      // Check if there's new data compared to last load
-      if (lastGitHubUpdate && gitHubDate && gitHubDate > lastGitHubUpdate) {
-        setHasNewData(true);
-      } else {
-        setHasNewData(false);
-      }
-      
       setLastGitHubUpdate(gitHubDate);
 
       const pricesData = await pricesRes.json();
@@ -63,26 +130,34 @@ export function App() {
       setPositions(calcPositions(movsData.movements || []));
       setUnderlying(underlyingData.underlying || []);
 
-      console.log(`✅ Data loaded: ${Object.keys(priceMap).length} prices, ${(movsData.movements || []).length} movements, ${(underlyingData.underlying || []).length} underlying items`);
+      console.log(`✅ Data loaded: ${Object.keys(priceMap).length} prices, ${(movsData.movements || []).length} movements`);
     } catch (e) {
       console.error("Error fetching data:", e);
       setError(e.message);
     }
     setLoading(false);
-  }, [lastGitHubUpdate]);
+  }, []);
 
-  // Refresh function that resets the "new data" indicator
-  const handleRefresh = useCallback(() => {
-    setHasNewData(false);
+  useEffect(() => {
     fetchAll();
-  }, [fetchAll]);
+    fetchLivePrices();
+  }, []);
 
-  useEffect(() => { fetchAll(); }, []);
-
-  // --- Enrich positions with price and color ---
+  // Enriquecer posiciones con precio (prioridad: live > static)
   const enriched = positions.map(p => {
-    const info = prices[p.originalTicker?.trim().toUpperCase()] || {};
-    const currentPrice = info.precio || 0;
+    const livePrice = livePrices[p.ticker];
+    const staticPrice = prices[p.originalTicker?.trim().toUpperCase()] || {};
+    
+    // EMRG siempre usa precio estático (fondo)
+    let currentPrice, isLive;
+    if (p.ticker === 'EMRG') {
+      currentPrice = staticPrice.precio || 0;
+      isLive = false;
+    } else {
+      currentPrice = livePrice?.price || staticPrice.precio || 0;
+      isLive = !!livePrice?.price;
+    }
+    
     const currentValue = currentPrice * p.units;
     const pl = currentValue - p.totalInvested;
 
@@ -92,7 +167,8 @@ export function App() {
       currentValue,
       pl,
       plPct: p.totalInvested > 0 ? (pl / p.totalInvested) * 100 : 0,
-      color: getTickerColor(p.ticker)
+      color: getTickerColor(p.ticker),
+      isLive
     };
   });
 
@@ -107,35 +183,30 @@ export function App() {
 
   const tabs = ["Dashboard", "Distribution", "Underlying"];
 
-  // Shared styles
   const cardStyle = { background: "#1C1C1E", borderRadius: 16, padding: "4px 16px", marginBottom: 12 };
   const cardFlatStyle = { background: "#1C1C1E", borderRadius: 16, padding: 16, marginBottom: 12 };
   const rowStyle = (border) => ({ display: "flex", alignItems: "center", padding: "13px 0", borderBottom: border ? "0.5px solid #2C2C2E" : "none" });
   const emptyCard = (msg) => h("div", { style: { ...cardFlatStyle, textAlign: "center", padding: "40px 20px", color: "#636366", fontSize: 15 } }, msg);
-  const segBtn = (active) => ({ flex: 1, padding: "8px 4px", border: "none", borderRadius: 10, fontSize: 13, fontWeight: active ? 600 : 400, background: active ? "#2C2C2E" : "transparent", color: active ? "#fff" : "#636366", boxShadow: active ? "0 1px 4px rgba(0,0,0,0.5)" : "none" });
+  const segBtn = (active) => ({ flex: 1, padding: "8px 4px", border: "none", borderRadius: 10, fontSize: 13, fontWeight: active ? 600 : 400, background: active ? "#2C2C2E" : "transparent", color: active ? "#fff" : "#636366", boxShadow: active ? "0 1px 4px rgba(0,0,0,0.5)" : "none", transition: "all 0.2s ease-in-out", cursor: "pointer" });
 
   return h("div", { style: { minHeight: "100vh", paddingBottom: 40 } },
     h(Header, { 
-      lastGitHubUpdate,
-      loading, 
-      error, 
-      onRefresh: handleRefresh,
-      hasNewData
+      livePricesLoading,
+      livePricesError
     }),
     error && h("div", { style: { margin: "0 16px 12px", background: "#2C1A1A", borderRadius: 12, padding: "12px 14px", fontSize: 13, color: "#FF375F" } }, error),
     h(MetricCards, { 
-  totalValue, 
-  totalPL, 
-  totalPLPct, 
-  lastGitHubUpdate 
-}),
+      totalValue, 
+      totalPL, 
+      totalPLPct, 
+      hasLivePrices
+    }),
     h("div", { style: { display: "flex", background: "#1C1C1E", borderRadius: 12, padding: 3, margin: "0 16px 16px" } },
       tabs.map(t => h("button", { key: t, onClick: () => setTab(t), style: segBtn(tab === t) }, t))
     ),
     h("div", { style: { padding: "0 16px" } },
       tab === "Dashboard" && h(DashboardTab, { enriched, cardStyle, rowStyle, emptyCard }),
       tab === "Distribution" && h(DistributionTab, { enriched, totalValue, cardFlatStyle, emptyCard, underlying }),
-
       tab === "Underlying" && h(UnderlyingTab, { cardStyle, emptyCard })
     )
   );

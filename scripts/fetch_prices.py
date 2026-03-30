@@ -10,7 +10,7 @@ from datetime import datetime
 # ============================================
 # Mapeo de tickers de Google Sheets a tickers de Yahoo Finance
 TICKER_MAP = {
-    "XNAS": "XNAS.DE",
+    "XNAS": "XNAS.DU",
     "VVSM": "VVSM.DU",
     "IE00BYWYCC39": "IE00BYWYCC39",  # No funciona en yfinance
     "BTC": "BTC-EUR",

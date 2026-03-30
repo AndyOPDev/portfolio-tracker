@@ -65,11 +65,14 @@ export function DashboardTab({ enriched, cardStyle, emptyCard }) {
           h("div", { style: { flex: 0.8, textAlign: "right", fontSize: 12 } }, formatUnits(p.ticker, p.units)),
           h("div", { style: { flex: 0.8, textAlign: "right", fontSize: 12 } }, `${fmt(p.avgPrice)} €`),
           h("div", { style: { flex: 0.8, textAlign: "right", fontSize: 12, fontWeight: 500 } }, `${fmt(p.currentPrice)} €`),
-          h("div", { style: { flex: 0.8, textAlign: "right", fontSize: 13, fontWeight: 500 } }, `${formatNumber(p.currentValue)} €`),
+          // Value with live price indicator
+          h("div", { style: { flex: 0.8, textAlign: "right", fontSize: 13, fontWeight: 500 } }, 
+            `${formatNumber(p.currentValue)} €`
+          ),
           h("div", { style: { flex: 0.7, textAlign: "right", fontSize: 13, fontWeight: 500, color: isPositive ? "#30D158" : "#FF375F" } },
             `${isPositive ? "+" : "-"}${formatNumber(plAmountAbs)} €`
           ),
-          // P&L % with subtle card style - borderRadius 8 (less rounded)
+          // P&L % with subtle card style
           h("div", { style: { flex: 0.7, textAlign: "right" } },
             h("span", { 
               style: { 
@@ -109,7 +112,12 @@ export function DashboardTab({ enriched, cardStyle, emptyCard }) {
             )
           ),
           h("div", { style: { textAlign: "right", flexShrink: 0 } },
-            h("div", { style: { fontSize: 18, fontWeight: 700, color: "#fff" } }, `${formatNumber(p.currentValue)} €`),
+            h("div", { style: { fontSize: 18, fontWeight: 700, color: "#fff" } }, 
+              `${formatNumber(p.currentValue)} €`,
+              p.isLive && h("span", { 
+                style: { fontSize: 10, color: "#30D158", marginLeft: 4, verticalAlign: "super" } 
+              }, "●")
+            ),
             h("div", { style: { display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 6, marginTop: 4 } },
               h("span", { style: { fontSize: 13, fontWeight: 600, color: isPositive ? "#30D158" : "#FF375F" } },
                 `${isPositive ? "+" : "-"}${formatNumber(plAmountAbs)} €`
