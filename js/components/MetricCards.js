@@ -2,41 +2,82 @@ import { fmt, pct } from '../utils.js';
 
 const { createElement: h } = React;
 
-export function MetricCards({ totalValue, totalInvested, totalPL, totalPLPct }) {
-  const cards = [
-    { label: "Total Value", value: "€" + fmt(totalValue), color: "#fff" },
-    { label: "Invested", value: "€" + fmt(totalInvested), color: "#fff" },
-    { label: "P&L (€)", value: (totalPL >= 0 ? "+" : "") + "€" + fmt(Math.abs(totalPL)), color: totalPL >= 0 ? "#30D158" : "#FF375F" },
-    { label: "P&L (%)", value: pct(totalPLPct), color: totalPLPct >= 0 ? "#30D158" : "#FF375F" }
-  ];
+export function MetricCards({ totalValue, totalPL, totalPLPct, lastGitHubUpdate }) {
+  const isPositive = totalPL >= 0;
 
-  const isMobile = window.innerWidth < 640;
+  // Format timestamp
+  const formattedTime = lastGitHubUpdate 
+    ? new Date(lastGitHubUpdate).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })
+    : "";
 
   return h("div", {
     style: {
-      display: "grid",
-      gridTemplateColumns: isMobile ? "repeat(2, 1fr)" : "repeat(4, 1fr)",
-      gap: 10,
       padding: "0 16px 16px"
     }
   },
-    cards.map(({ label, value, color }) =>
-      h("div", {
-        key: label,
-        style: {
-          background: "#1C1C1E",
-          borderRadius: 16,
-          padding: "14px 12px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          textAlign: "center",
-          minHeight: 80
-        }
+    h("div", {
+      style: {
+        background: "#1C1C1E",
+        borderRadius: 16,
+        padding: "20px 16px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
+        position: "relative"
+      }
+    },
+      // Timestamp in top-right corner
+      formattedTime && h("div", { 
+        style: { 
+          position: "absolute", 
+          top: 12, 
+          right: 16, 
+          fontSize: 10, 
+          color: "#636366",
+          fontFamily: "monospace"
+        } 
+      }, 
+        `Updated ${formattedTime}`
+      ),
+      
+      h("div", { style: { fontSize: 12, color: "#636366", marginBottom: 4 } }, "Total Worth"),
+      h("div", { style: { fontSize: 36, fontWeight: 700, color: "#fff", letterSpacing: -0.5 } }, 
+        `${fmt(totalValue)} €`
+      ),
+      
+      // P&L row
+      h("div", { 
+        style: { 
+          display: "flex", 
+          alignItems: "center", 
+          justifyContent: "center", 
+          gap: 12, 
+          marginTop: 12 
+        } 
       },
-        h("div", { style: { fontSize: 12, color: "#636366", marginBottom: 4 } }, label),
-        h("div", { style: { fontSize: 20, fontWeight: 700, color } }, value)
+        h("span", { 
+          style: { 
+            fontSize: 18, 
+            fontWeight: 700, 
+            color: isPositive ? "#30D158" : "#FF375F"
+          } 
+        }, 
+          `${totalPL >= 0 ? "+" : "-"}${fmt(Math.abs(totalPL))}`
+        ),
+        h("span", { 
+          style: { 
+            background: isPositive ? "rgba(48, 209, 88, 0.15)" : "rgba(255, 55, 95, 0.15)",
+            borderRadius: 6,
+            padding: "4px 10px",
+            fontSize: 14,
+            fontWeight: 600,
+            color: isPositive ? "#30D158" : "#FF375F"
+          } 
+        }, 
+          pct(totalPLPct)
+        )
       )
     )
   );

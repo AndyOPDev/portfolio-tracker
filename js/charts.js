@@ -2,7 +2,7 @@ import { COLORS } from './config.js';
 
 const { createElement: h, useEffect, useRef } = React;
 
-export function DonutChart({ data, colors }) {
+export function DonutChart({ data, colors, showLabels = false }) {
   const ref = useRef();
   const chart = useRef();
   
@@ -19,24 +19,33 @@ export function DonutChart({ data, colors }) {
         datasets: [{ 
           data: data.map(d => d.value), 
           backgroundColor: chartColors,
-          borderWidth: 0, 
-          hoverOffset: 4 
+          borderWidth: 2,
+          borderColor: "#000",
+          hoverOffset: 8,
+          cutout: "60%"
         }]
       },
       options: {
         responsive: true,
-        maintainAspectRatio: false,
-        cutout: "65%",
+        maintainAspectRatio: true,
         plugins: {
           legend: { display: false },
-          tooltip: { callbacks: { label: c => c.label + ": " + c.parsed.toFixed(1) + "%" } }
+          tooltip: { 
+            callbacks: { 
+              label: (context) => {
+                const label = context.label || '';
+                const value = context.parsed;
+                return `${label}: ${value.toFixed(1)}%`;
+              }
+            }
+          }
         }
       }
     });
     return () => { if (chart.current) chart.current.destroy(); };
-  }, [data, colors]);
+  }, [data, colors, showLabels]);
   
-  return h("canvas", { ref, style: { maxHeight: 200 } });
+  return h("canvas", { ref, style: { width: "100%", height: "100%" } });
 }
 
 export function HorizontalBarChart({ data, colors }) {
@@ -49,9 +58,12 @@ export function HorizontalBarChart({ data, colors }) {
     
     // Sort data from highest to lowest percentage
     const sortedData = [...data].sort((a, b) => b.value - a.value);
-    const sortedColors = colors ? [...colors].sort((_, i, arr) => 
-      sortedData.map(d => data.findIndex(item => item.name === d.name)).indexOf(i)
-    ) : sortedData.map((_, i) => COLORS[i % COLORS.length]);
+    const sortedColors = colors ? 
+      sortedData.map((item, idx) => {
+        const originalIndex = data.findIndex(d => d.name === item.name);
+        return colors[originalIndex];
+      }) : 
+      sortedData.map((_, i) => COLORS[i % COLORS.length]);
     
     chart.current = new Chart(ref.current, {
       type: "bar",
@@ -115,7 +127,5 @@ export function HorizontalBarChart({ data, colors }) {
   
   const chartHeight = Math.max(300, data.length * 38);
   
-  return h("div", { style: { position: "relative", width: "100%" } },
-    h("canvas", { ref, style: { height: chartHeight, width: "100%" } })
-  );
+  return h("canvas", { ref, style: { height: chartHeight, width: "100%" } });
 }

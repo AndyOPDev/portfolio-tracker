@@ -1,14 +1,13 @@
 // App.js
-import { PRICES_URL, MOVEMENTS_URL,UNDERLYING_URL, COLORS } from '../config.js';
+import { PRICES_URL, MOVEMENTS_URL, UNDERLYING_URL, COLORS } from '../config.js';
 import { getDisplayName, fmt, pct } from '../utils.js';
 import { calcPositions } from '../calculations.js';
 import { Header } from './Header.js';
 import { MetricCards } from './MetricCards.js';
 import { DashboardTab } from './DashboardTab.js';
 import { DistributionTab } from './DistributionTab.js';
-import { PositionsTab } from './PositionsTab.js';
-import { getTickerColor } from '../config.js';
 import { UnderlyingTab } from './UnderlyingTab.js';
+import { getTickerColor } from '../config.js';
 
 const { createElement: h, useState, useEffect, useCallback } = React;
 
@@ -19,7 +18,8 @@ export function App() {
   const [underlying, setUnderlying] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [lastUpdate, setLastUpdate] = useState(null);
+  const [lastGitHubUpdate, setLastGitHubUpdate] = useState(null);
+  const [hasNewData, setHasNewData] = useState(false);
 
   const fetchAll = useCallback(async () => {
     setLoading(true);
@@ -35,6 +35,19 @@ export function App() {
       if (!movsRes.ok) throw new Error(`Movements HTTP ${movsRes.status}`);
       if (!undRes.ok) throw new Error(`Underlying HTTP ${undRes.status}`);
 
+      // Get last-modified from GitHub
+      const lastModified = pricesRes.headers.get('last-modified');
+      const gitHubDate = lastModified ? new Date(lastModified) : null;
+      
+      // Check if there's new data compared to last load
+      if (lastGitHubUpdate && gitHubDate && gitHubDate > lastGitHubUpdate) {
+        setHasNewData(true);
+      } else {
+        setHasNewData(false);
+      }
+      
+      setLastGitHubUpdate(gitHubDate);
+
       const pricesData = await pricesRes.json();
       const movsData = await movsRes.json();
       const underlyingData = await undRes.json();
@@ -49,7 +62,6 @@ export function App() {
       setPrices(priceMap);
       setPositions(calcPositions(movsData.movements || []));
       setUnderlying(underlyingData.underlying || []);
-      setLastUpdate(new Date());
 
       console.log(`✅ Data loaded: ${Object.keys(priceMap).length} prices, ${(movsData.movements || []).length} movements, ${(underlyingData.underlying || []).length} underlying items`);
     } catch (e) {
@@ -57,11 +69,17 @@ export function App() {
       setError(e.message);
     }
     setLoading(false);
-  }, []);
+  }, [lastGitHubUpdate]);
 
-  useEffect(() => { fetchAll(); }, [fetchAll]);
+  // Refresh function that resets the "new data" indicator
+  const handleRefresh = useCallback(() => {
+    setHasNewData(false);
+    fetchAll();
+  }, [fetchAll]);
 
-  // --- Enriquecer posiciones con precio y color ---
+  useEffect(() => { fetchAll(); }, []);
+
+  // --- Enrich positions with price and color ---
   const enriched = positions.map(p => {
     const info = prices[p.originalTicker?.trim().toUpperCase()] || {};
     const currentPrice = info.precio || 0;
@@ -74,8 +92,7 @@ export function App() {
       currentValue,
       pl,
       plPct: p.totalInvested > 0 ? (pl / p.totalInvested) * 100 : 0,
-      color: getTickerColor(p.ticker),
-      lastUpdate
+      color: getTickerColor(p.ticker)
     };
   });
 
@@ -88,7 +105,7 @@ export function App() {
     .filter(p => p.currentValue > 0)
     .map(p => ({ name: getDisplayName(p.ticker), value: parseFloat(((p.currentValue / totalValue) * 100).toFixed(2)) }));
 
-  const tabs = ["Dashboard", "Positions", "Distribution", "Underlying"];
+  const tabs = ["Dashboard", "Distribution", "Underlying"];
 
   // Shared styles
   const cardStyle = { background: "#1C1C1E", borderRadius: 16, padding: "4px 16px", marginBottom: 12 };
@@ -98,16 +115,27 @@ export function App() {
   const segBtn = (active) => ({ flex: 1, padding: "8px 4px", border: "none", borderRadius: 10, fontSize: 13, fontWeight: active ? 600 : 400, background: active ? "#2C2C2E" : "transparent", color: active ? "#fff" : "#636366", boxShadow: active ? "0 1px 4px rgba(0,0,0,0.5)" : "none" });
 
   return h("div", { style: { minHeight: "100vh", paddingBottom: 40 } },
-    h(Header, { lastUpdate, loading, error, onRefresh: fetchAll }),
+    h(Header, { 
+      lastGitHubUpdate,
+      loading, 
+      error, 
+      onRefresh: handleRefresh,
+      hasNewData
+    }),
     error && h("div", { style: { margin: "0 16px 12px", background: "#2C1A1A", borderRadius: 12, padding: "12px 14px", fontSize: 13, color: "#FF375F" } }, error),
-    h(MetricCards, { totalValue, totalInvested, totalPL, totalPLPct, positionsCount: positions.length, pricesCount: Object.keys(prices).length }),
+    h(MetricCards, { 
+  totalValue, 
+  totalPL, 
+  totalPLPct, 
+  lastGitHubUpdate 
+}),
     h("div", { style: { display: "flex", background: "#1C1C1E", borderRadius: 12, padding: 3, margin: "0 16px 16px" } },
       tabs.map(t => h("button", { key: t, onClick: () => setTab(t), style: segBtn(tab === t) }, t))
     ),
     h("div", { style: { padding: "0 16px" } },
       tab === "Dashboard" && h(DashboardTab, { enriched, cardStyle, rowStyle, emptyCard }),
       tab === "Distribution" && h(DistributionTab, { enriched, totalValue, cardFlatStyle, emptyCard, underlying }),
-      tab === "Positions" && h(PositionsTab, { enriched, totalValue, cardStyle, emptyCard }),
+
       tab === "Underlying" && h(UnderlyingTab, { cardStyle, emptyCard })
     )
   );
