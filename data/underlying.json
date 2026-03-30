@@ -3,23 +3,23 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "value": 3130.3,
-      "pct": 15.64,
+      "value": 3116.98,
+      "pct": 15.76,
       "sector": "Crypto",
       "location": "Global"
     },
     {
       "ticker": "NVDA",
       "name": "NVIDIA CORP",
-      "value": 1208.76,
-      "pct": 6.04,
+      "value": 1190.9,
+      "pct": 6.02,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "AAPL",
       "name": "APPLE INC",
-      "value": 975.65,
+      "value": 964.2,
       "pct": 4.88,
       "sector": "Information Technology",
       "location": "United States"
@@ -27,7 +27,7 @@
     {
       "ticker": "MSFT",
       "name": "MICROSOFT CORP",
-      "value": 714.54,
+      "value": 706.16,
       "pct": 3.57,
       "sector": "Information Technology",
       "location": "United States"
@@ -35,7 +35,7 @@
     {
       "ticker": "AMZN",
       "name": "AMAZON COM INC",
-      "value": 585.9,
+      "value": 579.02,
       "pct": 2.93,
       "sector": "Consumer Discretionary",
       "location": "United States"
@@ -43,23 +43,23 @@
     {
       "ticker": "TSM",
       "name": "TAIWAN SEMICONDUCTOR MANUFACTURING",
-      "value": 512.74,
-      "pct": 2.56,
+      "value": 505.23,
+      "pct": 2.55,
       "sector": "Information Technology",
       "location": "Taiwan"
     },
     {
       "ticker": "AVGO",
       "name": "BROADCOM INC",
-      "value": 499.22,
-      "pct": 2.49,
+      "value": 489.78,
+      "pct": 2.48,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "TSLA",
       "name": "TESLA INC",
-      "value": 487.82,
+      "value": 482.1,
       "pct": 2.44,
       "sector": "Consumer Discretionary",
       "location": "United States"
@@ -67,7 +67,7 @@
     {
       "ticker": "WMT",
       "name": "WALMART INC",
-      "value": 433.06,
+      "value": 427.97,
       "pct": 2.16,
       "sector": "Consumer Staples",
       "location": "United States"
@@ -75,15 +75,15 @@
     {
       "ticker": "GOOGL",
       "name": "ALPHABET INC CLASS A",
-      "value": 429.23,
-      "pct": 2.15,
+      "value": 424.2,
+      "pct": 2.14,
       "sector": "Communication",
       "location": "United States"
     },
     {
       "ticker": "META",
       "name": "META PLATFORMS INC CLASS A",
-      "value": 424.14,
+      "value": 419.16,
       "pct": 2.12,
       "sector": "Communication",
       "location": "United States"
@@ -91,31 +91,31 @@
     {
       "ticker": "GOOG",
       "name": "ALPHABET INC CLASS C",
-      "value": 401.21,
-      "pct": 2.01,
+      "value": 396.5,
+      "pct": 2.0,
       "sector": "Communication",
       "location": "United States"
     },
     {
       "ticker": "MU",
       "name": "MICRON TECHNOLOGY INC",
-      "value": 397.0,
-      "pct": 1.98,
+      "value": 388.96,
+      "pct": 1.97,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "AMD",
       "name": "ADVANCED MICRO DEVICES INC",
-      "value": 337.39,
-      "pct": 1.69,
+      "value": 330.37,
+      "pct": 1.67,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "COST",
       "name": "COSTCO WHOLESALE CORP",
-      "value": 315.88,
+      "value": 312.17,
       "pct": 1.58,
       "sector": "Consumer Staples",
       "location": "United States"
@@ -123,7 +123,7 @@
     {
       "ticker": "NFLX",
       "name": "NETFLIX INC",
-      "value": 285.31,
+      "value": 281.96,
       "pct": 1.43,
       "sector": "Communication",
       "location": "United States"
@@ -131,23 +131,23 @@
     {
       "ticker": "AMAT",
       "name": "APPLIED MATERIAL INC",
-      "value": 272.52,
-      "pct": 1.36,
+      "value": 266.86,
+      "pct": 1.35,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "LRCX",
       "name": "LAM RESEARCH CORP",
-      "value": 266.66,
-      "pct": 1.33,
+      "value": 261.14,
+      "pct": 1.32,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "PLTR",
       "name": "PALANTIR TECHNOLOGIES INC CLASS A",
-      "value": 245.82,
+      "value": 242.94,
       "pct": 1.23,
       "sector": "Information Technology",
       "location": "United States"
@@ -155,7 +155,7 @@
     {
       "ticker": "CSCO",
       "name": "CISCO SYSTEMS INC",
-      "value": 235.63,
+      "value": 232.87,
       "pct": 1.18,
       "sector": "Information Technology",
       "location": "United States"
@@ -163,23 +163,23 @@
     {
       "ticker": "INTC",
       "name": "INTEL CORPORATION CORP",
-      "value": 221.38,
-      "pct": 1.11,
+      "value": 216.85,
+      "pct": 1.1,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "ASML",
       "name": "ASML HOLDING ADR REPRESENTING NV",
-      "value": 204.9,
-      "pct": 1.02,
+      "value": 198.67,
+      "pct": 1.0,
       "sector": "Information Technology",
       "location": "Europe"
     },
     {
       "ticker": "KLAC",
       "name": "KLA CORP",
-      "value": 186.97,
+      "value": 183.21,
       "pct": 0.93,
       "sector": "Information Technology",
       "location": "United States"
@@ -187,15 +187,15 @@
     {
       "ticker": "TXN",
       "name": "TEXAS INSTRUMENT INC",
-      "value": 177.62,
-      "pct": 0.89,
+      "value": 173.94,
+      "pct": 0.88,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "TMUS",
       "name": "T MOBILE US INC",
-      "value": 168.13,
+      "value": 166.15,
       "pct": 0.84,
       "sector": "Communication",
       "location": "United States"
@@ -203,7 +203,7 @@
     {
       "ticker": "LIN",
       "name": "LINDE PLC",
-      "value": 166.85,
+      "value": 164.9,
       "pct": 0.83,
       "sector": "Materials",
       "location": "United States"
@@ -211,23 +211,23 @@
     {
       "ticker": "SMSN",
       "name": "SAMSUNG ELECTRONICS LTD",
-      "value": 158.2,
-      "pct": 0.79,
+      "value": 157.25,
+      "pct": 0.8,
       "sector": "Information Technology",
       "location": "Korea"
     },
     {
       "ticker": "ADI",
       "name": "ANALOG DEVICES INC",
-      "value": 154.36,
-      "pct": 0.77,
+      "value": 151.17,
+      "pct": 0.76,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "PEP",
       "name": "PEPSICO INC",
-      "value": 149.02,
+      "value": 147.27,
       "pct": 0.74,
       "sector": "Consumer Staples",
       "location": "United States"
@@ -235,7 +235,7 @@
     {
       "ticker": "AMGN",
       "name": "AMGEN INC",
-      "value": 137.56,
+      "value": 135.94,
       "pct": 0.69,
       "sector": "Health Care",
       "location": "United States"
@@ -243,15 +243,15 @@
     {
       "ticker": "QCOM",
       "name": "QUALCOMM INC",
-      "value": 137.11,
-      "pct": 0.69,
+      "value": 134.35,
+      "pct": 0.68,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "GILD",
       "name": "GILEAD SCIENCES INC",
-      "value": 123.55,
+      "value": 122.1,
       "pct": 0.62,
       "sector": "Health Care",
       "location": "United States"
@@ -259,7 +259,7 @@
     {
       "ticker": "ISRG",
       "name": "INTUITIVE SURGICAL INC",
-      "value": 121.0,
+      "value": 119.58,
       "pct": 0.6,
       "sector": "Health Care",
       "location": "United States"
@@ -267,15 +267,15 @@
     {
       "ticker": "TENCENT",
       "name": "TENCENT HOLDINGS LTD",
-      "value": 112.54,
-      "pct": 0.56,
+      "value": 111.86,
+      "pct": 0.57,
       "sector": "Communication",
       "location": "China"
     },
     {
       "ticker": "HON",
       "name": "HONEYWELL INTERNATIONAL INC",
-      "value": 104.44,
+      "value": 103.22,
       "pct": 0.52,
       "sector": "Industrials",
       "location": "United States"
@@ -283,7 +283,7 @@
     {
       "ticker": "SHOP",
       "name": "SHOPIFY SUBORDINATE VOTING INC CLA",
-      "value": 103.17,
+      "value": 101.96,
       "pct": 0.52,
       "sector": "Information Technology",
       "location": "Canada"
@@ -291,7 +291,7 @@
     {
       "ticker": "BKNG",
       "name": "BOOKING HOLDINGS INC",
-      "value": 96.8,
+      "value": 95.66,
       "pct": 0.48,
       "sector": "Consumer Discretionary",
       "location": "United States"
@@ -299,7 +299,7 @@
     {
       "ticker": "HYNIX",
       "name": "SK HYNIX INC",
-      "value": 93.39,
+      "value": 92.83,
       "pct": 0.47,
       "sector": "Information Technology",
       "location": "Korea"
@@ -307,7 +307,7 @@
     {
       "ticker": "PANW",
       "name": "PALO ALTO NETWORKS INC",
-      "value": 92.98,
+      "value": 91.89,
       "pct": 0.46,
       "sector": "Information Technology",
       "location": "United States"
@@ -315,7 +315,7 @@
     {
       "ticker": "APP",
       "name": "APPLOVIN CORP CLASS A",
-      "value": 87.88,
+      "value": 86.85,
       "pct": 0.44,
       "sector": "Information Technology",
       "location": "United States"
@@ -323,7 +323,7 @@
     {
       "ticker": "INTU",
       "name": "INTUIT INC",
-      "value": 86.61,
+      "value": 85.59,
       "pct": 0.43,
       "sector": "Information Technology",
       "location": "United States"
@@ -331,7 +331,7 @@
     {
       "ticker": "VRTX",
       "name": "VERTEX PHARMACEUTICALS INC",
-      "value": 84.06,
+      "value": 83.08,
       "pct": 0.42,
       "sector": "Health Care",
       "location": "United States"
@@ -339,7 +339,7 @@
     {
       "ticker": "MRVL",
       "name": "MARVELL TECHNOLOGY INC",
-      "value": 82.87,
+      "value": 81.25,
       "pct": 0.41,
       "sector": "Information Technology",
       "location": "United States"
@@ -347,7 +347,7 @@
     {
       "ticker": "CEG",
       "name": "CONSTELLATION ENERGY CORP",
-      "value": 77.7,
+      "value": 76.78,
       "pct": 0.39,
       "sector": "Utilities",
       "location": "United States"
@@ -355,23 +355,31 @@
     {
       "ticker": "SNPS",
       "name": "SYNOPSYS INC",
-      "value": 77.7,
-      "pct": 0.39,
+      "value": 76.1,
+      "pct": 0.38,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "CDNS",
       "name": "CADENCE DESIGN SYSTEMS INC",
-      "value": 77.58,
-      "pct": 0.39,
+      "value": 75.98,
+      "pct": 0.38,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
+      "ticker": "ALIBABA",
+      "name": "ALIBABA GROUP HOLDING LTD",
+      "value": 74.67,
+      "pct": 0.38,
+      "sector": "Consumer Discretionary",
+      "location": "China"
+    },
+    {
       "ticker": "SBUX",
       "name": "STARBUCKS CORP",
-      "value": 75.15,
+      "value": 74.27,
       "pct": 0.38,
       "sector": "Consumer Discretionary",
       "location": "United States"
@@ -379,23 +387,15 @@
     {
       "ticker": "CMCSA",
       "name": "COMCAST CORP CLASS A",
-      "value": 75.15,
+      "value": 74.27,
       "pct": 0.38,
       "sector": "Communication",
       "location": "United States"
     },
     {
-      "ticker": "ALIBABA",
-      "name": "ALIBABA GROUP HOLDING LTD",
-      "value": 75.12,
-      "pct": 0.38,
-      "sector": "Consumer Discretionary",
-      "location": "China"
-    },
-    {
       "ticker": "CRWD",
       "name": "CROWDSTRIKE HOLDINGS INC CLASS A",
-      "value": 71.33,
+      "value": 70.49,
       "pct": 0.36,
       "sector": "Information Technology",
       "location": "United States"
@@ -403,7 +403,7 @@
     {
       "ticker": "ADBE",
       "name": "ADOBE INC",
-      "value": 71.33,
+      "value": 70.49,
       "pct": 0.36,
       "sector": "Information Technology",
       "location": "United States"
@@ -411,7 +411,7 @@
     {
       "ticker": "PDD",
       "name": "PDD HOLDINGS ADS INC",
-      "value": 68.14,
+      "value": 67.45,
       "pct": 0.34,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -419,7 +419,7 @@
     {
       "ticker": "WDC",
       "name": "WESTERN DIGITAL CORP",
-      "value": 67.51,
+      "value": 66.71,
       "pct": 0.34,
       "sector": "Information Technology",
       "location": "United States"
@@ -427,7 +427,7 @@
     {
       "ticker": "MAR",
       "name": "MARRIOTT INTERNATIONAL INC CLASS A",
-      "value": 62.41,
+      "value": 61.68,
       "pct": 0.31,
       "sector": "Consumer Discretionary",
       "location": "United States"
@@ -435,7 +435,7 @@
     {
       "ticker": "STX",
       "name": "SEAGATE TECHNOLOGY HOLDINGS PLC",
-      "value": 59.86,
+      "value": 59.16,
       "pct": 0.3,
       "sector": "Information Technology",
       "location": "United States"
@@ -443,7 +443,7 @@
     {
       "ticker": "MELI",
       "name": "MERCADOLIBRE INC",
-      "value": 59.86,
+      "value": 59.16,
       "pct": 0.3,
       "sector": "Consumer Discretionary",
       "location": "United States"
@@ -451,7 +451,7 @@
     {
       "ticker": "ADP",
       "name": "AUTOMATIC DATA PROCESSING INC",
-      "value": 59.86,
+      "value": 59.16,
       "pct": 0.3,
       "sector": "Industrials",
       "location": "United States"
@@ -459,7 +459,7 @@
     {
       "ticker": "REGN",
       "name": "REGENERON PHARMACEUTICALS INC",
-      "value": 56.04,
+      "value": 55.38,
       "pct": 0.28,
       "sector": "Health Care",
       "location": "United States"
@@ -467,7 +467,7 @@
     {
       "ticker": "ORLY",
       "name": "OREILLY AUTOMOTIVE INC",
-      "value": 56.04,
+      "value": 55.38,
       "pct": 0.28,
       "sector": "Consumer Discretionary",
       "location": "United States"
@@ -475,7 +475,7 @@
     {
       "ticker": "MDLZ",
       "name": "MONDELEZ INTERNATIONAL INC CLASS A",
-      "value": 53.5,
+      "value": 52.87,
       "pct": 0.27,
       "sector": "Consumer Staples",
       "location": "United States"
@@ -483,7 +483,7 @@
     {
       "ticker": "CSX",
       "name": "CSX CORP",
-      "value": 53.5,
+      "value": 52.87,
       "pct": 0.27,
       "sector": "Industrials",
       "location": "United States"
@@ -491,7 +491,7 @@
     {
       "ticker": "MNST",
       "name": "MONSTER BEVERAGE CORP",
-      "value": 50.95,
+      "value": 50.35,
       "pct": 0.25,
       "sector": "Consumer Staples",
       "location": "United States"
@@ -499,7 +499,7 @@
     {
       "ticker": "AEP",
       "name": "AMERICAN ELECTRIC POWER INC",
-      "value": 50.95,
+      "value": 50.35,
       "pct": 0.25,
       "sector": "Utilities",
       "location": "United States"
@@ -507,7 +507,7 @@
     {
       "ticker": "ROST",
       "name": "ROSS STORES INC",
-      "value": 49.67,
+      "value": 49.09,
       "pct": 0.25,
       "sector": "Consumer Discretionary",
       "location": "United States"
@@ -515,7 +515,7 @@
     {
       "ticker": "MPWR",
       "name": "MONOLITHIC POWER SYSTEMS INC",
-      "value": 48.98,
+      "value": 48.06,
       "pct": 0.24,
       "sector": "Information Technology",
       "location": "United States"
@@ -523,7 +523,7 @@
     {
       "ticker": "CTAS",
       "name": "CINTAS CORP",
-      "value": 48.4,
+      "value": 47.83,
       "pct": 0.24,
       "sector": "Industrials",
       "location": "United States"
@@ -531,7 +531,7 @@
     {
       "ticker": "WBD",
       "name": "WARNER BROS. DISCOVERY INC SERIES",
-      "value": 48.4,
+      "value": 47.83,
       "pct": 0.24,
       "sector": "Communication",
       "location": "United States"
@@ -539,7 +539,7 @@
     {
       "ticker": "NXPI",
       "name": "NXP SEMICONDUCTORS NV",
-      "value": 46.55,
+      "value": 45.66,
       "pct": 0.23,
       "sector": "Information Technology",
       "location": "United States"
@@ -547,7 +547,7 @@
     {
       "ticker": "DASH",
       "name": "DOORDASH INC CLASS A",
-      "value": 44.58,
+      "value": 44.06,
       "pct": 0.22,
       "sector": "Consumer Discretionary",
       "location": "United States"
@@ -555,7 +555,7 @@
     {
       "ticker": "BKR",
       "name": "BAKER HUGHES CLASS A",
-      "value": 44.58,
+      "value": 44.06,
       "pct": 0.22,
       "sector": "Energy",
       "location": "United States"
@@ -563,7 +563,7 @@
     {
       "ticker": "PCAR",
       "name": "PACCAR INC",
-      "value": 43.31,
+      "value": 42.8,
       "pct": 0.22,
       "sector": "Industrials",
       "location": "United States"
@@ -571,7 +571,7 @@
     {
       "ticker": "FTNT",
       "name": "FORTINET INC",
-      "value": 43.31,
+      "value": 42.8,
       "pct": 0.22,
       "sector": "Information Technology",
       "location": "United States"
@@ -579,7 +579,7 @@
     {
       "ticker": "FANG",
       "name": "DIAMONDBACK ENERGY INC",
-      "value": 42.03,
+      "value": 41.54,
       "pct": 0.21,
       "sector": "Energy",
       "location": "United States"
@@ -587,7 +587,7 @@
     {
       "ticker": "ABNB",
       "name": "AIRBNB INC CLASS A",
-      "value": 39.48,
+      "value": 39.02,
       "pct": 0.2,
       "sector": "Consumer Discretionary",
       "location": "United States"
@@ -595,7 +595,7 @@
     {
       "ticker": "FAST",
       "name": "FASTENAL",
-      "value": 38.21,
+      "value": 37.76,
       "pct": 0.19,
       "sector": "Industrials",
       "location": "United States"
@@ -603,7 +603,7 @@
     {
       "ticker": "EA",
       "name": "ELECTRONIC ARTS INC",
-      "value": 36.94,
+      "value": 36.5,
       "pct": 0.18,
       "sector": "Communication",
       "location": "United States"
@@ -611,7 +611,7 @@
     {
       "ticker": "ADSK",
       "name": "AUTODESK INC",
-      "value": 36.94,
+      "value": 36.5,
       "pct": 0.18,
       "sector": "Information Technology",
       "location": "United States"
@@ -619,7 +619,7 @@
     {
       "ticker": "EXC",
       "name": "EXELON CORP",
-      "value": 35.66,
+      "value": 35.24,
       "pct": 0.18,
       "sector": "Utilities",
       "location": "United States"
@@ -627,7 +627,7 @@
     {
       "ticker": "XEL",
       "name": "XCEL ENERGY INC",
-      "value": 35.66,
+      "value": 35.24,
       "pct": 0.18,
       "sector": "Utilities",
       "location": "United States"
@@ -635,7 +635,7 @@
     {
       "ticker": "MCHP",
       "name": "MICROCHIP TECHNOLOGY INC",
-      "value": 34.09,
+      "value": 33.41,
       "pct": 0.17,
       "sector": "Information Technology",
       "location": "United States"
@@ -643,7 +643,7 @@
     {
       "ticker": "FER",
       "name": "FERROVIAL",
-      "value": 33.12,
+      "value": 32.73,
       "pct": 0.17,
       "sector": "Industrials",
       "location": "Europe"
@@ -651,7 +651,7 @@
     {
       "ticker": "IDXX",
       "name": "IDEXX LABORATORIES INC",
-      "value": 33.12,
+      "value": 32.73,
       "pct": 0.17,
       "sector": "Health Care",
       "location": "United States"
@@ -659,7 +659,7 @@
     {
       "ticker": "ALNY",
       "name": "ALNYLAM PHARMACEUTICALS INC",
-      "value": 31.84,
+      "value": 31.47,
       "pct": 0.16,
       "sector": "Health Care",
       "location": "United States"
@@ -667,7 +667,7 @@
     {
       "ticker": "CCEP",
       "name": "COCA COLA EUROPACIFIC PARTNERS PLC",
-      "value": 30.57,
+      "value": 30.21,
       "pct": 0.15,
       "sector": "Consumer Staples",
       "location": "Europe"
@@ -675,7 +675,7 @@
     {
       "ticker": "MSTR",
       "name": "STRATEGY INC CLASS A",
-      "value": 30.57,
+      "value": 30.21,
       "pct": 0.15,
       "sector": "Information Technology",
       "location": "United States"
@@ -683,7 +683,7 @@
     {
       "ticker": "PYPL",
       "name": "PAYPAL HOLDINGS INC",
-      "value": 30.57,
+      "value": 30.21,
       "pct": 0.15,
       "sector": "Financials",
       "location": "United States"
@@ -691,7 +691,7 @@
     {
       "ticker": "DDOG",
       "name": "DATADOG INC CLASS A",
-      "value": 29.29,
+      "value": 28.95,
       "pct": 0.15,
       "sector": "Information Technology",
       "location": "United States"
@@ -699,7 +699,7 @@
     {
       "ticker": "TRI",
       "name": "THOMSON REUTERS CORP",
-      "value": 29.29,
+      "value": 28.95,
       "pct": 0.15,
       "sector": "Industrials",
       "location": "Canada"
@@ -707,7 +707,7 @@
     {
       "ticker": "ODFL",
       "name": "OLD DOMINION FREIGHT LINE INC",
-      "value": 29.29,
+      "value": 28.95,
       "pct": 0.15,
       "sector": "Industrials",
       "location": "United States"
@@ -715,7 +715,7 @@
     {
       "ticker": "939",
       "name": "CHINA CONSTRUCTION BANK CORP H",
-      "value": 27.99,
+      "value": 27.82,
       "pct": 0.14,
       "sector": "Financials",
       "location": "China"
@@ -723,7 +723,7 @@
     {
       "ticker": "TTWO",
       "name": "TAKE TWO INTERACTIVE SOFTWARE INC",
-      "value": 26.75,
+      "value": 26.43,
       "pct": 0.13,
       "sector": "Communication",
       "location": "United States"
@@ -731,7 +731,7 @@
     {
       "ticker": "ROP",
       "name": "ROPER TECHNOLOGIES INC",
-      "value": 26.75,
+      "value": 26.43,
       "pct": 0.13,
       "sector": "Information Technology",
       "location": "United States"
@@ -739,7 +739,7 @@
     {
       "ticker": "2308",
       "name": "DELTA ELECTRONICS INC",
-      "value": 25.93,
+      "value": 25.77,
       "pct": 0.13,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -747,7 +747,7 @@
     {
       "ticker": "HDFCBANK",
       "name": "HDFC BANK LTD",
-      "value": 25.63,
+      "value": 25.48,
       "pct": 0.13,
       "sector": "Financials",
       "location": "India"
@@ -755,7 +755,7 @@
     {
       "ticker": "KDP",
       "name": "KEURIG DR PEPPER INC",
-      "value": 25.47,
+      "value": 25.17,
       "pct": 0.13,
       "sector": "Consumer Staples",
       "location": "United States"
@@ -763,15 +763,23 @@
     {
       "ticker": "AXON",
       "name": "AXON ENTERPRISE INC",
-      "value": 25.47,
+      "value": 25.17,
       "pct": 0.13,
       "sector": "Industrials",
       "location": "United States"
     },
     {
+      "ticker": "RELIANCE",
+      "name": "RELIANCE INDUSTRIES LTD",
+      "value": 24.01,
+      "pct": 0.12,
+      "sector": "Energy",
+      "location": "India"
+    },
+    {
       "ticker": "PAYX",
       "name": "PAYCHEX INC",
-      "value": 24.2,
+      "value": 23.92,
       "pct": 0.12,
       "sector": "Industrials",
       "location": "United States"
@@ -779,23 +787,15 @@
     {
       "ticker": "GEHC",
       "name": "GE HEALTHCARE TECHNOLOGIES INC",
-      "value": 24.2,
+      "value": 23.92,
       "pct": 0.12,
       "sector": "Health Care",
       "location": "United States"
     },
     {
-      "ticker": "RELIANCE",
-      "name": "RELIANCE INDUSTRIES LTD",
-      "value": 24.16,
-      "pct": 0.12,
-      "sector": "Energy",
-      "location": "India"
-    },
-    {
       "ticker": "CPRT",
       "name": "COPART INC",
-      "value": 22.93,
+      "value": 22.66,
       "pct": 0.11,
       "sector": "Industrials",
       "location": "United States"
@@ -803,7 +803,7 @@
     {
       "ticker": "INSM",
       "name": "INSMED INC",
-      "value": 22.93,
+      "value": 22.66,
       "pct": 0.11,
       "sector": "Health Care",
       "location": "United States"
@@ -811,7 +811,7 @@
     {
       "ticker": "2317",
       "name": "HON HAI PRECISION INDUSTRY LTD",
-      "value": 22.1,
+      "value": 21.96,
       "pct": 0.11,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -819,7 +819,7 @@
     {
       "ticker": "CTSH",
       "name": "COGNIZANT TECHNOLOGY SOLUTIONS COR",
-      "value": 21.65,
+      "value": 21.4,
       "pct": 0.11,
       "sector": "Information Technology",
       "location": "United States"
@@ -827,7 +827,7 @@
     {
       "ticker": "2454",
       "name": "MEDIATEK INC",
-      "value": 21.21,
+      "value": 21.08,
       "pct": 0.11,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -835,15 +835,23 @@
     {
       "ticker": "1211",
       "name": "BYD LTD H",
-      "value": 20.62,
+      "value": 20.5,
       "pct": 0.1,
       "sector": "Consumer Discretionary",
       "location": "China"
     },
     {
+      "ticker": "1810",
+      "name": "XIAOMI CORP",
+      "value": 20.21,
+      "pct": 0.1,
+      "sector": "Information Technology",
+      "location": "China"
+    },
+    {
       "ticker": "CHTR",
       "name": "CHARTER COMMUNICATIONS INC CLASS A",
-      "value": 20.38,
+      "value": 20.14,
       "pct": 0.1,
       "sector": "Communication",
       "location": "United States"
@@ -851,23 +859,15 @@
     {
       "ticker": "WDAY",
       "name": "WORKDAY INC CLASS A",
-      "value": 20.38,
+      "value": 20.14,
       "pct": 0.1,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
-      "ticker": "1810",
-      "name": "XIAOMI CORP",
-      "value": 20.33,
-      "pct": 0.1,
-      "sector": "Information Technology",
-      "location": "China"
-    },
-    {
       "ticker": "ICICIBANK",
       "name": "ICICI BANK LTD",
-      "value": 19.44,
+      "value": 19.33,
       "pct": 0.1,
       "sector": "Financials",
       "location": "India"
@@ -875,7 +875,7 @@
     {
       "ticker": "005935",
       "name": "SAMSUNG ELECTRONICS NON VOTING PRE",
-      "value": 19.15,
+      "value": 19.03,
       "pct": 0.1,
       "sector": "Information Technology",
       "location": "Korea"
@@ -883,7 +883,7 @@
     {
       "ticker": "VRSK",
       "name": "VERISK ANALYTICS INC",
-      "value": 19.11,
+      "value": 18.88,
       "pct": 0.1,
       "sector": "Industrials",
       "location": "United States"
@@ -891,7 +891,7 @@
     {
       "ticker": "DXCM",
       "name": "DEXCOM INC",
-      "value": 19.11,
+      "value": 18.88,
       "pct": 0.1,
       "sector": "Health Care",
       "location": "United States"
@@ -899,7 +899,7 @@
     {
       "ticker": "KHC",
       "name": "KRAFT HEINZ",
-      "value": 19.11,
+      "value": 18.88,
       "pct": 0.1,
       "sector": "Consumer Staples",
       "location": "United States"
@@ -907,7 +907,7 @@
     {
       "ticker": "ZS",
       "name": "ZSCALER INC",
-      "value": 16.56,
+      "value": 16.36,
       "pct": 0.08,
       "sector": "Information Technology",
       "location": "United States"
@@ -915,7 +915,7 @@
     {
       "ticker": "1398",
       "name": "INDUSTRIAL AND COMMERCIAL BANK OF",
-      "value": 15.61,
+      "value": 15.52,
       "pct": 0.08,
       "sector": "Financials",
       "location": "China"
@@ -923,7 +923,7 @@
     {
       "ticker": "3690",
       "name": "MEITUAN",
-      "value": 15.32,
+      "value": 15.23,
       "pct": 0.08,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -931,7 +931,7 @@
     {
       "ticker": "VALE3",
       "name": "CIA VALE DO RIO DOCE SH",
-      "value": 15.32,
+      "value": 15.23,
       "pct": 0.08,
       "sector": "Materials",
       "location": "Latin America"
@@ -939,7 +939,7 @@
     {
       "ticker": "1120",
       "name": "AL RAJHI BANK",
-      "value": 15.32,
+      "value": 15.23,
       "pct": 0.08,
       "sector": "Financials",
       "location": "Middle East"
@@ -947,7 +947,7 @@
     {
       "ticker": "ARM",
       "name": "ARM HOLDINGS AMERICAN DEPOSITARY S",
-      "value": 15.28,
+      "value": 15.1,
       "pct": 0.08,
       "sector": "Information Technology",
       "location": "United Kingdom"
@@ -955,7 +955,7 @@
     {
       "ticker": "2318",
       "name": "PING AN INSURANCE (GROUP) CO OF CH",
-      "value": 14.14,
+      "value": 14.06,
       "pct": 0.07,
       "sector": "Financials",
       "location": "China"
@@ -963,7 +963,7 @@
     {
       "ticker": "BHARTIARTL",
       "name": "BHARTI AIRTEL LTD",
-      "value": 13.85,
+      "value": 13.76,
       "pct": 0.07,
       "sector": "Communication",
       "location": "India"
@@ -971,23 +971,15 @@
     {
       "ticker": "NU",
       "name": "NU HOLDINGS LTD CLASS A",
-      "value": 12.96,
-      "pct": 0.06,
+      "value": 12.88,
+      "pct": 0.07,
       "sector": "Financials",
       "location": "Latin America"
     },
     {
-      "ticker": "TER",
-      "name": "Teradyne Inc",
-      "value": 12.8,
-      "pct": 0.06,
-      "sector": "Information Technology",
-      "location": "United States"
-    },
-    {
       "ticker": "CSGP",
       "name": "COSTAR GROUP INC",
-      "value": 12.74,
+      "value": 12.59,
       "pct": 0.06,
       "sector": "Real Estate",
       "location": "United States"
@@ -995,7 +987,7 @@
     {
       "ticker": "3988",
       "name": "BANK OF CHINA LTD H",
-      "value": 12.37,
+      "value": 12.3,
       "pct": 0.06,
       "sector": "Financials",
       "location": "China"
@@ -1003,15 +995,23 @@
     {
       "ticker": "ANG",
       "name": "ANGLOGOLD ASHANTI PLC",
-      "value": 12.37,
+      "value": 12.3,
       "pct": 0.06,
       "sector": "Materials",
       "location": "Africa"
     },
     {
+      "ticker": "TER",
+      "name": "Teradyne Inc",
+      "value": 12.25,
+      "pct": 0.06,
+      "sector": "Information Technology",
+      "location": "United States"
+    },
+    {
       "ticker": "INFY",
       "name": "INFOSYS LTD",
-      "value": 12.08,
+      "value": 12.01,
       "pct": 0.06,
       "sector": "Information Technology",
       "location": "India"
@@ -1019,7 +1019,7 @@
     {
       "ticker": "005380",
       "name": "HYUNDAI MOTOR",
-      "value": 12.08,
+      "value": 12.01,
       "pct": 0.06,
       "sector": "Consumer Discretionary",
       "location": "Korea"
@@ -1027,7 +1027,7 @@
     {
       "ticker": "PETR4",
       "name": "PETROLEO BRASILEIRO PREF SA",
-      "value": 12.08,
+      "value": 12.01,
       "pct": 0.06,
       "sector": "Energy",
       "location": "Latin America"
@@ -1035,7 +1035,7 @@
     {
       "ticker": "ITUB4",
       "name": "ITAU UNIBANCO HOLDING PREF SA",
-      "value": 12.08,
+      "value": 12.01,
       "pct": 0.06,
       "sector": "Financials",
       "location": "Latin America"
@@ -1043,7 +1043,7 @@
     {
       "ticker": "2222",
       "name": "SAUDI ARABIAN OIL",
-      "value": 12.08,
+      "value": 12.01,
       "pct": 0.06,
       "sector": "Energy",
       "location": "Middle East"
@@ -1051,7 +1051,7 @@
     {
       "ticker": "NPN",
       "name": "NASPERS LIMITED LTD CLASS N",
-      "value": 10.9,
+      "value": 10.84,
       "pct": 0.05,
       "sector": "Consumer Discretionary",
       "location": "Africa"
@@ -1059,7 +1059,7 @@
     {
       "ticker": "9999",
       "name": "NETEASE INC",
-      "value": 10.9,
+      "value": 10.84,
       "pct": 0.05,
       "sector": "Communication",
       "location": "China"
@@ -1067,7 +1067,7 @@
     {
       "ticker": "PETR3",
       "name": "PETROLEO BRASILEIRO SA PETROBRAS",
-      "value": 10.9,
+      "value": 10.84,
       "pct": 0.05,
       "sector": "Energy",
       "location": "Latin America"
@@ -1075,7 +1075,7 @@
     {
       "ticker": "GFI",
       "name": "GOLD FIELDS LTD",
-      "value": 10.31,
+      "value": 10.25,
       "pct": 0.05,
       "sector": "Materials",
       "location": "Africa"
@@ -1083,7 +1083,7 @@
     {
       "ticker": "3711",
       "name": "ASE TECHNOLOGY HOLDING LTD",
-      "value": 10.31,
+      "value": 10.25,
       "pct": 0.05,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -1091,7 +1091,7 @@
     {
       "ticker": "105560",
       "name": "KB FINANCIAL GROUP INC",
-      "value": 10.31,
+      "value": 10.25,
       "pct": 0.05,
       "sector": "Financials",
       "location": "Korea"
@@ -1099,7 +1099,7 @@
     {
       "ticker": "9618",
       "name": "JD.COM CLASS A INC",
-      "value": 9.72,
+      "value": 9.66,
       "pct": 0.05,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -1107,7 +1107,7 @@
     {
       "ticker": "1180",
       "name": "THE SAUDI NATIONAL BANK",
-      "value": 9.43,
+      "value": 9.37,
       "pct": 0.05,
       "sector": "Financials",
       "location": "Middle East"
@@ -1115,7 +1115,7 @@
     {
       "ticker": "402340",
       "name": "SK SQUARE LTD",
-      "value": 9.43,
+      "value": 9.37,
       "pct": 0.05,
       "sector": "Industrials",
       "location": "Korea"
@@ -1123,7 +1123,7 @@
     {
       "ticker": "GMEXICOB",
       "name": "GRUPO MEXICO B",
-      "value": 8.84,
+      "value": 8.79,
       "pct": 0.04,
       "sector": "Materials",
       "location": "Latin America"
@@ -1131,7 +1131,7 @@
     {
       "ticker": "9961",
       "name": "TRIP.COM GROUP LTD",
-      "value": 8.54,
+      "value": 8.49,
       "pct": 0.04,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -1139,7 +1139,7 @@
     {
       "ticker": "9888",
       "name": "BAIDU CLASS A INC",
-      "value": 8.54,
+      "value": 8.49,
       "pct": 0.04,
       "sector": "Communication",
       "location": "China"
@@ -1147,7 +1147,7 @@
     {
       "ticker": "2382",
       "name": "QUANTA COMPUTER INC",
-      "value": 8.54,
+      "value": 8.49,
       "pct": 0.04,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -1155,7 +1155,7 @@
     {
       "ticker": "AXISBANK",
       "name": "AXIS BANK LTD",
-      "value": 8.25,
+      "value": 8.2,
       "pct": 0.04,
       "sector": "Financials",
       "location": "India"
@@ -1163,7 +1163,7 @@
     {
       "ticker": "857",
       "name": "PETROCHINA LTD H",
-      "value": 8.25,
+      "value": 8.2,
       "pct": 0.04,
       "sector": "Energy",
       "location": "China"
@@ -1171,7 +1171,7 @@
     {
       "ticker": "012450",
       "name": "HANWHA AEROSPACE LTD",
-      "value": 8.25,
+      "value": 8.2,
       "pct": 0.04,
       "sector": "Industrials",
       "location": "Korea"
@@ -1179,7 +1179,7 @@
     {
       "ticker": "034020",
       "name": "DOOSAN ENERBILITY LTD",
-      "value": 8.25,
+      "value": 8.2,
       "pct": 0.04,
       "sector": "Industrials",
       "location": "Korea"
@@ -1187,7 +1187,7 @@
     {
       "ticker": "M&M",
       "name": "MAHINDRA AND MAHINDRA LTD",
-      "value": 8.25,
+      "value": 8.2,
       "pct": 0.04,
       "sector": "Consumer Discretionary",
       "location": "India"
@@ -1195,7 +1195,7 @@
     {
       "ticker": "KFH",
       "name": "KUWAIT FINANCE HOUSE",
-      "value": 7.95,
+      "value": 7.91,
       "pct": 0.04,
       "sector": "Financials",
       "location": "Middle East"
@@ -1203,7 +1203,7 @@
     {
       "ticker": "2383",
       "name": "ELITE MATERIAL LTD",
-      "value": 7.95,
+      "value": 7.91,
       "pct": 0.04,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -1211,7 +1211,7 @@
     {
       "ticker": "2891",
       "name": "CTBC FINANCIAL HOLDING LTD",
-      "value": 7.95,
+      "value": 7.91,
       "pct": 0.04,
       "sector": "Financials",
       "location": "Taiwan"
@@ -1219,23 +1219,15 @@
     {
       "ticker": "055550",
       "name": "SHINHAN FINANCIAL GROUP LTD",
-      "value": 7.66,
+      "value": 7.61,
       "pct": 0.04,
       "sector": "Financials",
       "location": "Korea"
     },
     {
-      "ticker": "STM",
-      "name": "Stmicroelectronics Nv",
-      "value": 7.66,
-      "pct": 0.04,
-      "sector": "Information Technology",
-      "location": "Europe"
-    },
-    {
       "ticker": "TEAM",
       "name": "ATLASSIAN CORP CLASS A",
-      "value": 7.64,
+      "value": 7.55,
       "pct": 0.04,
       "sector": "Information Technology",
       "location": "United States"
@@ -1243,7 +1235,7 @@
     {
       "ticker": "DELTA.R",
       "name": "DELTA ELECTRONICS (THAILAND) NON-V",
-      "value": 7.37,
+      "value": 7.32,
       "pct": 0.04,
       "sector": "Information Technology",
       "location": "Asia"
@@ -1251,7 +1243,7 @@
     {
       "ticker": "2345",
       "name": "ACCTON TECHNOLOGY CORP",
-      "value": 7.37,
+      "value": 7.32,
       "pct": 0.04,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -1259,7 +1251,7 @@
     {
       "ticker": "GFNORTEO",
       "name": "GPO FINANCE BANORTE",
-      "value": 7.37,
+      "value": 7.32,
       "pct": 0.04,
       "sector": "Financials",
       "location": "Latin America"
@@ -1267,7 +1259,7 @@
     {
       "ticker": "FSR",
       "name": "FIRSTRAND LTD",
-      "value": 7.37,
+      "value": 7.32,
       "pct": 0.04,
       "sector": "Financials",
       "location": "Africa"
@@ -1275,15 +1267,23 @@
     {
       "ticker": "2899",
       "name": "ZIJIN MINING GROUP LTD H",
-      "value": 7.37,
+      "value": 7.32,
       "pct": 0.04,
       "sector": "Materials",
       "location": "China"
     },
     {
+      "ticker": "STM",
+      "name": "Stmicroelectronics Nv",
+      "value": 7.32,
+      "pct": 0.04,
+      "sector": "Information Technology",
+      "location": "Europe"
+    },
+    {
       "ticker": "LT",
       "name": "LARSEN AND TOUBRO LTD",
-      "value": 7.07,
+      "value": 7.03,
       "pct": 0.04,
       "sector": "Industrials",
       "location": "India"
@@ -1291,7 +1291,7 @@
     {
       "ticker": "BAJFINANCE",
       "name": "BAJAJ FINANCE LTD",
-      "value": 7.07,
+      "value": 7.03,
       "pct": 0.04,
       "sector": "Financials",
       "location": "India"
@@ -1299,7 +1299,7 @@
     {
       "ticker": "2628",
       "name": "CHINA LIFE INSURANCE LTD H",
-      "value": 6.78,
+      "value": 6.74,
       "pct": 0.03,
       "sector": "Financials",
       "location": "China"
@@ -1307,7 +1307,7 @@
     {
       "ticker": "NBK",
       "name": "NATIONAL BANK OF KUWAIT",
-      "value": 6.78,
+      "value": 6.74,
       "pct": 0.03,
       "sector": "Financials",
       "location": "Middle East"
@@ -1315,7 +1315,7 @@
     {
       "ticker": "000270",
       "name": "KIA CORPORATION CORP",
-      "value": 6.78,
+      "value": 6.74,
       "pct": 0.03,
       "sector": "Consumer Discretionary",
       "location": "Korea"
@@ -1323,7 +1323,7 @@
     {
       "ticker": "OTP",
       "name": "OTP BANK",
-      "value": 6.78,
+      "value": 6.74,
       "pct": 0.03,
       "sector": "Financials",
       "location": "Europe"
@@ -1331,7 +1331,7 @@
     {
       "ticker": "3968",
       "name": "CHINA MERCHANTS BANK LTD H",
-      "value": 6.78,
+      "value": 6.74,
       "pct": 0.03,
       "sector": "Financials",
       "location": "China"
@@ -1339,7 +1339,7 @@
     {
       "ticker": "2881",
       "name": "FUBON FINANCIAL HOLDING LTD",
-      "value": 6.48,
+      "value": 6.44,
       "pct": 0.03,
       "sector": "Financials",
       "location": "Taiwan"
@@ -1347,7 +1347,7 @@
     {
       "ticker": "TCS",
       "name": "TATA CONSULTANCY SERVICES LTD",
-      "value": 6.48,
+      "value": 6.44,
       "pct": 0.03,
       "sector": "Information Technology",
       "location": "India"
@@ -1355,7 +1355,7 @@
     {
       "ticker": "SBK",
       "name": "STANDARD BANK GROUP",
-      "value": 6.48,
+      "value": 6.44,
       "pct": 0.03,
       "sector": "Financials",
       "location": "Africa"
@@ -1363,7 +1363,7 @@
     {
       "ticker": "3017",
       "name": "ASIA VITAL COMPONENTS LTD",
-      "value": 6.48,
+      "value": 6.44,
       "pct": 0.03,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -1371,7 +1371,7 @@
     {
       "ticker": "EMAAR",
       "name": "EMAAR PROPERTIES",
-      "value": 6.19,
+      "value": 6.15,
       "pct": 0.03,
       "sector": "Real Estate",
       "location": "Middle East"
@@ -1379,7 +1379,7 @@
     {
       "ticker": "AMXB",
       "name": "AMERICA MOVIL B",
-      "value": 6.19,
+      "value": 6.15,
       "pct": 0.03,
       "sector": "Communication",
       "location": "Latin America"
@@ -1387,7 +1387,7 @@
     {
       "ticker": "BBCA",
       "name": "BANK CENTRAL ASIA",
-      "value": 6.19,
+      "value": 6.15,
       "pct": 0.03,
       "sector": "Financials",
       "location": "Asia"
@@ -1395,7 +1395,7 @@
     {
       "ticker": "7010",
       "name": "SAUDI TELECOM",
-      "value": 6.19,
+      "value": 6.15,
       "pct": 0.03,
       "sector": "Communication",
       "location": "Middle East"
@@ -1403,7 +1403,7 @@
     {
       "ticker": "BAP",
       "name": "CREDICORP LTD",
-      "value": 6.19,
+      "value": 6.15,
       "pct": 0.03,
       "sector": "Financials",
       "location": "Latin America"
@@ -1411,7 +1411,7 @@
     {
       "ticker": "QNBK",
       "name": "QATAR NATIONAL BANK",
-      "value": 6.19,
+      "value": 6.15,
       "pct": 0.03,
       "sector": "Financials",
       "location": "Middle East"
@@ -1419,7 +1419,7 @@
     {
       "ticker": "FAB",
       "name": "FIRST ABU DHABI BANK",
-      "value": 5.89,
+      "value": 5.86,
       "pct": 0.03,
       "sector": "Financials",
       "location": "Middle East"
@@ -1427,7 +1427,7 @@
     {
       "ticker": "068270",
       "name": "CELLTRION INC",
-      "value": 5.89,
+      "value": 5.86,
       "pct": 0.03,
       "sector": "Health Care",
       "location": "Korea"
@@ -1435,7 +1435,7 @@
     {
       "ticker": "2303",
       "name": "UNITED MICRO ELECTRONICS CORP",
-      "value": 5.89,
+      "value": 5.86,
       "pct": 0.03,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -1443,7 +1443,7 @@
     {
       "ticker": "KOTAKBANK",
       "name": "KOTAK MAHINDRA BANK LTD",
-      "value": 5.89,
+      "value": 5.86,
       "pct": 0.03,
       "sector": "Financials",
       "location": "India"
@@ -1451,7 +1451,7 @@
     {
       "ticker": "CPI",
       "name": "CAPITEC LTD",
-      "value": 5.89,
+      "value": 5.86,
       "pct": 0.03,
       "sector": "Financials",
       "location": "Africa"
@@ -1459,7 +1459,7 @@
     {
       "ticker": "1088",
       "name": "CHINA SHENHUA ENERGY LTD H",
-      "value": 5.89,
+      "value": 5.86,
       "pct": 0.03,
       "sector": "Energy",
       "location": "China"
@@ -1467,7 +1467,7 @@
     {
       "ticker": "2882",
       "name": "CATHAY FINANCIAL HOLDING LTD",
-      "value": 5.89,
+      "value": 5.86,
       "pct": 0.03,
       "sector": "Financials",
       "location": "Taiwan"
@@ -1475,7 +1475,7 @@
     {
       "ticker": "3037",
       "name": "UNIMICRON TECHNOLOGY CORP",
-      "value": 5.89,
+      "value": 5.86,
       "pct": 0.03,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -1483,7 +1483,7 @@
     {
       "ticker": "2020",
       "name": "ANTA SPORTS PRODUCTS LTD",
-      "value": 5.89,
+      "value": 5.86,
       "pct": 0.03,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -1491,7 +1491,7 @@
     {
       "ticker": "035420",
       "name": "NAVER CORP",
-      "value": 5.6,
+      "value": 5.56,
       "pct": 0.03,
       "sector": "Communication",
       "location": "Korea"
@@ -1499,7 +1499,7 @@
     {
       "ticker": "MTN",
       "name": "MTN GROUP LTD",
-      "value": 5.6,
+      "value": 5.56,
       "pct": 0.03,
       "sector": "Communication",
       "location": "Africa"
@@ -1507,7 +1507,7 @@
     {
       "ticker": "SBIN",
       "name": "STATE BANK OF INDIA",
-      "value": 5.6,
+      "value": 5.56,
       "pct": 0.03,
       "sector": "Financials",
       "location": "India"
@@ -1515,7 +1515,7 @@
     {
       "ticker": "VAL",
       "name": "VALTERRA PLATINUM LTD",
-      "value": 5.6,
+      "value": 5.56,
       "pct": 0.03,
       "sector": "Materials",
       "location": "Africa"
@@ -1523,7 +1523,7 @@
     {
       "ticker": "PKN",
       "name": "ORLEN SA",
-      "value": 5.6,
+      "value": 5.56,
       "pct": 0.03,
       "sector": "Energy",
       "location": "Europe"
@@ -1531,7 +1531,7 @@
     {
       "ticker": "2360",
       "name": "CHROMA ATE INC",
-      "value": 5.6,
+      "value": 5.56,
       "pct": 0.03,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -1539,7 +1539,7 @@
     {
       "ticker": "086790",
       "name": "HANA FINANCIAL GROUP INC",
-      "value": 5.6,
+      "value": 5.56,
       "pct": 0.03,
       "sector": "Financials",
       "location": "Korea"
@@ -1547,7 +1547,7 @@
     {
       "ticker": "PKO",
       "name": "POWSZECHNA KASA OSZCZEDNOSCI BANK",
-      "value": 5.6,
+      "value": 5.56,
       "pct": 0.03,
       "sector": "Financials",
       "location": "Europe"
@@ -1555,7 +1555,7 @@
     {
       "ticker": "1288",
       "name": "AGRICULTURAL BANK OF CHINA LTD H",
-      "value": 5.3,
+      "value": 5.27,
       "pct": 0.03,
       "sector": "Financials",
       "location": "China"
@@ -1563,7 +1563,7 @@
     {
       "ticker": "SAR",
       "name": "SAR CASH(COMMITTED)",
-      "value": 5.3,
+      "value": 5.27,
       "pct": 0.03,
       "sector": "Cash",
       "location": "Middle East"
@@ -1571,7 +1571,7 @@
     {
       "ticker": "BBDC4",
       "name": "BANCO BRADESCO PREF SA",
-      "value": 5.3,
+      "value": 5.27,
       "pct": 0.03,
       "sector": "Financials",
       "location": "Latin America"
@@ -1579,7 +1579,7 @@
     {
       "ticker": "6160",
       "name": "BEONE MEDICINES AG",
-      "value": 5.3,
+      "value": 5.27,
       "pct": 0.03,
       "sector": "Health Care",
       "location": "China"
@@ -1587,23 +1587,15 @@
     {
       "ticker": "FEMSAUBD",
       "name": "FOMENTO ECONOMICO MEXICANO",
-      "value": 5.3,
+      "value": 5.27,
       "pct": 0.03,
       "sector": "Consumer Staples",
       "location": "Latin America"
     },
     {
-      "ticker": "ON",
-      "name": "On Semiconductor Corp",
-      "value": 5.14,
-      "pct": 0.03,
-      "sector": "Information Technology",
-      "location": "United States"
-    },
-    {
       "ticker": "PBBANK",
       "name": "PUBLIC BANK",
-      "value": 5.01,
+      "value": 4.98,
       "pct": 0.03,
       "sector": "Financials",
       "location": "Asia"
@@ -1611,7 +1603,7 @@
     {
       "ticker": "EAND",
       "name": "EMIRATES TELECOM",
-      "value": 5.01,
+      "value": 4.98,
       "pct": 0.03,
       "sector": "Communication",
       "location": "Middle East"
@@ -1619,7 +1611,7 @@
     {
       "ticker": "HINDUNILVR",
       "name": "HINDUSTAN UNILEVER LTD",
-      "value": 5.01,
+      "value": 4.98,
       "pct": 0.03,
       "sector": "Consumer Staples",
       "location": "India"
@@ -1627,7 +1619,7 @@
     {
       "ticker": "B3SA3",
       "name": "B3 BRASIL BOLSA BALCAO SA",
-      "value": 5.01,
+      "value": 4.98,
       "pct": 0.03,
       "sector": "Financials",
       "location": "Latin America"
@@ -1635,7 +1627,7 @@
     {
       "ticker": "SUNPHARMA",
       "name": "SUN PHARMACEUTICAL INDUSTRIES LTD",
-      "value": 5.01,
+      "value": 4.98,
       "pct": 0.03,
       "sector": "Health Care",
       "location": "India"
@@ -1643,7 +1635,7 @@
     {
       "ticker": "9987",
       "name": "YUM CHINA HOLDINGS INC",
-      "value": 5.01,
+      "value": 4.98,
       "pct": 0.03,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -1651,15 +1643,23 @@
     {
       "ticker": "NTPC",
       "name": "NTPC LTD",
-      "value": 5.01,
+      "value": 4.98,
       "pct": 0.03,
       "sector": "Utilities",
       "location": "India"
     },
     {
+      "ticker": "ON",
+      "name": "On Semiconductor Corp",
+      "value": 4.92,
+      "pct": 0.02,
+      "sector": "Information Technology",
+      "location": "United States"
+    },
+    {
       "ticker": "CEMEXCPO",
       "name": "CEMEX CPO",
-      "value": 4.71,
+      "value": 4.69,
       "pct": 0.02,
       "sector": "Materials",
       "location": "Latin America"
@@ -1667,7 +1667,7 @@
     {
       "ticker": "WALMEX*",
       "name": "WALMART DE MEXICO V",
-      "value": 4.71,
+      "value": 4.69,
       "pct": 0.02,
       "sector": "Consumer Staples",
       "location": "Latin America"
@@ -1675,7 +1675,7 @@
     {
       "ticker": "005490",
       "name": "POSCO",
-      "value": 4.71,
+      "value": 4.69,
       "pct": 0.02,
       "sector": "Materials",
       "location": "Korea"
@@ -1683,7 +1683,7 @@
     {
       "ticker": "175",
       "name": "GEELY AUTOMOBILE HOLDINGS LTD",
-      "value": 4.71,
+      "value": 4.69,
       "pct": 0.02,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -1691,7 +1691,7 @@
     {
       "ticker": "MAYBANK",
       "name": "MALAYAN BANKING",
-      "value": 4.71,
+      "value": 4.69,
       "pct": 0.02,
       "sector": "Financials",
       "location": "Asia"
@@ -1699,7 +1699,7 @@
     {
       "ticker": "MARUTI",
       "name": "MARUTI SUZUKI INDIA LTD",
-      "value": 4.71,
+      "value": 4.69,
       "pct": 0.02,
       "sector": "Consumer Discretionary",
       "location": "India"
@@ -1707,7 +1707,7 @@
     {
       "ticker": "006400",
       "name": "SAMSUNG SDI LTD",
-      "value": 4.42,
+      "value": 4.39,
       "pct": 0.02,
       "sector": "Information Technology",
       "location": "Korea"
@@ -1715,7 +1715,7 @@
     {
       "ticker": "BEL",
       "name": "BHARAT ELECTRONICS LTD",
-      "value": 4.42,
+      "value": 4.39,
       "pct": 0.02,
       "sector": "Industrials",
       "location": "India"
@@ -1723,7 +1723,7 @@
     {
       "ticker": "TATASTEEL",
       "name": "TATA STEEL LTD",
-      "value": 4.42,
+      "value": 4.39,
       "pct": 0.02,
       "sector": "Materials",
       "location": "India"
@@ -1731,7 +1731,7 @@
     {
       "ticker": "300750",
       "name": "CONTEMPORARY AMPEREX TECHNOLOGY LT",
-      "value": 4.42,
+      "value": 4.39,
       "pct": 0.02,
       "sector": "Industrials",
       "location": "China"
@@ -1739,7 +1739,7 @@
     {
       "ticker": "2887",
       "name": "TS FINANCIAL HOLDING LTD",
-      "value": 4.42,
+      "value": 4.39,
       "pct": 0.02,
       "sector": "Financials",
       "location": "Taiwan"
@@ -1747,7 +1747,7 @@
     {
       "ticker": "012330",
       "name": "HYUNDAI MOBIS LTD",
-      "value": 4.42,
+      "value": 4.39,
       "pct": 0.02,
       "sector": "Consumer Discretionary",
       "location": "Korea"
@@ -1755,7 +1755,7 @@
     {
       "ticker": "009150",
       "name": "SAMSUNG ELECTRO MECHANICS LTD",
-      "value": 4.42,
+      "value": 4.39,
       "pct": 0.02,
       "sector": "Information Technology",
       "location": "Korea"
@@ -1763,7 +1763,7 @@
     {
       "ticker": "2412",
       "name": "CHUNGHWA TELECOM LTD",
-      "value": 4.42,
+      "value": 4.39,
       "pct": 0.02,
       "sector": "Communication",
       "location": "Taiwan"
@@ -1771,7 +1771,7 @@
     {
       "ticker": "1801",
       "name": "INNOVENT BIOLOGICS INC",
-      "value": 4.42,
+      "value": 4.39,
       "pct": 0.02,
       "sector": "Health Care",
       "location": "China"
@@ -1779,7 +1779,7 @@
     {
       "ticker": "CIMB",
       "name": "CIMB GROUP HOLDINGS",
-      "value": 4.42,
+      "value": 4.39,
       "pct": 0.02,
       "sector": "Financials",
       "location": "Asia"
@@ -1787,23 +1787,15 @@
     {
       "ticker": "600519",
       "name": "KWEICHOW MOUTAI LTD A",
-      "value": 4.42,
+      "value": 4.39,
       "pct": 0.02,
       "sector": "Consumer Staples",
       "location": "China"
     },
     {
-      "ticker": "ENTG",
-      "name": "Entegris Inc",
-      "value": 4.19,
-      "pct": 0.02,
-      "sector": "Information Technology",
-      "location": "United States"
-    },
-    {
       "ticker": "2885",
       "name": "YUANTA FINANCIAL HOLDING LTD",
-      "value": 4.12,
+      "value": 4.1,
       "pct": 0.02,
       "sector": "Financials",
       "location": "Taiwan"
@@ -1811,7 +1803,7 @@
     {
       "ticker": "SCCO",
       "name": "SOUTHERN COPPER CORP",
-      "value": 4.12,
+      "value": 4.1,
       "pct": 0.02,
       "sector": "Materials",
       "location": "Latin America"
@@ -1819,7 +1811,7 @@
     {
       "ticker": "WEGE3",
       "name": "WEG SA",
-      "value": 4.12,
+      "value": 4.1,
       "pct": 0.02,
       "sector": "Industrials",
       "location": "Latin America"
@@ -1827,7 +1819,7 @@
     {
       "ticker": "1024",
       "name": "KUAISHOU TECHNOLOGY",
-      "value": 4.12,
+      "value": 4.1,
       "pct": 0.02,
       "sector": "Communication",
       "location": "China"
@@ -1835,7 +1827,7 @@
     {
       "ticker": "028260",
       "name": "SAMSUNG C&T CORP",
-      "value": 4.12,
+      "value": 4.1,
       "pct": 0.02,
       "sector": "Industrials",
       "location": "Korea"
@@ -1843,7 +1835,7 @@
     {
       "ticker": "ITSA4",
       "name": "ITAUSA INVESTIMENTOS ITAU PREF SA",
-      "value": 4.12,
+      "value": 4.1,
       "pct": 0.02,
       "sector": "Financials",
       "location": "Latin America"
@@ -1851,7 +1843,7 @@
     {
       "ticker": "SBSP3",
       "name": "COMPANHIA DE SANEAMENTO BASICO DE",
-      "value": 4.12,
+      "value": 4.1,
       "pct": 0.02,
       "sector": "Utilities",
       "location": "Latin America"
@@ -1859,7 +1851,7 @@
     {
       "ticker": "267260",
       "name": "HD HYUNDAI ELECTRIC LTD",
-      "value": 4.12,
+      "value": 4.1,
       "pct": 0.02,
       "sector": "Industrials",
       "location": "Korea"
@@ -1867,7 +1859,7 @@
     {
       "ticker": "EMIRATESNBD",
       "name": "EMIRATES NBD",
-      "value": 4.12,
+      "value": 4.1,
       "pct": 0.02,
       "sector": "Financials",
       "location": "Middle East"
@@ -1875,7 +1867,7 @@
     {
       "ticker": "2269",
       "name": "WUXI BIOLOGICS CAYMAN INC",
-      "value": 4.12,
+      "value": 4.1,
       "pct": 0.02,
       "sector": "Health Care",
       "location": "China"
@@ -1883,7 +1875,7 @@
     {
       "ticker": "2886",
       "name": "MEGA FINANCIAL HOLDING LTD",
-      "value": 4.12,
+      "value": 4.1,
       "pct": 0.02,
       "sector": "Financials",
       "location": "Taiwan"
@@ -1891,7 +1883,7 @@
     {
       "ticker": "316140",
       "name": "WOORI FINANCIAL GROUP INC",
-      "value": 4.12,
+      "value": 4.1,
       "pct": 0.02,
       "sector": "Financials",
       "location": "Korea"
@@ -1899,7 +1891,7 @@
     {
       "ticker": "POWERGRID",
       "name": "POWER GRID CORPORATION OF INDIA LT",
-      "value": 4.12,
+      "value": 4.1,
       "pct": 0.02,
       "sector": "Utilities",
       "location": "India"
@@ -1907,7 +1899,7 @@
     {
       "ticker": "2884",
       "name": "E.SUN FINANCIAL HOLDING LTD",
-      "value": 4.12,
+      "value": 4.1,
       "pct": 0.02,
       "sector": "Financials",
       "location": "Taiwan"
@@ -1915,15 +1907,23 @@
     {
       "ticker": "TITAN",
       "name": "TITAN COMPANY LTD",
-      "value": 4.12,
+      "value": 4.1,
       "pct": 0.02,
       "sector": "Consumer Discretionary",
       "location": "India"
     },
     {
+      "ticker": "ENTG",
+      "name": "Entegris Inc",
+      "value": 4.01,
+      "pct": 0.02,
+      "sector": "Information Technology",
+      "location": "United States"
+    },
+    {
       "ticker": "ALAB",
       "name": "Astera Labs Inc",
-      "value": 4.07,
+      "value": 3.89,
       "pct": 0.02,
       "sector": "Information Technology",
       "location": "United States"
@@ -1931,7 +1931,7 @@
     {
       "ticker": "ABEV3",
       "name": "AMBEV SA",
-      "value": 3.83,
+      "value": 3.81,
       "pct": 0.02,
       "sector": "Consumer Staples",
       "location": "Latin America"
@@ -1939,7 +1939,7 @@
     {
       "ticker": "BBRI",
       "name": "BANK RAKYAT INDONESIA (PERSERO)",
-      "value": 3.83,
+      "value": 3.81,
       "pct": 0.02,
       "sector": "Financials",
       "location": "Asia"
@@ -1947,7 +1947,7 @@
     {
       "ticker": "2327",
       "name": "YAGEO CORP",
-      "value": 3.83,
+      "value": 3.81,
       "pct": 0.02,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -1955,7 +1955,7 @@
     {
       "ticker": "2010",
       "name": "SAUDI BASIC INDUSTRIES",
-      "value": 3.83,
+      "value": 3.81,
       "pct": 0.02,
       "sector": "Materials",
       "location": "Middle East"
@@ -1963,7 +1963,7 @@
     {
       "ticker": "ULTRACEMCO",
       "name": "ULTRATECH CEMENT LTD",
-      "value": 3.83,
+      "value": 3.81,
       "pct": 0.02,
       "sector": "Materials",
       "location": "India"
@@ -1971,7 +1971,7 @@
     {
       "ticker": "HCLTECH",
       "name": "HCL TECHNOLOGIES LTD",
-      "value": 3.83,
+      "value": 3.81,
       "pct": 0.02,
       "sector": "Information Technology",
       "location": "India"
@@ -1979,7 +1979,7 @@
     {
       "ticker": "ETE",
       "name": "NATIONAL BANK OF GREECE SA",
-      "value": 3.83,
+      "value": 3.81,
       "pct": 0.02,
       "sector": "Financials",
       "location": "Europe"
@@ -1987,7 +1987,7 @@
     {
       "ticker": "386",
       "name": "CHINA PETROLEUM AND CHEMICAL CORP",
-      "value": 3.83,
+      "value": 3.81,
       "pct": 0.02,
       "sector": "Energy",
       "location": "China"
@@ -1995,7 +1995,7 @@
     {
       "ticker": "SHFL",
       "name": "SHRIRAM FINANCE LTD",
-      "value": 3.83,
+      "value": 3.81,
       "pct": 0.02,
       "sector": "Financials",
       "location": "India"
@@ -2003,7 +2003,7 @@
     {
       "ticker": "2357",
       "name": "ASUSTEK COMPUTER INC",
-      "value": 3.83,
+      "value": 3.81,
       "pct": 0.02,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -2011,7 +2011,7 @@
     {
       "ticker": "2328",
       "name": "PICC PROPERTY AND CASUALTY LTD H",
-      "value": 3.54,
+      "value": 3.51,
       "pct": 0.02,
       "sector": "Financials",
       "location": "China"
@@ -2019,7 +2019,7 @@
     {
       "ticker": "AXIA3",
       "name": "CENTRAIS ELETR BRAS-ELETROBRAS SA",
-      "value": 3.54,
+      "value": 3.51,
       "pct": 0.02,
       "sector": "Utilities",
       "location": "Latin America"
@@ -2027,7 +2027,7 @@
     {
       "ticker": "1378",
       "name": "CHINA HONGQIAO GROUP LTD",
-      "value": 3.54,
+      "value": 3.51,
       "pct": 0.02,
       "sector": "Materials",
       "location": "China"
@@ -2035,7 +2035,7 @@
     {
       "ticker": "BPAC11",
       "name": "BCO BTG PACTUAL UNT SA",
-      "value": 3.54,
+      "value": 3.51,
       "pct": 0.02,
       "sector": "Financials",
       "location": "Latin America"
@@ -2043,7 +2043,7 @@
     {
       "ticker": "373220",
       "name": "LG ENERGY SOLUTION LTD",
-      "value": 3.54,
+      "value": 3.51,
       "pct": 0.02,
       "sector": "Industrials",
       "location": "Korea"
@@ -2051,7 +2051,7 @@
     {
       "ticker": "2890",
       "name": "SINOPAC FINANCIAL HOLDINGS LTD",
-      "value": 3.54,
+      "value": 3.51,
       "pct": 0.02,
       "sector": "Financials",
       "location": "Taiwan"
@@ -2059,7 +2059,7 @@
     {
       "ticker": "207940",
       "name": "SAMSUNG BIOLOGICS LTD",
-      "value": 3.54,
+      "value": 3.51,
       "pct": 0.02,
       "sector": "Health Care",
       "location": "Korea"
@@ -2067,7 +2067,7 @@
     {
       "ticker": "HINDALCO",
       "name": "HINDALCO INDUSTRIES LTD",
-      "value": 3.54,
+      "value": 3.51,
       "pct": 0.02,
       "sector": "Materials",
       "location": "India"
@@ -2075,7 +2075,7 @@
     {
       "ticker": "010140",
       "name": "SAMSUNG HEAVY INDUSTRIES LTD",
-      "value": 3.54,
+      "value": 3.51,
       "pct": 0.02,
       "sector": "Industrials",
       "location": "Korea"
@@ -2083,7 +2083,7 @@
     {
       "ticker": "329180",
       "name": "HD HYUNDAI HEAVY INDUSTRIES LTD",
-      "value": 3.54,
+      "value": 3.51,
       "pct": 0.02,
       "sector": "Industrials",
       "location": "Korea"
@@ -2091,7 +2091,7 @@
     {
       "ticker": "2883",
       "name": "KGI FINANCIAL HOLDING LTD",
-      "value": 3.54,
+      "value": 3.51,
       "pct": 0.02,
       "sector": "Financials",
       "location": "Taiwan"
@@ -2099,7 +2099,7 @@
     {
       "ticker": "3231",
       "name": "WISTRON CORP",
-      "value": 3.24,
+      "value": 3.22,
       "pct": 0.02,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -2107,7 +2107,7 @@
     {
       "ticker": "6669",
       "name": "WIWYNN CORPORATION CORP",
-      "value": 3.24,
+      "value": 3.22,
       "pct": 0.02,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -2115,7 +2115,7 @@
     {
       "ticker": "1303",
       "name": "NAN YA PLASTICS CORP",
-      "value": 3.24,
+      "value": 3.22,
       "pct": 0.02,
       "sector": "Materials",
       "location": "Taiwan"
@@ -2123,7 +2123,7 @@
     {
       "ticker": "ABG",
       "name": "ABSA GROUP LTD",
-      "value": 3.24,
+      "value": 3.22,
       "pct": 0.02,
       "sector": "Financials",
       "location": "Africa"
@@ -2131,7 +2131,7 @@
     {
       "ticker": "042660",
       "name": "HANWHA OCEAN LTD",
-      "value": 3.24,
+      "value": 3.22,
       "pct": 0.02,
       "sector": "Industrials",
       "location": "Korea"
@@ -2139,7 +2139,7 @@
     {
       "ticker": "9868",
       "name": "XPENG CLASS A INC",
-      "value": 3.24,
+      "value": 3.22,
       "pct": 0.02,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -2147,7 +2147,7 @@
     {
       "ticker": "2015",
       "name": "LI AUTO CLASS A INC",
-      "value": 3.24,
+      "value": 3.22,
       "pct": 0.02,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -2155,7 +2155,7 @@
     {
       "ticker": "3653",
       "name": "JENTECH PRECISION INDUSTRIAL LTD",
-      "value": 3.24,
+      "value": 3.22,
       "pct": 0.02,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -2163,7 +2163,7 @@
     {
       "ticker": "QIBK",
       "name": "QATAR ISLAMIC BANK",
-      "value": 3.24,
+      "value": 3.22,
       "pct": 0.02,
       "sector": "Financials",
       "location": "Middle East"
@@ -2171,7 +2171,7 @@
     {
       "ticker": "ICT",
       "name": "INTERNATIONAL CONTAINER TERMINAL S",
-      "value": 3.24,
+      "value": 3.22,
       "pct": 0.02,
       "sector": "Industrials",
       "location": "Asia"
@@ -2179,7 +2179,7 @@
     {
       "ticker": "SQM.B",
       "name": "SOCIEDAD QUIMICA Y MINERA DE CHILE",
-      "value": 3.24,
+      "value": 3.22,
       "pct": 0.02,
       "sector": "Materials",
       "location": "Latin America"
@@ -2187,7 +2187,7 @@
     {
       "ticker": "9633",
       "name": "NONGFU SPRING LTD H",
-      "value": 3.24,
+      "value": 3.22,
       "pct": 0.02,
       "sector": "Consumer Staples",
       "location": "China"
@@ -2195,7 +2195,7 @@
     {
       "ticker": "ADVANC.R",
       "name": "ADVANCED INFO SERVICE NON-VOTING D",
-      "value": 3.24,
+      "value": 3.22,
       "pct": 0.02,
       "sector": "Communication",
       "location": "Asia"
@@ -2203,7 +2203,7 @@
     {
       "ticker": "032830",
       "name": "SAMSUNG LIFE LTD",
-      "value": 3.24,
+      "value": 3.22,
       "pct": 0.02,
       "sector": "Financials",
       "location": "Korea"
@@ -2211,7 +2211,7 @@
     {
       "ticker": "PRIO3",
       "name": "PETRO RIO SA",
-      "value": 3.24,
+      "value": 3.22,
       "pct": 0.02,
       "sector": "Energy",
       "location": "Latin America"
@@ -2219,7 +2219,7 @@
     {
       "ticker": "1010",
       "name": "RIYAD BANK",
-      "value": 3.24,
+      "value": 3.22,
       "pct": 0.02,
       "sector": "Financials",
       "location": "Middle East"
@@ -2227,7 +2227,7 @@
     {
       "ticker": "1109",
       "name": "CHINA RESOURCES LAND LTD",
-      "value": 3.24,
+      "value": 3.22,
       "pct": 0.02,
       "sector": "Real Estate",
       "location": "China"
@@ -2235,7 +2235,7 @@
     {
       "ticker": "IMP",
       "name": "IMPALA PLATINUM LTD",
-      "value": 3.24,
+      "value": 3.22,
       "pct": 0.02,
       "sector": "Materials",
       "location": "Africa"
@@ -2243,7 +2243,7 @@
     {
       "ticker": "196170",
       "name": "ALTEOGEN INC",
-      "value": 2.95,
+      "value": 2.93,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "Korea"
@@ -2251,7 +2251,7 @@
     {
       "ticker": "051910",
       "name": "LG CHEM LTD",
-      "value": 2.95,
+      "value": 2.93,
       "pct": 0.01,
       "sector": "Materials",
       "location": "Korea"
@@ -2259,7 +2259,7 @@
     {
       "ticker": "PZU",
       "name": "PZU SA",
-      "value": 2.95,
+      "value": 2.93,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Europe"
@@ -2267,7 +2267,7 @@
     {
       "ticker": "035720",
       "name": "KAKAO CORP",
-      "value": 2.95,
+      "value": 2.93,
       "pct": 0.01,
       "sector": "Communication",
       "location": "Korea"
@@ -2275,7 +2275,7 @@
     {
       "ticker": "5274",
       "name": "ASPEED TECHNOLOGY INC",
-      "value": 2.95,
+      "value": 2.93,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -2283,7 +2283,7 @@
     {
       "ticker": "1216",
       "name": "UNI-PRESIDENT ENTERPRISES CORP",
-      "value": 2.95,
+      "value": 2.93,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "Taiwan"
@@ -2291,7 +2291,7 @@
     {
       "ticker": "ASELS.E",
       "name": "ASELSAN ELEKTRONIK SANAYI VE TICAR",
-      "value": 2.95,
+      "value": 2.93,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Europe"
@@ -2299,7 +2299,7 @@
     {
       "ticker": "2057",
       "name": "ZTO EXPRESS (CAYMAN) INC",
-      "value": 2.95,
+      "value": 2.93,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "China"
@@ -2307,7 +2307,7 @@
     {
       "ticker": "2892",
       "name": "FIRST FINANCIAL HOLDING LTD",
-      "value": 2.95,
+      "value": 2.93,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Taiwan"
@@ -2315,7 +2315,7 @@
     {
       "ticker": "2423",
       "name": "KE HOLDINGS INC",
-      "value": 2.95,
+      "value": 2.93,
       "pct": 0.01,
       "sector": "Real Estate",
       "location": "China"
@@ -2323,7 +2323,7 @@
     {
       "ticker": "9866",
       "name": "NIO CLASS A INC",
-      "value": 2.95,
+      "value": 2.93,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -2331,7 +2331,7 @@
     {
       "ticker": "9992",
       "name": "POP MART INTERNATIONAL GROUP LTD",
-      "value": 2.95,
+      "value": 2.93,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -2339,7 +2339,7 @@
     {
       "ticker": "3665",
       "name": "BIZLINK HOLDING INC",
-      "value": 2.95,
+      "value": 2.93,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Taiwan"
@@ -2347,7 +2347,7 @@
     {
       "ticker": "009540",
       "name": "HD KOREA SHIPBUILDING & OFFSHORE E",
-      "value": 2.95,
+      "value": 2.93,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Korea"
@@ -2355,7 +2355,7 @@
     {
       "ticker": "PTT.R",
       "name": "PTT NON-VOTING DR PCL",
-      "value": 2.95,
+      "value": 2.93,
       "pct": 0.01,
       "sector": "Energy",
       "location": "Asia"
@@ -2363,7 +2363,7 @@
     {
       "ticker": "BMRI",
       "name": "BANK MANDIRI (PERSERO)",
-      "value": 2.95,
+      "value": 2.93,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Asia"
@@ -2371,7 +2371,7 @@
     {
       "ticker": "9926",
       "name": "AKESO INC",
-      "value": 2.95,
+      "value": 2.93,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "China"
@@ -2379,7 +2379,7 @@
     {
       "ticker": "2601",
       "name": "CHINA PACIFIC INSURANCE (GROUP) LT",
-      "value": 2.95,
+      "value": 2.93,
       "pct": 0.01,
       "sector": "Financials",
       "location": "China"
@@ -2387,7 +2387,7 @@
     {
       "ticker": "ADCB",
       "name": "ABU DHABI COMMERCIAL BANK",
-      "value": 2.95,
+      "value": 2.93,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Middle East"
@@ -2395,7 +2395,7 @@
     {
       "ticker": "PEO",
       "name": "BANK PEKAO SA",
-      "value": 2.95,
+      "value": 2.93,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Europe"
@@ -2403,7 +2403,7 @@
     {
       "ticker": "LTM",
       "name": "LATAM AIRLINES GROUP SA",
-      "value": 2.95,
+      "value": 2.93,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Latin America"
@@ -2411,7 +2411,7 @@
     {
       "ticker": "EUROB",
       "name": "EUROBANK SA",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Europe"
@@ -2419,7 +2419,7 @@
     {
       "ticker": "TENAGA",
       "name": "TENAGA NASIONAL",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Utilities",
       "location": "Asia"
@@ -2427,7 +2427,7 @@
     {
       "ticker": "TPEIR",
       "name": "PIRAEUS BANK SA",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Europe"
@@ -2435,7 +2435,7 @@
     {
       "ticker": "ASIANPAINT",
       "name": "ASIAN PAINTS LTD",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Materials",
       "location": "India"
@@ -2443,7 +2443,7 @@
     {
       "ticker": "047810",
       "name": "KOREA AEROSPACE INDUSTRIES LTD",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Korea"
@@ -2451,7 +2451,7 @@
     {
       "ticker": "TMCV",
       "name": "TATA MOTORS LTD",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "India"
@@ -2459,7 +2459,7 @@
     {
       "ticker": "064350",
       "name": "HYUNDAI-ROTEM",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Korea"
@@ -2467,7 +2467,7 @@
     {
       "ticker": "2449",
       "name": "KING YUAN ELECTRONICS LTD",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -2475,7 +2475,7 @@
     {
       "ticker": "992",
       "name": "LENOVO GROUP LTD",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "China"
@@ -2483,7 +2483,7 @@
     {
       "ticker": "7769",
       "name": "HONPRECISION INC",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -2491,7 +2491,7 @@
     {
       "ticker": "KGH",
       "name": "KGHM POLSKA MIEDZ SA",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Materials",
       "location": "Europe"
@@ -2499,7 +2499,7 @@
     {
       "ticker": "HTHT",
       "name": "H WORLD GROUP ADR LTD",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -2507,7 +2507,7 @@
     {
       "ticker": "1060",
       "name": "SAUDI AWWAL BANK",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Middle East"
@@ -2515,7 +2515,7 @@
     {
       "ticker": "EMBJ3",
       "name": "EMBRAER SA",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Latin America"
@@ -2523,7 +2523,7 @@
     {
       "ticker": "033780",
       "name": "KT&G CORP",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "Korea"
@@ -2531,7 +2531,7 @@
     {
       "ticker": "EICHERMOT",
       "name": "EICHER MOTORS LTD",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "India"
@@ -2539,7 +2539,7 @@
     {
       "ticker": "298040",
       "name": "HYOSUNG HEAVY INDUSTRIES CORP",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Korea"
@@ -2547,7 +2547,7 @@
     {
       "ticker": "086520",
       "name": "ECOPRO LTD",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Korea"
@@ -2555,7 +2555,7 @@
     {
       "ticker": "ITC",
       "name": "ITC LTD",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "India"
@@ -2563,7 +2563,7 @@
     {
       "ticker": "SLM",
       "name": "SANLAM LIMITED LTD",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Africa"
@@ -2571,7 +2571,7 @@
     {
       "ticker": "VEDL",
       "name": "VEDANTA LTD",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Materials",
       "location": "India"
@@ -2579,7 +2579,7 @@
     {
       "ticker": "GAPB",
       "name": "GRUPO AEROPORTUARIO DEL PACIFICO",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Latin America"
@@ -2587,7 +2587,7 @@
     {
       "ticker": "2880",
       "name": "HUA NAN FINANCIAL HOLDINGS LTD",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Taiwan"
@@ -2595,7 +2595,7 @@
     {
       "ticker": "1150",
       "name": "ALINMA BANK",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Middle East"
@@ -2603,7 +2603,7 @@
     {
       "ticker": "ONGC",
       "name": "OIL AND NATURAL GAS LTD",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Energy",
       "location": "India"
@@ -2611,7 +2611,7 @@
     {
       "ticker": "2301",
       "name": "LITE ON TECHNOLOGY CORP",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -2619,7 +2619,7 @@
     {
       "ticker": "2368",
       "name": "GOLD CIRCUIT ELECTRONICS LTD",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -2627,7 +2627,7 @@
     {
       "ticker": "1093",
       "name": "CSPC PHARMACEUTICAL GROUP LTD",
-      "value": 2.65,
+      "value": 2.64,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "China"
@@ -2635,7 +2635,7 @@
     {
       "ticker": "INDIGO",
       "name": "INTERGLOBE AVIATION LTD",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "India"
@@ -2643,7 +2643,7 @@
     {
       "ticker": "PE&OLES*",
       "name": "INDUST PENOLES",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Materials",
       "location": "Latin America"
@@ -2651,7 +2651,7 @@
     {
       "ticker": "ALDAR",
       "name": "ALDAR PROPERTIES",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Real Estate",
       "location": "Middle East"
@@ -2659,7 +2659,7 @@
     {
       "ticker": "HAR",
       "name": "HARMONY GOLD MINING COMPANY LIMITE",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Materials",
       "location": "Africa"
@@ -2667,7 +2667,7 @@
     {
       "ticker": "DSY",
       "name": "DISCOVERY LTD",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Africa"
@@ -2675,7 +2675,7 @@
     {
       "ticker": "006800",
       "name": "MIRAE ASSET SECURITIES CO LTD",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Korea"
@@ -2683,7 +2683,7 @@
     {
       "ticker": "PFCIBEST",
       "name": "GRUPO CIBEST PREF SA",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Latin America"
@@ -2691,7 +2691,7 @@
     {
       "ticker": "TECHM",
       "name": "TECH MAHINDRA LTD",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "India"
@@ -2699,7 +2699,7 @@
     {
       "ticker": "RENT3",
       "name": "LOCALIZA RENT A CAR SA",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Latin America"
@@ -2707,7 +2707,7 @@
     {
       "ticker": "GULF.R",
       "name": "GULF DEVELOPMENT NON-VOTING DR PCL",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Utilities",
       "location": "Asia"
@@ -2715,7 +2715,7 @@
     {
       "ticker": "3993",
       "name": "CMOC GROUP LTD",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Materials",
       "location": "China"
@@ -2723,7 +2723,7 @@
     {
       "ticker": "998",
       "name": "CHINA CITIC BANK CORP LTD H",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Financials",
       "location": "China"
@@ -2731,7 +2731,7 @@
     {
       "ticker": "NESTLEIND",
       "name": "NESTLE INDIA LTD",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "India"
@@ -2739,7 +2739,7 @@
     {
       "ticker": "APOLLOHOSP",
       "name": "APOLLO HOSPITALS ENTERPRISE LTD",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "India"
@@ -2747,7 +2747,7 @@
     {
       "ticker": "TVSMOTOR",
       "name": "TVS MOTOR COMPANY LTD",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "India"
@@ -2755,7 +2755,7 @@
     {
       "ticker": "SBILIFE",
       "name": "SBI LIFE INSURANCE COMPANY LTD",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Financials",
       "location": "India"
@@ -2763,7 +2763,7 @@
     {
       "ticker": "COALINDIA",
       "name": "COAL INDIA LTD",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Energy",
       "location": "India"
@@ -2771,7 +2771,7 @@
     {
       "ticker": "000810",
       "name": "SAMSUNG FIRE & MARINE INSURANCE LT",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Korea"
@@ -2779,7 +2779,7 @@
     {
       "ticker": "6869",
       "name": "YANGTZE OPTICAL FIBRE AND CABLE JO",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "China"
@@ -2787,7 +2787,7 @@
     {
       "ticker": "TLKM",
       "name": "TELEKOMUNIKASI INDONESIA",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Communication",
       "location": "Asia"
@@ -2795,7 +2795,7 @@
     {
       "ticker": "EQTL3",
       "name": "EQUATORIAL SA",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Utilities",
       "location": "Latin America"
@@ -2803,7 +2803,7 @@
     {
       "ticker": "MAXHEALTH",
       "name": "MAX HEALTHCARE INSTITUTE LTD",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "India"
@@ -2811,7 +2811,7 @@
     {
       "ticker": "ADIB",
       "name": "ABU DHABI ISLAMIC BANK",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Middle East"
@@ -2819,7 +2819,7 @@
     {
       "ticker": "CHILE",
       "name": "BANCO DE CHILE",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Latin America"
@@ -2827,7 +2827,7 @@
     {
       "ticker": "034730",
       "name": "SK INC",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Korea"
@@ -2835,7 +2835,7 @@
     {
       "ticker": "BID",
       "name": "BID CORPORATION LTD",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "Africa"
@@ -2843,7 +2843,7 @@
     {
       "ticker": "SSW",
       "name": "SIBANYE STILLWATER LTD",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Materials",
       "location": "Africa"
@@ -2851,7 +2851,7 @@
     {
       "ticker": "010120",
       "name": "LS ELECTRIC LTD",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Korea"
@@ -2859,7 +2859,7 @@
     {
       "ticker": "5880",
       "name": "TAIWAN COOPERATIVE FINANCIAL HOLDI",
-      "value": 2.36,
+      "value": 2.34,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Taiwan"
@@ -2867,7 +2867,7 @@
     {
       "ticker": "JBS",
       "name": "JBS N V NV CLASS A",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "Latin America"
@@ -2875,7 +2875,7 @@
     {
       "ticker": "3661",
       "name": "ALCHIP TECHNOLOGIES LTD",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -2883,7 +2883,7 @@
     {
       "ticker": "BBAS3",
       "name": "BANCO DO BRASIL SA",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Latin America"
@@ -2891,7 +2891,7 @@
     {
       "ticker": "JIOFIN",
       "name": "JIO FINANCIAL SERVICES LTD",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Financials",
       "location": "India"
@@ -2899,7 +2899,7 @@
     {
       "ticker": "2688",
       "name": "ENN ENERGY HOLDINGS LTD",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Utilities",
       "location": "China"
@@ -2907,7 +2907,7 @@
     {
       "ticker": "KRW",
       "name": "KRW CASH",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Cash",
       "location": "Korea"
@@ -2915,7 +2915,7 @@
     {
       "ticker": "3328",
       "name": "BANK OF COMMUNICATIONS LTD H",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Financials",
       "location": "China"
@@ -2923,7 +2923,7 @@
     {
       "ticker": "042700",
       "name": "HANMI SEMICONDUCTOR LTD",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Korea"
@@ -2931,7 +2931,7 @@
     {
       "ticker": "CIPLA",
       "name": "CIPLA LTD",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "India"
@@ -2939,7 +2939,7 @@
     {
       "ticker": "CEZ",
       "name": "CEZ",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Utilities",
       "location": "Europe"
@@ -2947,7 +2947,7 @@
     {
       "ticker": "267250",
       "name": "HD HYUNDAI LTD",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Energy",
       "location": "Korea"
@@ -2955,7 +2955,7 @@
     {
       "ticker": "2379",
       "name": "REALTEK SEMICONDUCTOR CORP",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -2963,7 +2963,7 @@
     {
       "ticker": "015760",
       "name": "KOREA ELECTRIC POWER CORP",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Utilities",
       "location": "Korea"
@@ -2971,7 +2971,7 @@
     {
       "ticker": "9901",
       "name": "NEW ORIENTAL EDUCATION & TECHNOLOG",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -2979,7 +2979,7 @@
     {
       "ticker": "HAL",
       "name": "HINDUSTAN AERONAUTICS LTD",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "India"
@@ -2987,7 +2987,7 @@
     {
       "ticker": "DIVISLAB",
       "name": "DIVIS LABORATORIES LTD",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "India"
@@ -2995,7 +2995,7 @@
     {
       "ticker": "ADANIPORTS",
       "name": "ADANI PORTS AND SPECIAL ECONOMIC Z",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "India"
@@ -3003,7 +3003,7 @@
     {
       "ticker": "GRASIM",
       "name": "GRASIM INDUSTRIES LTD",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Materials",
       "location": "India"
@@ -3011,7 +3011,7 @@
     {
       "ticker": "066570",
       "name": "LG ELECTRONICS INC",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "Korea"
@@ -3019,7 +3019,7 @@
     {
       "ticker": "1177",
       "name": "SINO BIOPHARMACEUTICAL LTD",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "China"
@@ -3027,7 +3027,7 @@
     {
       "ticker": "SHP",
       "name": "SHOPRITE HOLDINGS LTD",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "Africa"
@@ -3035,7 +3035,7 @@
     {
       "ticker": "3750",
       "name": "CONTEMPORARY AMPEREX TECHNOLOGY LT",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "China"
@@ -3043,7 +3043,7 @@
     {
       "ticker": "1347",
       "name": "HUA HONG SEMICONDUCTOR LTD",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "China"
@@ -3051,7 +3051,7 @@
     {
       "ticker": "3008",
       "name": "LARGAN PRECISION LTD",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -3059,7 +3059,7 @@
     {
       "ticker": "6618",
       "name": "JD HEALTH INTERNATIONAL INC",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "China"
@@ -3067,7 +3067,7 @@
     {
       "ticker": "600036",
       "name": "CHINA MERCHANTS BANK LTD A",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Financials",
       "location": "China"
@@ -3075,7 +3075,7 @@
     {
       "ticker": "PMETAL",
       "name": "PRESS METAL ALUMINIUM HOLDINGS",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Materials",
       "location": "Asia"
@@ -3083,7 +3083,7 @@
     {
       "ticker": "XP",
       "name": "XP CLASS A INC",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Latin America"
@@ -3091,7 +3091,7 @@
     {
       "ticker": "3034",
       "name": "NOVATEK MICROELECTRONICS CORP",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -3099,7 +3099,7 @@
     {
       "ticker": "2002",
       "name": "CHINA STEEL CORP",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Materials",
       "location": "Taiwan"
@@ -3107,7 +3107,7 @@
     {
       "ticker": "NED",
       "name": "NEDBANK GROUP LTD",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Africa"
@@ -3115,7 +3115,7 @@
     {
       "ticker": "CPALL.R",
       "name": "CP ALL NON-VOTING DR PCL",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "Asia"
@@ -3123,7 +3123,7 @@
     {
       "ticker": "ASII",
       "name": "ASTRA INTERNATIONAL",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Asia"
@@ -3131,7 +3131,7 @@
     {
       "ticker": "000720",
       "name": "HYUNDAI ENGINEERING & CONSTRUCTION",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Korea"
@@ -3139,7 +3139,7 @@
     {
       "ticker": "JSWSTEEL",
       "name": "JSW STEEL LTD",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Materials",
       "location": "India"
@@ -3147,7 +3147,7 @@
     {
       "ticker": "DRREDDY",
       "name": "DR REDDYS LABORATORIES LTD",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "India"
@@ -3155,7 +3155,7 @@
     {
       "ticker": "SOL",
       "name": "SASOL LTD",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Materials",
       "location": "Africa"
@@ -3163,7 +3163,7 @@
     {
       "ticker": "BAJAJFINSV",
       "name": "BAJAJ FINSERV LTD",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Financials",
       "location": "India"
@@ -3171,7 +3171,7 @@
     {
       "ticker": "2082",
       "name": "ACWA POWER CO",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Utilities",
       "location": "Middle East"
@@ -3179,7 +3179,7 @@
     {
       "ticker": "1519",
       "name": "FORTUNE ELECTRIC LTD",
-      "value": 2.06,
+      "value": 2.05,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Taiwan"
@@ -3187,7 +3187,7 @@
     {
       "ticker": "SWKS",
       "name": "Skyworks Solutions Inc",
-      "value": 1.91,
+      "value": 1.83,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "United States"
@@ -3195,7 +3195,7 @@
     {
       "ticker": "TATACONSUM",
       "name": "TATA CONSUMER PRODUCTS LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "India"
@@ -3203,7 +3203,7 @@
     {
       "ticker": "PTTEP.R",
       "name": "PTT EXPLORATION AND PRODUCTION NON",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Energy",
       "location": "Asia"
@@ -3211,7 +3211,7 @@
     {
       "ticker": "2338",
       "name": "WEICHAI POWER LTD H",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "China"
@@ -3219,7 +3219,7 @@
     {
       "ticker": "6690",
       "name": "HAIER SMART HOME CLASS H LTD H",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -3227,7 +3227,7 @@
     {
       "ticker": "1171",
       "name": "YANKUANG ENERGY GROUP COMPANY LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Energy",
       "location": "China"
@@ -3235,7 +3235,7 @@
     {
       "ticker": "1818",
       "name": "ZHAOJIN MINING INDUSTRY LTD H",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Materials",
       "location": "China"
@@ -3243,7 +3243,7 @@
     {
       "ticker": "1339",
       "name": "THE PEOPLES INSURANCE CO (GROUP)",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Financials",
       "location": "China"
@@ -3251,7 +3251,7 @@
     {
       "ticker": "788",
       "name": "CHINA TOWER CORP LTD H",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Communication",
       "location": "China"
@@ -3259,7 +3259,7 @@
     {
       "ticker": "3533",
       "name": "LOTES LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -3267,7 +3267,7 @@
     {
       "ticker": "TATAPOWER",
       "name": "TATA POWER LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Utilities",
       "location": "India"
@@ -3275,7 +3275,7 @@
     {
       "ticker": "247540",
       "name": "ECOPRO BM LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Korea"
@@ -3283,7 +3283,7 @@
     {
       "ticker": "LPP",
       "name": "LPP SA",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "Europe"
@@ -3291,7 +3291,7 @@
     {
       "ticker": "VIVT3",
       "name": "TELEFONICA BRASIL SA",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Communication",
       "location": "Latin America"
@@ -3299,7 +3299,7 @@
     {
       "ticker": "COMI",
       "name": "COMMERCIAL INTERNATIONAL BANK EGYP",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Africa"
@@ -3307,7 +3307,7 @@
     {
       "ticker": "CHOLAFIN",
       "name": "CHOLAMANDALAM INVESTMENT AND FINAN",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Financials",
       "location": "India"
@@ -3315,7 +3315,7 @@
     {
       "ticker": "086280",
       "name": "HYUNDAI GLOVIS LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Korea"
@@ -3323,7 +3323,7 @@
     {
       "ticker": "300308",
       "name": "ZHONGJI INNOLIGHT LTD A",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "China"
@@ -3331,7 +3331,7 @@
     {
       "ticker": "RDOR3",
       "name": "REDE DOR SAO LUIZ SA",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "Latin America"
@@ -3339,7 +3339,7 @@
     {
       "ticker": "3692",
       "name": "HANSOH PHARMACEUTICAL GROUP LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "China"
@@ -3347,7 +3347,7 @@
     {
       "ticker": "079550",
       "name": "LIG NEX1 LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Korea"
@@ -3355,7 +3355,7 @@
     {
       "ticker": "20",
       "name": "SENSETIME GROUP CLASS B INC",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "China"
@@ -3363,7 +3363,7 @@
     {
       "ticker": "SUZB3",
       "name": "SUZANO SA",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Materials",
       "location": "Latin America"
@@ -3371,7 +3371,7 @@
     {
       "ticker": "NPH",
       "name": "NORTHAM PLATINUM HLDGS LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Materials",
       "location": "Africa"
@@ -3379,7 +3379,7 @@
     {
       "ticker": "7020",
       "name": "ETIHAD ETISALAT",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Communication",
       "location": "Middle East"
@@ -3387,7 +3387,7 @@
     {
       "ticker": "3443",
       "name": "GLOBAL UNICHIP CORP",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -3395,7 +3395,7 @@
     {
       "ticker": "DMART",
       "name": "AVENUE SUPERMARTS LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "India"
@@ -3403,7 +3403,7 @@
     {
       "ticker": "AOT.R",
       "name": "AIRPORTS OF THAILAND NON-VOTING DR",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Asia"
@@ -3411,7 +3411,7 @@
     {
       "ticker": "2603",
       "name": "EVERGREEN MARINE CORP (TAIWAN) LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Taiwan"
@@ -3419,7 +3419,7 @@
     {
       "ticker": "TRENT",
       "name": "TRENT LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "India"
@@ -3427,7 +3427,7 @@
     {
       "ticker": "BAJAJ.AUTO",
       "name": "BAJAJ AUTO LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "India"
@@ -3435,7 +3435,7 @@
     {
       "ticker": "SPL",
       "name": "SANTANDER BANK POLSKA SA",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Europe"
@@ -3443,7 +3443,7 @@
     {
       "ticker": "2331",
       "name": "LI NING LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -3451,7 +3451,7 @@
     {
       "ticker": "2059",
       "name": "KING SLIDE WORKS LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -3459,7 +3459,7 @@
     {
       "ticker": "HEROMOTOCO",
       "name": "HERO MOTOCORP LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "India"
@@ -3467,7 +3467,7 @@
     {
       "ticker": "1050",
       "name": "BANQUE SAUDI FRANSI",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Middle East"
@@ -3475,7 +3475,7 @@
     {
       "ticker": "272210",
       "name": "HANWHA SYSTEMS LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Korea"
@@ -3483,7 +3483,7 @@
     {
       "ticker": "6446",
       "name": "PHARMAESSENTIA CORP",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "Taiwan"
@@ -3491,7 +3491,7 @@
     {
       "ticker": "138040",
       "name": "MERITZ FINANCIAL GROUP INC",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Korea"
@@ -3499,7 +3499,7 @@
     {
       "ticker": "071050",
       "name": "KOREA INVESTMENT HOLDINGS LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Korea"
@@ -3507,7 +3507,7 @@
     {
       "ticker": "ALPHA",
       "name": "ALPHA BANK SA",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Europe"
@@ -3515,7 +3515,7 @@
     {
       "ticker": "267",
       "name": "CITIC LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "China"
@@ -3523,7 +3523,7 @@
     {
       "ticker": "3045",
       "name": "TAIWAN MOBILE LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Communication",
       "location": "Taiwan"
@@ -3531,7 +3531,7 @@
     {
       "ticker": "9698",
       "name": "GDS HOLDINGS LTD CLASS A",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "China"
@@ -3539,7 +3539,7 @@
     {
       "ticker": "005387",
       "name": "HYUNDAI MOTOR S2 PREF",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "Korea"
@@ -3547,7 +3547,7 @@
     {
       "ticker": "ETERNAL",
       "name": "ETERNAL LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "India"
@@ -3555,7 +3555,7 @@
     {
       "ticker": "DIB",
       "name": "DB ISLAMIC BANK",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Middle East"
@@ -3563,7 +3563,7 @@
     {
       "ticker": "000150",
       "name": "DOOSAN CORP",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Korea"
@@ -3571,7 +3571,7 @@
     {
       "ticker": "TWD",
       "name": "TWD CASH",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Cash",
       "location": "Taiwan"
@@ -3579,7 +3579,7 @@
     {
       "ticker": "ASURB",
       "name": "GRUPO AEROPORTUARIO DEL SURESTE B",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Latin America"
@@ -3587,7 +3587,7 @@
     {
       "ticker": "601899",
       "name": "ZIJIN MINING GROUP LTD A",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Materials",
       "location": "China"
@@ -3595,7 +3595,7 @@
     {
       "ticker": "3481",
       "name": "INNOLUX CORP",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -3603,7 +3603,7 @@
     {
       "ticker": "4013",
       "name": "DR SULAIMAN AL HABIB MEDICAL GRP",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "Middle East"
@@ -3611,7 +3611,7 @@
     {
       "ticker": "HDFCLIFE",
       "name": "HDFC LIFE INSURANCE COMPANY LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Financials",
       "location": "India"
@@ -3619,7 +3619,7 @@
     {
       "ticker": "LUPIN",
       "name": "LUPIN LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "India"
@@ -3627,7 +3627,7 @@
     {
       "ticker": "PFC",
       "name": "POWER FINANCE CORPORATION LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Financials",
       "location": "India"
@@ -3635,7 +3635,7 @@
     {
       "ticker": "BDMS.R",
       "name": "BANGKOK DUSIT MEDICAL SERVICES NON",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "Asia"
@@ -3643,7 +3643,7 @@
     {
       "ticker": "RADL3",
       "name": "RAIA DROGASIL",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "Latin America"
@@ -3651,7 +3651,7 @@
     {
       "ticker": "INDUSTOWER",
       "name": "INDUS TOWERS LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Communication",
       "location": "India"
@@ -3659,7 +3659,7 @@
     {
       "ticker": "CUMMINSIND",
       "name": "CUMMINS INDIA LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "India"
@@ -3667,7 +3667,7 @@
     {
       "ticker": "VBBR3",
       "name": "VIBRA ENERGIA SA",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "Latin America"
@@ -3675,7 +3675,7 @@
     {
       "ticker": "BRITANNIA",
       "name": "BRITANNIA INDUSTRIES LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "India"
@@ -3683,7 +3683,7 @@
     {
       "ticker": "TMPV",
       "name": "TATA MOTORS PASSENGER VEHICLES LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "India"
@@ -3691,7 +3691,7 @@
     {
       "ticker": "BIMAS.E",
       "name": "BIM BIRLESIK MAGAZALAR A",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "Europe"
@@ -3699,7 +3699,7 @@
     {
       "ticker": "2319",
       "name": "CHINA MENGNIU DAIRY LTD",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "China"
@@ -3707,7 +3707,7 @@
     {
       "ticker": "2618",
       "name": "JD LOGISTICS INC",
-      "value": 1.77,
+      "value": 1.76,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "China"
@@ -3715,7 +3715,7 @@
     {
       "ticker": "CIBEST",
       "name": "GRUPO CIBEST SA",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Latin America"
@@ -3723,7 +3723,7 @@
     {
       "ticker": "BCI",
       "name": "BANCO DE CREDITO E INVERSION",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Latin America"
@@ -3731,7 +3731,7 @@
     {
       "ticker": "1336",
       "name": "NEW CHINA LIFE INSURANCE COMPANY L",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Financials",
       "location": "China"
@@ -3739,7 +3739,7 @@
     {
       "ticker": "1530",
       "name": "3SBIO INC",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "China"
@@ -3747,7 +3747,7 @@
     {
       "ticker": "VBL",
       "name": "VARUN BEVERAGES LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "India"
@@ -3755,7 +3755,7 @@
     {
       "ticker": "2313",
       "name": "SHENZHOU INTERNATIONAL GROUP LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -3763,7 +3763,7 @@
     {
       "ticker": "ALE",
       "name": "ALLEGRO SA",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "Europe"
@@ -3771,7 +3771,7 @@
     {
       "ticker": "VIPS",
       "name": "VIPSHOP HOLDINGS SPONSORED ADS REP",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -3779,7 +3779,7 @@
     {
       "ticker": "291",
       "name": "CHINA RESOURCES BEER HOLDINGS LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "China"
@@ -3787,7 +3787,7 @@
     {
       "ticker": "ASHOKLEY",
       "name": "ASHOK LEYLAND LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "India"
@@ -3795,7 +3795,7 @@
     {
       "ticker": "2359",
       "name": "WUXI APPTEC LTD H",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "China"
@@ -3803,7 +3803,7 @@
     {
       "ticker": "3529",
       "name": "EMEMORY TECHNOLOGY INC",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -3811,7 +3811,7 @@
     {
       "ticker": "1140",
       "name": "BANK ALBILAD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Middle East"
@@ -3819,7 +3819,7 @@
     {
       "ticker": "AUBANK",
       "name": "AU SMALL FINANCE BANK LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Financials",
       "location": "India"
@@ -3827,7 +3827,7 @@
     {
       "ticker": "POLICYBZR",
       "name": "PB FINTECH LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Financials",
       "location": "India"
@@ -3835,7 +3835,7 @@
     {
       "ticker": "BBDC3",
       "name": "BANCO BRADESCO SA",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Latin America"
@@ -3843,7 +3843,7 @@
     {
       "ticker": "6030",
       "name": "CITIC SECURITIES COMPANY LTD H",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Financials",
       "location": "China"
@@ -3851,7 +3851,7 @@
     {
       "ticker": "003670",
       "name": "POSCO FUTURE M LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Korea"
@@ -3859,7 +3859,7 @@
     {
       "ticker": "INDHOTEL",
       "name": "INDIAN HOTELS LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "India"
@@ -3867,7 +3867,7 @@
     {
       "ticker": "WIPRO",
       "name": "WIPRO LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "India"
@@ -3875,7 +3875,7 @@
     {
       "ticker": "TME",
       "name": "TENCENT MUSIC ENTERTAINMENT GROUP",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Communication",
       "location": "China"
@@ -3883,7 +3883,7 @@
     {
       "ticker": "AC*",
       "name": "ARCA CONTINENTAL",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "Latin America"
@@ -3891,7 +3891,7 @@
     {
       "ticker": "1301",
       "name": "FORMOSA PLASTICS CORP",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Materials",
       "location": "Taiwan"
@@ -3899,7 +3899,7 @@
     {
       "ticker": "2280",
       "name": "ALMARAI",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "Middle East"
@@ -3907,7 +3907,7 @@
     {
       "ticker": "601138",
       "name": "FOXCONN INDUSTRIAL INTERNET LTD A",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "China"
@@ -3915,7 +3915,7 @@
     {
       "ticker": "1658",
       "name": "POSTAL SAVINGS BANK OF CHINA LTD H",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Financials",
       "location": "China"
@@ -3923,7 +3923,7 @@
     {
       "ticker": "PERSISTENT",
       "name": "PERSISTENT SYSTEMS LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "India"
@@ -3931,7 +3931,7 @@
     {
       "ticker": "9626",
       "name": "BILIBILI INC",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Communication",
       "location": "China"
@@ -3939,7 +3939,7 @@
     {
       "ticker": "REM",
       "name": "REMGRO LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Africa"
@@ -3947,7 +3947,7 @@
     {
       "ticker": "TORNTPHARM",
       "name": "TORRENT PHARMACEUTICALS LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "India"
@@ -3955,7 +3955,7 @@
     {
       "ticker": "4958",
       "name": "ZHEN DING TECHNOLOGY HOLDING LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -3963,7 +3963,7 @@
     {
       "ticker": "5871",
       "name": "CHAILEASE HOLDING LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Taiwan"
@@ -3971,7 +3971,7 @@
     {
       "ticker": "CPLE3",
       "name": "CIA PARANAENSE DE ENERGIA COPEL",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Utilities",
       "location": "Latin America"
@@ -3979,7 +3979,7 @@
     {
       "ticker": "017670",
       "name": "SK TELECOM LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Communication",
       "location": "Korea"
@@ -3987,7 +3987,7 @@
     {
       "ticker": "BVN",
       "name": "BUENAVENTURA ADR REPRESENTING",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Materials",
       "location": "Latin America"
@@ -3995,7 +3995,7 @@
     {
       "ticker": "TUPRS.E",
       "name": "TURKIYE PETROL RAFINERILERI A",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Energy",
       "location": "Europe"
@@ -4003,7 +4003,7 @@
     {
       "ticker": "2395",
       "name": "ADVANTECH LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -4011,7 +4011,7 @@
     {
       "ticker": "096770",
       "name": "SK INNOVATION LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Energy",
       "location": "Korea"
@@ -4019,7 +4019,7 @@
     {
       "ticker": "VOD",
       "name": "VODACOM GROUP LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Communication",
       "location": "Africa"
@@ -4027,7 +4027,7 @@
     {
       "ticker": "ADNOCGAS",
       "name": "ADNOC GAS PLC",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Energy",
       "location": "Middle East"
@@ -4035,7 +4035,7 @@
     {
       "ticker": "600900",
       "name": "CHINA YANGTZE POWER LTD A",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Utilities",
       "location": "China"
@@ -4043,7 +4043,7 @@
     {
       "ticker": "688",
       "name": "CHINA OVERSEAS LAND INVESTMENT LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Real Estate",
       "location": "China"
@@ -4051,7 +4051,7 @@
     {
       "ticker": "3293",
       "name": "INTERNATIONAL GAMES SYSTEM LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Communication",
       "location": "Taiwan"
@@ -4059,7 +4059,7 @@
     {
       "ticker": "BSANTANDER",
       "name": "BANCO SANTANDER CHILE",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Latin America"
@@ -4067,7 +4067,7 @@
     {
       "ticker": "259960",
       "name": "KRAFTON INC",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Communication",
       "location": "Korea"
@@ -4075,7 +4075,7 @@
     {
       "ticker": "1101",
       "name": "TAIWAN CEMENT LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Materials",
       "location": "Taiwan"
@@ -4083,7 +4083,7 @@
     {
       "ticker": "SCC.R",
       "name": "SIAM CEMENT NON-VOTING DR PCL",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Materials",
       "location": "Asia"
@@ -4091,7 +4091,7 @@
     {
       "ticker": "ADANIPOWER",
       "name": "ADANI POWER LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Utilities",
       "location": "India"
@@ -4099,7 +4099,7 @@
     {
       "ticker": "INDUSINDBK",
       "name": "INDUSIND BANK LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Financials",
       "location": "India"
@@ -4107,7 +4107,7 @@
     {
       "ticker": "MOL",
       "name": "MOL HUNGARIAN OIL AND GAS",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Energy",
       "location": "Europe"
@@ -4115,7 +4115,7 @@
     {
       "ticker": "1326",
       "name": "FORMOSA CHEMICALS & FIBRE CORP",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Materials",
       "location": "Taiwan"
@@ -4123,7 +4123,7 @@
     {
       "ticker": "BZ",
       "name": "KANZHUN AMERICAN DEPOSITORY SHARES",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "China"
@@ -4131,7 +4131,7 @@
     {
       "ticker": "836",
       "name": "CHINA RESOURCES POWER LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Utilities",
       "location": "China"
@@ -4139,7 +4139,7 @@
     {
       "ticker": "003550",
       "name": "LG CORP",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Korea"
@@ -4147,7 +4147,7 @@
     {
       "ticker": "1816",
       "name": "CGN POWER LTD H",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Utilities",
       "location": "China"
@@ -4155,7 +4155,7 @@
     {
       "ticker": "601318",
       "name": "PING AN INSURANCE (GROUP) OF CHINA",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Financials",
       "location": "China"
@@ -4163,7 +4163,7 @@
     {
       "ticker": "4938",
       "name": "PEGATRON CORP",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -4171,7 +4171,7 @@
     {
       "ticker": "4904",
       "name": "FAR EASTONE TELECOMMUNICATIONS LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Communication",
       "location": "Taiwan"
@@ -4179,7 +4179,7 @@
     {
       "ticker": "1080",
       "name": "ARAB NATIONAL BANK",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Middle East"
@@ -4187,7 +4187,7 @@
     {
       "ticker": "GVT&D",
       "name": "GE VERNOVA T&D INDIA LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "India"
@@ -4195,7 +4195,7 @@
     {
       "ticker": "KOFUBL",
       "name": "COCA-COLA FEMSA CLASS UBL UNITS",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "Latin America"
@@ -4203,7 +4203,7 @@
     {
       "ticker": "CGPOWER",
       "name": "CG POWER AND INDUSTRIAL SOLUTIONS",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "India"
@@ -4211,7 +4211,7 @@
     {
       "ticker": "1919",
       "name": "COSCO SHIPPING HOLDINGS LTD H",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "China"
@@ -4219,7 +4219,7 @@
     {
       "ticker": "RICHTER",
       "name": "GEDEON RICHTER",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "Europe"
@@ -4227,7 +4227,7 @@
     {
       "ticker": "MOTHERSON",
       "name": "SAMVARDHANA MOTHERSON INTERNATIONA",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "India"
@@ -4235,7 +4235,7 @@
     {
       "ticker": "BDO",
       "name": "BDO UNIBANK INC",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Asia"
@@ -4243,7 +4243,7 @@
     {
       "ticker": "358",
       "name": "JIANGXI COPPER LTD H",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Materials",
       "location": "China"
@@ -4251,7 +4251,7 @@
     {
       "ticker": "005830",
       "name": "DB INSURANCE LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Korea"
@@ -4259,7 +4259,7 @@
     {
       "ticker": "002594",
       "name": "BYD LTD A",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -4267,7 +4267,7 @@
     {
       "ticker": "278470",
       "name": "APR LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "Korea"
@@ -4275,7 +4275,7 @@
     {
       "ticker": "2600",
       "name": "ALUMINUM CORPORATION OF CHINA LTD",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Materials",
       "location": "China"
@@ -4283,7 +4283,7 @@
     {
       "ticker": "IHH",
       "name": "IHH HEALTHCARE",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "Asia"
@@ -4291,7 +4291,7 @@
     {
       "ticker": "000100",
       "name": "YUHAN CORP",
-      "value": 1.47,
+      "value": 1.46,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "Korea"
@@ -4299,7 +4299,7 @@
     {
       "ticker": "MLIFT",
       "name": "CASH COLLATERAL USD MLIFT",
-      "value": 1.27,
+      "value": 1.26,
       "pct": 0.01,
       "sector": "Cash",
       "location": "United States"
@@ -4307,7 +4307,7 @@
     {
       "ticker": "FALABELLA",
       "name": "FALABELLA SACI SA",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "Latin America"
@@ -4315,7 +4315,7 @@
     {
       "ticker": "DSSA",
       "name": "DIAN SWASTATIKA SENTOSA",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Energy",
       "location": "Asia"
@@ -4323,7 +4323,7 @@
     {
       "ticker": "PPC",
       "name": "PUBLIC POWER CORPORATION SA",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Utilities",
       "location": "Europe"
@@ -4331,7 +4331,7 @@
     {
       "ticker": "ZAIN",
       "name": "MOBILE TEL",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Communication",
       "location": "Middle East"
@@ -4339,7 +4339,7 @@
     {
       "ticker": "2333",
       "name": "GREAT WALL MOTOR COMPANY LTD H",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -4347,7 +4347,7 @@
     {
       "ticker": "6488",
       "name": "GLOBALWAFERS LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -4355,7 +4355,7 @@
     {
       "ticker": "SCB.R",
       "name": "SCB X PUBLIC COMPANY LIMITED NON-V",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Asia"
@@ -4363,7 +4363,7 @@
     {
       "ticker": "MARK",
       "name": "MASRAF AL RAYAN",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Middle East"
@@ -4371,7 +4371,7 @@
     {
       "ticker": "1772",
       "name": "GANFENG LITHIUM LTD H",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Materials",
       "location": "China"
@@ -4379,7 +4379,7 @@
     {
       "ticker": "ICICIGI",
       "name": "ICICI LOMBARD GENERAL INSURANCE CO",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "India"
@@ -4387,7 +4387,7 @@
     {
       "ticker": "2207",
       "name": "HOTAI MOTOR LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "Taiwan"
@@ -4395,7 +4395,7 @@
     {
       "ticker": "PPH",
       "name": "PEPKOR HOLDINGS SHS LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "Africa"
@@ -4403,7 +4403,7 @@
     {
       "ticker": "GGBR4",
       "name": "GERDAU PREF SA",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Materials",
       "location": "Latin America"
@@ -4411,7 +4411,7 @@
     {
       "ticker": "AKBNK.E",
       "name": "AKBANK A",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Europe"
@@ -4419,7 +4419,7 @@
     {
       "ticker": "2259",
       "name": "ZIJIN GOLD INTERNATIONAL LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Materials",
       "location": "China"
@@ -4427,7 +4427,7 @@
     {
       "ticker": "352820",
       "name": "HYBE LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Communication",
       "location": "Korea"
@@ -4435,7 +4435,7 @@
     {
       "ticker": "2099",
       "name": "CHINA GOLD INTERNATIONAL RESOURCES",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Materials",
       "location": "China"
@@ -4443,7 +4443,7 @@
     {
       "ticker": "FIBRAPL14",
       "name": "PROLOGIS PROPERTY MEXICO REIT",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Real Estate",
       "location": "Latin America"
@@ -4451,7 +4451,7 @@
     {
       "ticker": "ENEV3",
       "name": "ENEVA SA",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Utilities",
       "location": "Latin America"
@@ -4459,7 +4459,7 @@
     {
       "ticker": "SUZLON",
       "name": "SUZLON ENERGY LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "India"
@@ -4467,7 +4467,7 @@
     {
       "ticker": "IQCD",
       "name": "INDUSTRIES QATAR",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Middle East"
@@ -4475,7 +4475,7 @@
     {
       "ticker": "OMAB",
       "name": "GRUPO AEROPORTUARIO DEL CENTRO NOR",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Latin America"
@@ -4483,7 +4483,7 @@
     {
       "ticker": "CMIG4",
       "name": "CIA ENERGETICA DE MINAS GERAIS PRE",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Utilities",
       "location": "Latin America"
@@ -4491,7 +4491,7 @@
     {
       "ticker": "CLS",
       "name": "CLICKS GROUP LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "Africa"
@@ -4499,7 +4499,7 @@
     {
       "ticker": "688041",
       "name": "HYGON INFORMATION TECHNOLOGY LTD A",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "China"
@@ -4507,7 +4507,7 @@
     {
       "ticker": "TAL",
       "name": "TAL EDUCATION GROUP ADR REPTG",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -4515,7 +4515,7 @@
     {
       "ticker": "3606",
       "name": "FUYAO GLASS INDUSTRY GROUP LTD H",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -4523,7 +4523,7 @@
     {
       "ticker": "ADNOCDRILL",
       "name": "ADNOC DRILLING COMPANY",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Energy",
       "location": "Middle East"
@@ -4531,7 +4531,7 @@
     {
       "ticker": "024110",
       "name": "INDUSTRIAL BANK OF KOREA",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Korea"
@@ -4539,7 +4539,7 @@
     {
       "ticker": "DEWA",
       "name": "DUBAI ELECTRICITY AND WATER AUTHOR",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Utilities",
       "location": "Middle East"
@@ -4547,7 +4547,7 @@
     {
       "ticker": "PIDILITIND",
       "name": "PIDILITE INDUSTRIES LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Materials",
       "location": "India"
@@ -4555,7 +4555,7 @@
     {
       "ticker": "HDFCAMC",
       "name": "HDFC ASSET MANAGEMENT COMPANY LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "India"
@@ -4563,7 +4563,7 @@
     {
       "ticker": "601288",
       "name": "AGRICULTURAL BANK OF CHINA LTD A",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "China"
@@ -4571,7 +4571,7 @@
     {
       "ticker": "5876",
       "name": "SHANGHAI COMMERCIAL LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Taiwan"
@@ -4579,7 +4579,7 @@
     {
       "ticker": "NRP",
       "name": "NEPI ROCKCASTLE NV",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Real Estate",
       "location": "Africa"
@@ -4587,7 +4587,7 @@
     {
       "ticker": "BPCL",
       "name": "BHARAT PETROLEUM LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Energy",
       "location": "India"
@@ -4595,7 +4595,7 @@
     {
       "ticker": "BBSE3",
       "name": "BB SEGURIDADE SA",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Latin America"
@@ -4603,7 +4603,7 @@
     {
       "ticker": "GAMUDA",
       "name": "GAMUDA",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Asia"
@@ -4611,7 +4611,7 @@
     {
       "ticker": "2801",
       "name": "CHANG HWA COMMERCIAL BANK LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Taiwan"
@@ -4619,7 +4619,7 @@
     {
       "ticker": "RNI",
       "name": "REINET INVESTMENTS S.C.A.",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Africa"
@@ -4627,7 +4627,7 @@
     {
       "ticker": "DNP",
       "name": "DINO POLSKA SA",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "Europe"
@@ -4635,7 +4635,7 @@
     {
       "ticker": "JINDALSTEL",
       "name": "JINDAL STEEL LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Materials",
       "location": "India"
@@ -4643,7 +4643,7 @@
     {
       "ticker": "BVT",
       "name": "BIDVEST GROUP LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Africa"
@@ -4651,7 +4651,7 @@
     {
       "ticker": "018260",
       "name": "SAMSUNG SDS LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Korea"
@@ -4659,7 +4659,7 @@
     {
       "ticker": "TRUE.R",
       "name": "TRUE CORPORATION NON-VOTING DR PCL",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Communication",
       "location": "Asia"
@@ -4667,7 +4667,7 @@
     {
       "ticker": "2324",
       "name": "COMPAL ELECTRONICS INC",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -4675,7 +4675,7 @@
     {
       "ticker": "SRF",
       "name": "SRF LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Materials",
       "location": "India"
@@ -4683,7 +4683,7 @@
     {
       "ticker": "SWIGGY",
       "name": "SWIGGY LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "India"
@@ -4691,7 +4691,7 @@
     {
       "ticker": "9660",
       "name": "HORIZON ROBOTICS",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "China"
@@ -4699,7 +4699,7 @@
     {
       "ticker": "BHARATFORG",
       "name": "BHARAT FORGE LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "India"
@@ -4707,7 +4707,7 @@
     {
       "ticker": "MARICO",
       "name": "MARICO LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "India"
@@ -4715,7 +4715,7 @@
     {
       "ticker": "3908",
       "name": "CHINA INTERNATIONAL CAPITAL CORP L",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "China"
@@ -4723,7 +4723,7 @@
     {
       "ticker": "CDR",
       "name": "CD PROJEKT SA",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Communication",
       "location": "Europe"
@@ -4731,7 +4731,7 @@
     {
       "ticker": "APLAPOLLO",
       "name": "APL APOLLO TUBES LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Materials",
       "location": "India"
@@ -4739,7 +4739,7 @@
     {
       "ticker": "BAAKOMB",
       "name": "KOMERCNI BANK",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Europe"
@@ -4747,7 +4747,7 @@
     {
       "ticker": "1787",
       "name": "SHANDONG GOLD MINING LTD H",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Materials",
       "location": "China"
@@ -4755,7 +4755,7 @@
     {
       "ticker": "PAYTM",
       "name": "ONE COMMUNICATIONS LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "India"
@@ -4763,7 +4763,7 @@
     {
       "ticker": "DLF",
       "name": "DLF LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Real Estate",
       "location": "India"
@@ -4771,7 +4771,7 @@
     {
       "ticker": "IOC",
       "name": "INDIAN OIL CORP LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Energy",
       "location": "India"
@@ -4779,7 +4779,7 @@
     {
       "ticker": "AMMN",
       "name": "AMMAN MINERAL INTERNASIONAL",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Materials",
       "location": "Asia"
@@ -4787,7 +4787,7 @@
     {
       "ticker": "GODREJCP",
       "name": "GODREJ CONSUMER PRODUCTS LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "India"
@@ -4795,7 +4795,7 @@
     {
       "ticker": "300",
       "name": "MIDEA GROUP LTD CLASS H",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -4803,7 +4803,7 @@
     {
       "ticker": "FUNO11",
       "name": "FIBRA UNO ADMINISTRACION REIT",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Real Estate",
       "location": "Latin America"
@@ -4811,7 +4811,7 @@
     {
       "ticker": "1590",
       "name": "AIRTAC INTERNATIONAL GROUP",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Taiwan"
@@ -4819,7 +4819,7 @@
     {
       "ticker": "MBK",
       "name": "MBANK SA",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Europe"
@@ -4827,7 +4827,7 @@
     {
       "ticker": "TIMS3",
       "name": "TIM SA",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Communication",
       "location": "Latin America"
@@ -4835,7 +4835,7 @@
     {
       "ticker": "5347",
       "name": "VANGUARD INTERNATIONAL SEMICONDUCT",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -4843,7 +4843,7 @@
     {
       "ticker": "FORTIS",
       "name": "FORTIS HEALTHCARE LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "India"
@@ -4851,7 +4851,7 @@
     {
       "ticker": "BIMBOA",
       "name": "GRUPO BIMBO A",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "Latin America"
@@ -4859,7 +4859,7 @@
     {
       "ticker": "MUTHOOTFIN",
       "name": "MUTHOOT FINANCE LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "India"
@@ -4867,7 +4867,7 @@
     {
       "ticker": "028300",
       "name": "HLB INC",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Health Care",
       "location": "Korea"
@@ -4875,7 +4875,7 @@
     {
       "ticker": "300502",
       "name": "EOPTOLINK TECHNOLOGY INC LTD A",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "China"
@@ -4883,7 +4883,7 @@
     {
       "ticker": "2912",
       "name": "PRESIDENT CHAIN STORE CORP",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "Taiwan"
@@ -4891,7 +4891,7 @@
     {
       "ticker": "GCARSOA1",
       "name": "GRUPO CARSO SERIES A1",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Latin America"
@@ -4899,7 +4899,7 @@
     {
       "ticker": "RECLTD",
       "name": "REC",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "India"
@@ -4907,7 +4907,7 @@
     {
       "ticker": "8069",
       "name": "E INK HOLDINGS INC",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -4915,7 +4915,7 @@
     {
       "ticker": "UGPA3",
       "name": "ULTRAPAR PARTICIPOES SA",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "Latin America"
@@ -4923,7 +4923,7 @@
     {
       "ticker": "POLYCAB",
       "name": "POLYCAB INDIA LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "India"
@@ -4931,7 +4931,7 @@
     {
       "ticker": "2376",
       "name": "GIGABYTE TECHNOLOGY LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "Taiwan"
@@ -4939,7 +4939,7 @@
     {
       "ticker": "6881",
       "name": "CHINA GALAXY SECURITIES LTD H",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "China"
@@ -4947,7 +4947,7 @@
     {
       "ticker": "GFINBURO",
       "name": "GRUPO FINANCIERO INBURSA SRIES O",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Latin America"
@@ -4955,7 +4955,7 @@
     {
       "ticker": "NAUKRI",
       "name": "INFO EDGE INDIA LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Communication",
       "location": "India"
@@ -4963,7 +4963,7 @@
     {
       "ticker": "688256",
       "name": "CAMBRICON TECHNOLOGIES CORPORATION",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Information Technology",
       "location": "China"
@@ -4971,7 +4971,7 @@
     {
       "ticker": "CBQK",
       "name": "COMMERCIAL BANK OF QATAR",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Middle East"
@@ -4979,7 +4979,7 @@
     {
       "ticker": "AXIA7",
       "name": "CENTRAIS ELET BRAS PRF SA",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Utilities",
       "location": "Latin America"
@@ -4987,7 +4987,7 @@
     {
       "ticker": "AMBANK",
       "name": "AMMB HOLDINGS",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Asia"
@@ -4995,7 +4995,7 @@
     {
       "ticker": "1208",
       "name": "MMG LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Materials",
       "location": "China"
@@ -5003,7 +5003,7 @@
     {
       "ticker": "DIXON",
       "name": "DIXON TECHNOLOGIES (INDIA) LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "India"
@@ -5011,7 +5011,7 @@
     {
       "ticker": "005385",
       "name": "HYUNDAI MOTOR S1 PREF",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Consumer Discretionary",
       "location": "Korea"
@@ -5019,7 +5019,7 @@
     {
       "ticker": "966",
       "name": "CHINA TAIPING INSURANCE HLDGS LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "China"
@@ -5027,7 +5027,7 @@
     {
       "ticker": "UNITDSPR",
       "name": "UNITED SPIRITS LTD",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "India"
@@ -5035,7 +5035,7 @@
     {
       "ticker": "RAIL3",
       "name": "RUMO SA",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Industrials",
       "location": "Latin America"
@@ -5043,7 +5043,7 @@
     {
       "ticker": "601398",
       "name": "INDUSTRIAL AND COMMERCIAL BANK OF",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "China"
@@ -5051,7 +5051,7 @@
     {
       "ticker": "EMAARDEV",
       "name": "EMAAR DEVELOPMENT",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Real Estate",
       "location": "Middle East"
@@ -5059,7 +5059,7 @@
     {
       "ticker": "1209",
       "name": "CHINA RESOURCES MIXC LIFESTYLE SER",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Real Estate",
       "location": "China"
@@ -5067,7 +5067,7 @@
     {
       "ticker": "8210",
       "name": "BUPA ARABIA",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Financials",
       "location": "Middle East"
@@ -5075,7 +5075,7 @@
     {
       "ticker": "168",
       "name": "TSINGTAO BREWERY LTD H",
-      "value": 1.18,
+      "value": 1.17,
       "pct": 0.01,
       "sector": "Consumer Staples",
       "location": "China"
@@ -9251,12 +9251,12 @@
     {
       "ticker": "USD",
       "name": "USD CASH",
-      "value": -4.05,
+      "value": -4.07,
       "pct": -0.02,
       "sector": "Cash",
       "location": "United States"
     }
   ],
-  "total_value": 20009.62,
-  "updated": "2026-03-30T05:30:29.468944"
+  "total_value": 19777.25,
+  "updated": "2026-03-30T21:41:10.576478"
 }
