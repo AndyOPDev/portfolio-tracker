@@ -1,5 +1,5 @@
 // App.js
-import { PRICES_URL, MOVEMENTS_URL, COLORS } from '../config.js';
+import { PRICES_URL, MOVEMENTS_URL,UNDERLYING_URL, COLORS } from '../config.js';
 import { getDisplayName, fmt, pct } from '../utils.js';
 import { calcPositions } from '../calculations.js';
 import { Header } from './Header.js';
@@ -28,7 +28,7 @@ export function App() {
       const [pricesRes, movsRes, undRes] = await Promise.all([
         fetch(PRICES_URL),
         fetch(MOVEMENTS_URL),
-        fetch('/data/underlying.json')
+        fetch(UNDERLYING_URL)
       ]);
 
       if (!pricesRes.ok) throw new Error(`Prices HTTP ${pricesRes.status}`);
