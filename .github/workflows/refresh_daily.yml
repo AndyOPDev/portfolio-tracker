@@ -1,0 +1,44 @@
+name: Daily Refresh
+
+on:
+  schedule:
+    - cron: '0 3 * * *'   # 3:00 AM every day
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  daily-update:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - run: pip install yfinance pandas requests beautifulsoup4 lxml
+      
+      # Fetch movements from Google Sheets
+      - name: Fetch movements
+        run: python scripts/fetch_movements.py
+      
+      # Fetch current prices
+      - name: Fetch prices
+        run: python scripts/fetch_prices.py
+      
+      # Calculate underlying portfolio
+      - name: Calculate underlying
+        run: python scripts/calculate_underlying.py
+      
+      # Commit all changes
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --quiet && git diff --staged --quiet || git commit -m "📊 Daily update $(date +'%Y-%m-%d')"
+          git push
