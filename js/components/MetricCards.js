@@ -2,8 +2,20 @@ import { fmt, pct, formatNumber } from '../utils.js';
 
 const { createElement: h } = React;
 
-export function MetricCards({ totalValue, totalPL, totalPLPct, hasLivePrices }) {
+export function MetricCards({ totalValue, totalPL, totalPLPct, hasLivePrices, livePricesLoading, livePricesError }) {
   const isPositive = totalPL >= 0;
+  
+  // Determinar qué mostrar en el indicador de actualización
+  let statusText = null;
+  let statusColor = null;
+  
+  if (livePricesLoading) {
+    statusText = "⟳ Updating...";
+    statusColor = "#FF9F0A";
+  } else if (livePricesError && !hasLivePrices) {
+    statusText = "Using daily prices";
+    statusColor = "#636366";
+  }
 
   return h("div", {
     style: {
@@ -23,21 +35,18 @@ export function MetricCards({ totalValue, totalPL, totalPLPct, hasLivePrices }) 
         position: "relative"
       }
     },
-      // Live prices indicator in top-left corner
-      hasLivePrices && h("div", { 
+      // Status indicator in top-right corner
+      statusText && h("div", { 
         style: { 
           position: "absolute", 
           top: 12, 
-          left: 16, 
+          right: 16, 
           fontSize: 10, 
-          color: "#30D158",
-          display: "flex",
-          alignItems: "center",
-          gap: 4
+          color: statusColor,
+          fontFamily: "monospace"
         } 
       }, 
-        h("span", { style: { fontSize: 8, color: "#30D158" } }, "●"),
-        "Live prices"
+        statusText
       ),
       
       h("div", { style: { fontSize: 12, color: "#636366", marginBottom: 4 } }, "Total Worth"),

@@ -2,7 +2,6 @@
 import { PRICES_URL, MOVEMENTS_URL, UNDERLYING_URL, WORKER_URL, COLORS } from '../config.js';
 import { getDisplayName, fmt, pct, formatNumber } from '../utils.js';
 import { calcPositions } from '../calculations.js';
-import { Header } from './Header.js';
 import { MetricCards } from './MetricCards.js';
 import { DashboardTab } from './DashboardTab.js';
 import { DistributionTab } from './DistributionTab.js';
@@ -190,16 +189,14 @@ export function App() {
   const segBtn = (active) => ({ flex: 1, padding: "8px 4px", border: "none", borderRadius: 10, fontSize: 13, fontWeight: active ? 600 : 400, background: active ? "#2C2C2E" : "transparent", color: active ? "#fff" : "#636366", boxShadow: active ? "0 1px 4px rgba(0,0,0,0.5)" : "none", transition: "all 0.2s ease-in-out", cursor: "pointer" });
 
   return h("div", { style: { minHeight: "100vh", paddingBottom: 40 } },
-    h(Header, { 
-      livePricesLoading,
-      livePricesError
-    }),
     error && h("div", { style: { margin: "0 16px 12px", background: "#2C1A1A", borderRadius: 12, padding: "12px 14px", fontSize: 13, color: "#FF375F" } }, error),
     h(MetricCards, { 
       totalValue, 
       totalPL, 
       totalPLPct, 
-      hasLivePrices
+      hasLivePrices,
+      livePricesLoading,
+      livePricesError
     }),
     h("div", { style: { display: "flex", background: "#1C1C1E", borderRadius: 12, padding: 3, margin: "0 16px 16px" } },
       tabs.map(t => h("button", { key: t, onClick: () => setTab(t), style: segBtn(tab === t) }, t))
