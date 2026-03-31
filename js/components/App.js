@@ -31,16 +31,16 @@ export function App() {
     const now = Date.now();
     const timeSinceLastUpdate = lastLiveUpdate ? (now - lastLiveUpdate) / 1000 : null;
     
-    console.log("🔍 [CACHE CHECK] lastLiveUpdate:", lastLiveUpdate);
-    console.log("🔍 [CACHE CHECK] time since last update:", timeSinceLastUpdate, "seconds");
+    //console.log("🔍 [CACHE CHECK] lastLiveUpdate:", lastLiveUpdate);
+    //console.log("🔍 [CACHE CHECK] time since last update:", timeSinceLastUpdate, "seconds");
     
     // Si ya tenemos precios y han pasado menos de 60 segundos, no llamar al worker
     if (lastLiveUpdate && timeSinceLastUpdate < 60) {
-      console.log("📡 [CACHE HIT] Using cached live prices (", timeSinceLastUpdate.toFixed(1), "seconds old)");
+      //console.log("📡 [CACHE HIT] Using cached live prices (", timeSinceLastUpdate.toFixed(1), "seconds old)");
       return;
     }
     
-    console.log("🔄 [CACHE MISS] Fetching fresh live prices from worker...");
+    //console.log("🔄 [CACHE MISS] Fetching fresh live prices from worker...");
     setLivePricesLoading(true);
     setLivePricesError(false);
     
@@ -53,7 +53,7 @@ export function App() {
       try {
         // Delay de 1 segundo entre cada petición para evitar rate limit
         if (i > 0) {
-          console.log(`⏱️ Waiting 1 second before fetching ${ticker}...`);
+          //console.log(`⏱️ Waiting 1 second before fetching ${ticker}...`);
           await new Promise(resolve => setTimeout(resolve, 1000));
         }
         
@@ -99,7 +99,7 @@ export function App() {
     setLoading(true);
     setError(null);
     try {
-      console.log("📡 Fetching static data from GitHub...");
+      //console.log("📡 Fetching static data from GitHub...");
       const [pricesRes, movsRes, undRes] = await Promise.all([
         fetch(PRICES_URL),
         fetch(MOVEMENTS_URL),
