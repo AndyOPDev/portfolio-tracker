@@ -32,6 +32,9 @@ FALLBACK_SOURCES = {
 MOVEMENTS_FILE = "data/movements.json"
 OUTPUT_FILE = "data/prices.json"
 
+# Lista de tickers por defecto (para primera ejecución o fallback)
+DEFAULT_TICKERS = ["XNAS", "VVSM", "BTC"]
+
 def get_price_from_ft(url):
     """Obtiene precio desde Financial Times mediante scraping"""
     try:
@@ -171,12 +174,15 @@ def save_prices(data):
     print(f"📈 {len(data['precios'])} precios actualizados")
     print(f"🕒 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
-
-
 if __name__ == "__main__":
+    # Intentar obtener tickers de movements.json
     tickers = get_tickers_from_movements()
-    if tickers:
-        data = fetch_prices(tickers)
-        save_prices(data)
-    else:
-        print("⚠️ No se encontraron tickers en movements.json")
+    
+    # Si no hay tickers (movements.json no existe o está vacío), usar lista por defecto
+    if not tickers:
+        print("⚠️ No se encontraron tickers en movements.json, usando lista por defecto")
+        tickers = DEFAULT_TICKERS
+    
+    # Obtener precios y guardar
+    data = fetch_prices(tickers)
+    save_prices(data)
