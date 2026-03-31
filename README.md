@@ -101,6 +101,14 @@ Then enable GitHub Pages:
 
 Your app will be available at: https://YOUR_USERNAME.github.io/portfolio-tracker/
 
+## 📈 ETF Holdings
+
+The app automatically fetches and processes ETF holdings data to calculate your **real portfolio breakdown**:
+- **XNAS (iShares Nasdaq 100)**: Holdings fetched from iShares
+- **VVSM (VanEck Semiconductor)**: Holdings fetched from VanEck
+- Holdings are updated **daily** via GitHub Actions
+- The underlying tab shows your actual exposure to individual stocks (e.g., how much AAPL, MSFT, etc. you own through ETFs)
+
 ## Data Structure
 
 movements.json:
