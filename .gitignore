@@ -8,16 +8,44 @@ __pycache__/
 venv/
 ENV/
 env/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.mypy_cache/
 
 # VS Code
 .vscode/
 *.code-workspace
 
-# Data (opcional - comenta si quieres versionar los precios)
-# data/prices.json
+# Datos personales (NO se suben a GitHub)
+data/prices.json
+data/movements.json
+data/underlying.json
+data/holdings/*.csv
+
+# Mantener la carpeta data vacía
+!data/.gitkeep
 
 # macOS
 .DS_Store
+.AppleDouble
+.LSOverride
 
 # Windows
 Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+
+# Cloudflare
+.wrangler/
