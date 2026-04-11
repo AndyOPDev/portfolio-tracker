@@ -3,8 +3,8 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "value": 3331.4,
-      "pct": 15.49,
+      "value": 3353.48,
+      "pct": 15.58,
       "sector": "Crypto",
       "location": "Global"
     },
@@ -12,7 +12,7 @@
       "ticker": "NVDA",
       "name": "Nvidia Corp",
       "value": 1318.32,
-      "pct": 6.13,
+      "pct": 6.12,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -28,7 +28,7 @@
       "ticker": "MSFT",
       "name": "MICROSOFT CORP",
       "value": 723.67,
-      "pct": 3.37,
+      "pct": 3.36,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -36,7 +36,7 @@
       "ticker": "AMZN",
       "name": "AMAZON COM INC",
       "value": 654.95,
-      "pct": 3.05,
+      "pct": 3.04,
       "sector": "Consumer Discretionary",
       "location": "United States"
     },
@@ -50,9 +50,9 @@
     },
     {
       "ticker": "TSM",
-      "name": "TAIWAN SEMICONDUCTOR MANUFACTURING",
+      "name": "Taiwan Semiconductor Manufacturing Co L",
       "value": 571.18,
-      "pct": 2.66,
+      "pct": 2.65,
       "sector": "Information Technology",
       "location": "Taiwan"
     },
@@ -68,7 +68,7 @@
       "ticker": "GOOGL",
       "name": "ALPHABET INC CLASS A",
       "value": 485.15,
-      "pct": 2.26,
+      "pct": 2.25,
       "sector": "Communication",
       "location": "United States"
     },
@@ -132,7 +132,7 @@
       "ticker": "COST",
       "name": "COSTCO WHOLESALE CORP",
       "value": 330.17,
-      "pct": 1.54,
+      "pct": 1.53,
       "sector": "Consumer Staples",
       "location": "United States"
     },
@@ -172,7 +172,7 @@
       "ticker": "KLAC",
       "name": "Kla Corp",
       "value": 231.38,
-      "pct": 1.08,
+      "pct": 1.07,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -188,7 +188,7 @@
       "ticker": "TXN",
       "name": "Texas Instruments Inc",
       "value": 205.38,
-      "pct": 0.96,
+      "pct": 0.95,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -252,7 +252,7 @@
       "ticker": "GILD",
       "name": "GILEAD SCIENCES INC",
       "value": 128.02,
-      "pct": 0.6,
+      "pct": 0.59,
       "sector": "Health Care",
       "location": "United States"
     },
@@ -260,7 +260,7 @@
       "ticker": "ISRG",
       "name": "INTUITIVE SURGICAL INC",
       "value": 117.24,
-      "pct": 0.55,
+      "pct": 0.54,
       "sector": "Health Care",
       "location": "United States"
     },
@@ -588,7 +588,7 @@
       "ticker": "MCHP",
       "name": "Microchip Technology Inc",
       "value": 39.82,
-      "pct": 0.19,
+      "pct": 0.18,
       "sector": "Information Technology",
       "location": "Europe"
     },
@@ -9145,6 +9145,6 @@
       "location": "United States"
     }
   ],
-  "total_value": 21503.35,
-  "updated": "2026-04-11T19:18:08.221018"
+  "total_value": 21525.42,
+  "updated": "2026-04-11T20:18:28.909127"
 }
