@@ -259,9 +259,9 @@ export function UnderlyingTab({ cardStyle, emptyCard }) {
         const tickerColor = getTickerColor(item.ticker, sector);
         const isLast = i === displayHoldings.length - 1;
         
-        const truncatedName = truncate(item.name, isMobile ? 25 : 50);
-        const truncatedSector = isMobile ? truncate(sector, 12) : sector;
-        const truncatedLocation = isMobile ? truncate(location, 12) : location;
+        const truncatedName = truncate(item.name, isMobile ? 35 : 50);
+        const truncatedSector = isMobile ? truncate(sector, 35) : sector;
+        const truncatedLocation = isMobile ? truncate(location, 15) : location;
         
         // Desktop layout
         if (!isMobile) {

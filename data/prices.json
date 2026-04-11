@@ -1,6 +1,7 @@
 {
   "precios": [
     {
+<<<<<<< Updated upstream
       "ticker": "BTC",
       "precio": 62865.11,
       "moneda": "EUR"
@@ -11,6 +12,8 @@
       "moneda": "EUR"
     },
     {
+=======
+>>>>>>> Stashed changes
       "ticker": "XNAS",
       "precio": 49.58,
       "moneda": "EUR"
@@ -18,6 +21,16 @@
     {
       "ticker": "IE00BYWYCC39",
       "precio": 17.42,
+      "moneda": "EUR"
+    },
+    {
+      "ticker": "VVSM",
+      "precio": 65.72,
+      "moneda": "EUR"
+    },
+    {
+      "ticker": "BTC",
+      "precio": 62285.59,
       "moneda": "EUR"
     }
   ]

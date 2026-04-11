@@ -71,6 +71,7 @@ export const REGION_COLORS = {
   "Korea": "#5AC8FA",
   "Asia": "#FF6B35",
   "South America": "#D2691E",
+  "Latin America": "#D2691E",
   "Canada": "#FFD700",
   "Africa": "#8B008B",
   "Global": "#b0234d",
@@ -120,12 +121,39 @@ export function getRegionColor(region) {
 
 // Función para obtener color por sector
 export function getSectorColor(sector) {
-  return SECTOR_COLORS[sector] || "#636366";
+  if (!sector) return "#636366";
+  
+  // Normalizar para coincidir con SECTOR_COLORS
+  const normalized = sector.trim();
+  
+  if (SECTOR_COLORS[normalized]) {
+    return SECTOR_COLORS[normalized];
+  }
+  
+  return "#636366";
 }
 
 // Función para obtener color por location
+// En config.js, modifica getLocationColor:
 export function getLocationColor(location) {
-  return REGION_COLORS[location] || "#636366";
+  if (!location) return "#636366";
+  
+  // Normalizar: trim y primera letra mayúscula para coincidir con REGION_COLORS
+  const normalized = location.trim().split(' ').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+  ).join(' ');
+  
+  // Buscar en REGION_COLORS
+  if (REGION_COLORS[normalized]) {
+    return REGION_COLORS[normalized];
+  }
+  
+  // Buscar en REGION_COLORS con el original
+  if (REGION_COLORS[location]) {
+    return REGION_COLORS[location];
+  }
+  
+  return "#636366";
 }
 
 // Nombres amigables para tickers

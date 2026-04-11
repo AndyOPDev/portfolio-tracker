@@ -6,6 +6,7 @@ import { MetricCards } from './MetricCards.js';
 import { DashboardTab } from './DashboardTab.js';
 import { DistributionTab } from './DistributionTab.js';
 import { UnderlyingTab } from './UnderlyingTab.js';
+import { AssetDetail } from './AssetDetail.js';
 import { getTickerColor } from '../config.js';
 
 const { createElement: h, useState, useEffect, useCallback } = React;
@@ -19,6 +20,9 @@ export function App() {
   const [error, setError] = useState(null);
   const [lastGitHubUpdate, setLastGitHubUpdate] = useState(null);
   
+  // Estado para navegación a detalles del activo
+  const [selectedAsset, setSelectedAsset] = useState(null);
+  
   // Precios en vivo
   const [livePrices, setLivePrices] = useState({});
   const [livePricesLoading, setLivePricesLoading] = useState(false);
@@ -31,29 +35,21 @@ export function App() {
     const now = Date.now();
     const timeSinceLastUpdate = lastLiveUpdate ? (now - lastLiveUpdate) / 1000 : null;
     
-    //console.log("🔍 [CACHE CHECK] lastLiveUpdate:", lastLiveUpdate);
-    //console.log("🔍 [CACHE CHECK] time since last update:", timeSinceLastUpdate, "seconds");
-    
-    // Si ya tenemos precios y han pasado menos de 60 segundos, no llamar al worker
     if (lastLiveUpdate && timeSinceLastUpdate < 60) {
-      //console.log("📡 [CACHE HIT] Using cached live prices (", timeSinceLastUpdate.toFixed(1), "seconds old)");
       return;
     }
     
-    //console.log("🔄 [CACHE MISS] Fetching fresh live prices from worker...");
     setLivePricesLoading(true);
     setLivePricesError(false);
     
-    const tickers = ['XNAS', 'VVSM', 'BTC']; // EMRG no se pide (usa fallback diario)
+    const tickers = ['XNAS', 'VVSM', 'BTC'];
     const results = {};
     let hasError = false;
     
     for (let i = 0; i < tickers.length; i++) {
       const ticker = tickers[i];
       try {
-        // Delay de 1 segundo entre cada petición para evitar rate limit
         if (i > 0) {
-          //console.log(`⏱️ Waiting 1 second before fetching ${ticker}...`);
           await new Promise(resolve => setTimeout(resolve, 1000));
         }
         
@@ -99,7 +95,6 @@ export function App() {
     setLoading(true);
     setError(null);
     try {
-      //console.log("📡 Fetching static data from GitHub...");
       const [pricesRes, movsRes, undRes] = await Promise.all([
         fetch(PRICES_URL),
         fetch(MOVEMENTS_URL),
@@ -147,7 +142,6 @@ export function App() {
     const livePrice = livePrices[p.ticker];
     const staticPrice = prices[p.originalTicker?.trim().toUpperCase()] || {};
     
-    // EMRG siempre usa precio estático (fondo)
     let currentPrice, isLive;
     if (p.ticker === 'EMRG') {
       currentPrice = staticPrice.precio || 0;
@@ -188,6 +182,13 @@ export function App() {
   const emptyCard = (msg) => h("div", { style: { ...cardFlatStyle, textAlign: "center", padding: "40px 20px", color: "#636366", fontSize: 15 } }, msg);
   const segBtn = (active) => ({ flex: 1, padding: "8px 4px", border: "none", borderRadius: 10, fontSize: 13, fontWeight: active ? 600 : 400, background: active ? "#2C2C2E" : "transparent", color: active ? "#fff" : "#636366", boxShadow: active ? "0 1px 4px rgba(0,0,0,0.5)" : "none", transition: "all 0.2s ease-in-out", cursor: "pointer" });
 
+  // Si hay un activo seleccionado, mostrar el detalle
+  if (selectedAsset) {
+    return h("div", { style: { minHeight: "100vh", paddingBottom: 40 } },
+      h(AssetDetail, { asset: selectedAsset, onBack: () => setSelectedAsset(null), cardStyle })
+    );
+  }
+
   return h("div", { style: { minHeight: "100vh", paddingBottom: 40 } },
     error && h("div", { style: { margin: "0 16px 12px", background: "#2C1A1A", borderRadius: 12, padding: "12px 14px", fontSize: 13, color: "#FF375F" } }, error),
     h(MetricCards, { 
@@ -202,7 +203,7 @@ export function App() {
       tabs.map(t => h("button", { key: t, onClick: () => setTab(t), style: segBtn(tab === t) }, t))
     ),
     h("div", { style: { padding: "0 16px" } },
-      tab === "Dashboard" && h(DashboardTab, { enriched, cardStyle, rowStyle, emptyCard }),
+      tab === "Dashboard" && h(DashboardTab, { enriched, cardStyle, rowStyle, emptyCard, onSelectAsset: setSelectedAsset }),
       tab === "Distribution" && h(DistributionTab, { enriched, totalValue, cardFlatStyle, emptyCard, underlying }),
       tab === "Underlying" && h(UnderlyingTab, { cardStyle, emptyCard })
     )

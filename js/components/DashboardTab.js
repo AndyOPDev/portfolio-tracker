@@ -2,7 +2,7 @@ import { getDisplayName, fmt, fmtEur, pct, formatNumber } from '../utils.js';
 
 const { createElement: h } = React;
 
-export function DashboardTab({ enriched, cardStyle, emptyCard }) {
+export function DashboardTab({ enriched, cardStyle, emptyCard, onSelectAsset }) {
   if (enriched.length === 0) {
     return emptyCard("No positions found. Check your movements sheet.");
   }
@@ -20,6 +20,12 @@ export function DashboardTab({ enriched, cardStyle, emptyCard }) {
 
   // Shared card background
   const cardBg = { background: "#1C1C1E", borderRadius: 16 };
+
+  const handleAssetClick = (asset) => {
+    if (onSelectAsset) {
+      onSelectAsset(asset);
+    }
+  };
 
   return h("div", { style: { ...cardBg, marginBottom: 12, overflow: "hidden" } },
     // Holdings header
@@ -51,8 +57,11 @@ export function DashboardTab({ enriched, cardStyle, emptyCard }) {
             display: "flex", 
             alignItems: "center", 
             padding: "12px 16px",
-            borderBottom: !isLast ? "0.5px solid #2C2C2E" : "none"
-          } 
+            borderBottom: !isLast ? "0.5px solid #2C2C2E" : "none",
+            cursor: "pointer",
+            transition: "background 0.15s ease"
+          },
+          onClick: () => handleAssetClick(p)
         },
           h("div", { style: { flex: 2, display: "flex", alignItems: "center", gap: 12 } },
             h("div", { style: { width: 36, height: 36, borderRadius: 10, background: p.color + "22", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 } },
@@ -96,8 +105,11 @@ export function DashboardTab({ enriched, cardStyle, emptyCard }) {
         key: p.ticker, 
         style: { 
           padding: "14px 16px",
-          borderBottom: !isLast ? "0.5px solid #2C2C2E" : "none"
-        } 
+          borderBottom: !isLast ? "0.5px solid #2C2C2E" : "none",
+          cursor: "pointer",
+          transition: "background 0.15s ease"
+        },
+        onClick: () => handleAssetClick(p)
       },
         h("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "flex-start" } },
           h("div", { style: { display: "flex", alignItems: "flex-start", gap: 12, flex: 1 } },

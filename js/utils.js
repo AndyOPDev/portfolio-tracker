@@ -39,3 +39,26 @@ export function useIsMobile() {
 
   return isMobile;
 }
+
+export function parseCSV(text) {
+  const lines = text.trim().split("\n");
+  const headers = lines[0].split(",");
+
+  return lines.slice(1).map(line => {
+    const values = line.split(",");
+    const obj = {};
+
+    headers.forEach((h, i) => {
+      obj[h.trim()] = values[i]?.trim();
+    });
+
+    return {
+      etf: obj.etf,
+      ticker: obj.ticker,
+      name: obj.name,
+      weight: parseFloat(obj.weight_pct) || 0,
+      sector: obj.sector,
+      location: obj.location
+    };
+  });
+}
