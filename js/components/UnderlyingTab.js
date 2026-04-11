@@ -1,6 +1,8 @@
-import { fmt, fmtEur, formatNumber } from '../utils.js';
+// Importar la función desde utils.js
+import { fmt, fmtEur, formatNumber, toTitleCase } from '../utils.js';
 import { UNDERLYING_URL } from '../config.js';
 import { getTickerColor, getSectorColor, getLocationColor } from '../config.js';
+
 
 // Al principio del archivo, después de los imports
 const countryAbbreviations = {
@@ -271,7 +273,7 @@ export function UnderlyingTab({ cardStyle, emptyCard }) {
         const tickerColor = getTickerColor(item.ticker, sector);
         const isLast = i === displayHoldings.length - 1;
         
-        const truncatedName = truncate(item.name, isMobile ? 35 : 50);
+        const truncatedName = truncate(toTitleCase(item.name), isMobile ? 30 : 50);
         const truncatedSector = isMobile ? truncate(sector, 35) : sector;
         const truncatedLocation = isMobile ? truncate(location, 15) : location;
         
@@ -299,13 +301,13 @@ export function UnderlyingTab({ cardStyle, emptyCard }) {
             ),
             h("div", { style: { flex: 1, display: "flex", alignItems: "center", gap: 6, minWidth: 0 } },
               h("div", { style: { width: 6, height: 6, borderRadius: 1.5, background: sectorColor, flexShrink: 0 } }),
-              h("span", { style: { fontSize: 11, color: "#8e8e93", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", title: sector } }, 
+              h("span", { style: { fontSize: 10, color: "#8e8e93", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", title: sector } }, 
                 truncatedSector
               )
             ),
             h("div", { style: { flex: 1, display: "flex", alignItems: "center", gap: 6, minWidth: 0 } },
               h("div", { style: { width: 6, height: 6, borderRadius: 1.5, background: locationColor, flexShrink: 0 } }),
-              h("span", { style: { fontSize: 11, color: "#8e8e93", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", title: location } }, 
+              h("span", { style: { fontSize: 10, color: "#8e8e93", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", title: location } }, 
                 truncatedLocation
               )
             ),
@@ -330,7 +332,7 @@ export function UnderlyingTab({ cardStyle, emptyCard }) {
                 h("span", { style: { fontSize: 14, fontWeight: 700, color: tickerColor } }, item.ticker.slice(0, 4))
               ),
               h("div", { style: { flex: 1, minWidth: 0 } },
-                h("div", { style: { fontSize: 16, fontWeight: 600, color: "#fff", marginBottom: 6, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", title: item.name } }, 
+                h("div", { style: { fontSize: 14, fontWeight: 600, color: "#fff", marginBottom: 6, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", title: item.name } }, 
                   truncatedName
                 ),
                 h("div", { style: { display: "flex", gap: 12, flexWrap: "wrap" } },
@@ -346,8 +348,8 @@ export function UnderlyingTab({ cardStyle, emptyCard }) {
               )
             ),
             h("div", { style: { textAlign: "right", flexShrink: 0 } },
-              h("div", { style: { fontSize: 20, fontWeight: 700, color: "#fff" } }, `${item.pct.toFixed(1)}%`),
-              h("div", { style: { fontSize: 11, color: "#636366", marginTop: 2 } }, `${formatNumber(item.value)} €`)
+              h("div", { style: { fontSize: 16, fontWeight: 700, color: "#fff" } }, `${item.pct.toFixed(1)}%`),
+              h("div", { style: { fontSize: 10, color: "#636366", marginTop: 2 } }, `${formatNumber(item.value)} €`)
             )
           )
         );

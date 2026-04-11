@@ -65,6 +65,9 @@ export const TICKER_COLORS = {
 export const REGION_COLORS = {
   "United States": "#0A84FF",
   "Europe": "#30D158",
+  "Netherlands": "#30D158",
+  "Spain": "#30D158",
+  "United Kingdom": "#30D158",
   "China": "#FF9F0A",
   "Taiwan": "#BF5AF2",
   "India": "#FF375F",

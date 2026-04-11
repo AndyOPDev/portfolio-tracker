@@ -40,25 +40,56 @@ export function useIsMobile() {
   return isMobile;
 }
 
-export function parseCSV(text) {
-  const lines = text.trim().split("\n");
-  const headers = lines[0].split(",");
+// En utils.js, añade esta función:
 
-  return lines.slice(1).map(line => {
-    const values = line.split(",");
-    const obj = {};
+// Palabras que deben preservarse en mayúsculas
+const PRESERVE_UPPER  = [
+  'KLA', 'AMD', 'IBM', 'TSMC', 'CEO', 'CFO', 'CTO', 'USA', 'UK', 'EU',
+  'AI', 'API', 'URL', 'HTML', 'CSS', 'JS', 'PDF', 'XML', 'JSON', 'SQL',
+  'HTTP', 'HTTPS', 'FTP', 'SSH', 'SSL', 'TLS', 'VPN', 'RAM', 'CPU', 'GPU',
+  'HDD', 'SSD', 'USB', 'LED', 'LCD', 'OLED', '4K', '8K', 'HD', 'UHD',
+  'GPS', 'WiFi', 'NFC', 'RFID', 'SIM', 'PIN', 'OTP', '2FA', 'MFA', 'USD',
+  'NVIDIA', 'ASML', 'IDEXX', 'HDFC', 'ICICI', 'JD.COM','CTBC', 'NXP'
+];
 
-    headers.forEach((h, i) => {
-      obj[h.trim()] = values[i]?.trim();
-    });
+// Palabras que deben ir en minúsculas (excepto primera letra)
+// Ejemplo: INC → Inc, CORP → Corp, LTD → Ltd, LLC → Llc
+const PRESERVE_TITLE  = [
+  'INC', 'CORP', 'LTD', 'LLC', 'LP', 'PLC', 'AG', 'SE', 'SA',
+  'GMBH', 'SRL', 'BV', 'OY', 'APS', 'SIA', 'KFT', 'SPA', 'SRO', 'LAM', 'COM', 'TWO', 'DR', 'HON','HAI', 'NON','PRE','THE'
+];
 
-    return {
-      etf: obj.etf,
-      ticker: obj.ticker,
-      name: obj.name,
-      weight: parseFloat(obj.weight_pct) || 0,
-      sector: obj.sector,
-      location: obj.location
-    };
+export function toTitleCase(str) {
+  if (!str) return "";
+  
+  const words = str.split(' ');
+  
+  const result = words.map(word => {
+    const upperWord = word.toUpperCase();
+    
+    // 1. Preservar siglas (ej: KLA, AMD)
+    if (PRESERVE_UPPER.includes(upperWord)) {
+      return upperWord;
+    }
+    
+    // 2. Palabras como INC, CORP → Inc, Corp
+    if (PRESERVE_TITLE.includes(upperWord)) {
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    }
+    
+    // 3. Palabras de 2 letras → FORZAR MAYÚSCULAS (ON, IN, UP, etc.)
+    if (word.length === 2) {
+      return word.toUpperCase();
+    }
+    
+    // 4. Palabras de 3 letras que son siglas (todo mayúsculas)
+    if (word.length === 3 && word === word.toUpperCase() && /^[A-Z]{3}$/.test(word)) {
+      return word;
+    }
+    
+    // 5. Capitalizar normal
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
   });
+  
+  return result.join(' ');
 }

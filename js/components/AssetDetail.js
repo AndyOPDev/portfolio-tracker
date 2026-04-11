@@ -1,14 +1,8 @@
-import { getDisplayName, formatNumber } from '../utils.js';
-//import { getSectorColor, getLocationColor } from '../config.js';
+import { getDisplayName, formatNumber, toTitleCase } from '../utils.js';
 import { getTickerColor, getSectorColor, getLocationColor } from '../config.js';
 
 const { createElement: h, useState, useEffect, useCallback } = React;
 
-// Helper para formatear nombres a título
-const toTitleCase = (str) => {
-  if (!str) return "";
-  return str.toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
-};
 
 // Helper para truncar texto
 const truncate = (text, maxLength) => {
