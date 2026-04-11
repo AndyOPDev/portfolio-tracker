@@ -32,11 +32,11 @@ export function AssetDetail({ asset, onBack, cardStyle }) {
       try {
         let url;
         if (asset.ticker === 'XNAS') {
-          url = '/data/holdings/XNAS_holdings.csv';
+          url = './data/holdings/XNAS_holdings.csv';
         } else if (asset.ticker === 'VVSM') {
-          url = '/data/holdings/VVSM_holdings.csv';
+          url = './data/holdings/VVSM_holdings.csv';
         } else if (asset.ticker === 'EMRG') {
-          url = '/data/holdings/EMRG_holdings.csv';
+          url = './data/holdings/EMRG_holdings.csv';
         } else {
           setHoldings([]);
           setLoading(false);
