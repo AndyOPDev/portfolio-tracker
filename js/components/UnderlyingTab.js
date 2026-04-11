@@ -2,6 +2,18 @@ import { fmt, fmtEur, formatNumber } from '../utils.js';
 import { UNDERLYING_URL } from '../config.js';
 import { getTickerColor, getSectorColor, getLocationColor } from '../config.js';
 
+// Al principio del archivo, después de los imports
+const countryAbbreviations = {
+  "United States": "USA",
+  "United Kingdom": "UK"
+};
+
+const abbreviateCountry = (country, isMobile) => {
+  if (!isMobile) return country;
+  return countryAbbreviations[country] || country;
+};
+
+
 const { createElement: h, useState, useEffect, useCallback } = React;
 
 export function UnderlyingTab({ cardStyle, emptyCard }) {
@@ -328,7 +340,7 @@ export function UnderlyingTab({ cardStyle, emptyCard }) {
                   ),
                   h("div", { style: { display: "flex", alignItems: "center", gap: 5, fontSize: 11, color: "#8e8e93" } },
                     h("div", { style: { width: 5, height: 5, borderRadius: 1.5, background: locationColor } }),
-                    h("span", { title: location }, truncatedLocation)
+                    h("span", { title: location }, abbreviateCountry(truncatedLocation, true))
                   )
                 )
               )
