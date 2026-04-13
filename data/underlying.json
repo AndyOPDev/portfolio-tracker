@@ -3,8 +3,8 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "value": 3264.71,
-      "pct": 15.23,
+      "value": 3242.84,
+      "pct": 15.14,
       "sector": "Crypto",
       "location": "Global"
     },
@@ -12,7 +12,7 @@
       "ticker": "NVDA",
       "name": "Nvidia Corp",
       "value": 1318.32,
-      "pct": 6.15,
+      "pct": 6.16,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -20,7 +20,7 @@
       "ticker": "AAPL",
       "name": "APPLE INC",
       "value": 999.94,
-      "pct": 4.66,
+      "pct": 4.67,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -52,7 +52,7 @@
       "ticker": "TSM",
       "name": "Taiwan Semiconductor Manufacturing Co L",
       "value": 571.18,
-      "pct": 2.66,
+      "pct": 2.67,
       "sector": "Information Technology",
       "location": "Taiwan"
     },
@@ -68,7 +68,7 @@
       "ticker": "GOOGL",
       "name": "ALPHABET INC CLASS A",
       "value": 485.15,
-      "pct": 2.26,
+      "pct": 2.27,
       "sector": "Communication",
       "location": "United States"
     },
@@ -84,7 +84,7 @@
       "ticker": "WMT",
       "name": "WALMART INC",
       "value": 455.5,
-      "pct": 2.12,
+      "pct": 2.13,
       "sector": "Consumer Staples",
       "location": "United States"
     },
@@ -204,7 +204,7 @@
       "ticker": "SMSN",
       "name": "SAMSUNG ELECTRONICS LTD",
       "value": 178.85,
-      "pct": 0.83,
+      "pct": 0.84,
       "sector": "Information Technology",
       "location": "Korea"
     },
@@ -9145,6 +9145,6 @@
       "location": "United States"
     }
   ],
-  "total_value": 21436.66,
-  "updated": "2026-04-12T05:15:24.955585"
+  "total_value": 21414.79,
+  "updated": "2026-04-13T05:32:38.988316"
 }
