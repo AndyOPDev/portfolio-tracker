@@ -1,103 +1,104 @@
 etf,ticker,name,weight_pct,sector,location
-XNAS,NVDA,NVIDIA CORP,8.9,Information Technology,United States
-XNAS,AAPL,APPLE INC,7.14,Information Technology,United States
-XNAS,MSFT,MICROSOFT CORP,5.77,Information Technology,United States
-XNAS,AMZN,AMAZON COM INC,4.95,Consumer Discretionary,United States
-XNAS,META,META PLATFORMS INC CLASS A,3.69,Communication,United States
-XNAS,GOOGL,ALPHABET INC CLASS A,3.61,Communication,United States
-XNAS,TSLA,TESLA INC,3.59,Consumer Discretionary,United States
+XNAS,NVDA,NVIDIA CORP,8.88,Information Technology,United States
+XNAS,AAPL,APPLE INC,7.19,Information Technology,United States
+XNAS,MSFT,MICROSOFT CORP,5.69,Information Technology,United States
+XNAS,AMZN,AMAZON COM INC,4.87,Consumer Discretionary,United States
+XNAS,META,META PLATFORMS INC CLASS A,3.68,Communication,United States
+XNAS,TSLA,TESLA INC,3.62,Consumer Discretionary,United States
+XNAS,GOOGL,ALPHABET INC CLASS A,3.6,Communication,United States
 XNAS,AVGO,BROADCOM INC,3.49,Information Technology,United States
 XNAS,GOOG,ALPHABET INC CLASS C,3.34,Communication,United States
-XNAS,WMT,WALMART INC,3.11,Consumer Staples,United States
-XNAS,MU,MICRON TECHNOLOGY INC,2.62,Information Technology,United States
-XNAS,NFLX,NETFLIX INC,2.32,Communication,United States
-XNAS,AMD,ADVANCED MICRO DEVICES INC,2.31,Information Technology,United States
-XNAS,COST,COSTCO WHOLESALE CORP,2.23,Consumer Staples,United States
-XNAS,INTC,INTEL CORPORATION CORP,1.75,Information Technology,United States
+XNAS,WMT,WALMART INC,3.12,Consumer Staples,United States
+XNAS,MU,MICRON TECHNOLOGY INC,2.56,Information Technology,United States
+XNAS,AMD,ADVANCED MICRO DEVICES INC,2.27,Information Technology,United States
+XNAS,COST,COSTCO WHOLESALE CORP,2.22,Consumer Staples,United States
+XNAS,NFLX,NETFLIX INC,2.06,Communication,United States
+XNAS,INTC,INTEL CORPORATION CORP,1.71,Information Technology,United States
 XNAS,CSCO,CISCO SYSTEMS INC,1.7,Information Technology,United States
-XNAS,PLTR,PALANTIR TECHNOLOGIES INC CLASS A,1.67,Information Technology,United States
-XNAS,LRCX,LAM RESEARCH CORP,1.66,Information Technology,United States
+XNAS,PLTR,PALANTIR TECHNOLOGIES INC CLASS A,1.68,Information Technology,United States
+XNAS,LRCX,LAM RESEARCH CORP,1.67,Information Technology,United States
 XNAS,AMAT,APPLIED MATERIAL INC,1.58,Information Technology,United States
-XNAS,LIN,LINDE PLC,1.18,Materials,United States
-XNAS,KLAC,KLA CORP,1.16,Information Technology,United States
-XNAS,TMUS,T MOBILE US INC,1.11,Communication,United States
-XNAS,PEP,PEPSICO INC,1.1,Consumer Staples,United States
-XNAS,TXN,TEXAS INSTRUMENT INC,1.03,Information Technology,United States
+XNAS,KLAC,KLA CORP,1.17,Information Technology,United States
+XNAS,LIN,LINDE PLC,1.14,Materials,United States
+XNAS,TMUS,T MOBILE US INC,1.09,Communication,United States
+XNAS,PEP,PEPSICO INC,1.08,Consumer Staples,United States
+XNAS,TXN,TEXAS INSTRUMENT INC,1.04,Information Technology,United States
 XNAS,AMGN,AMGEN INC,0.96,Health Care,United States
-XNAS,ADI,ANALOG DEVICES INC,0.88,Information Technology,United States
-XNAS,GILD,GILEAD SCIENCES INC,0.88,Health Care,United States
+XNAS,ADI,ANALOG DEVICES INC,0.91,Information Technology,United States
+XNAS,GILD,GILEAD SCIENCES INC,0.85,Health Care,United States
 XNAS,ISRG,INTUITIVE SURGICAL INC,0.83,Health Care,United States
-XNAS,SHOP,SHOPIFY SUBORDINATE VOTING INC CLA,0.79,Information Technology,Canada
-XNAS,BKNG,BOOKING HOLDINGS INC,0.75,Consumer Discretionary,United States
+XNAS,SHOP,SHOPIFY SUBORDINATE VOTING INC CLA,0.8,Information Technology,Canada
+XNAS,BKNG,BOOKING HOLDINGS INC,0.76,Consumer Discretionary,United States
 XNAS,HON,HONEYWELL INTERNATIONAL INC,0.74,Industrials,United States
 XNAS,APP,APPLOVIN CORP CLASS A,0.73,Information Technology,United States
 XNAS,QCOM,QUALCOMM INC,0.73,Information Technology,United States
-XNAS,PANW,PALO ALTO NETWORKS INC,0.7,Information Technology,United States
-XNAS,ASML,ASML HOLDING ADR REPRESENTING NV,0.63,Information Technology,Netherlands
+XNAS,PANW,PALO ALTO NETWORKS INC,0.69,Information Technology,United States
+XNAS,SNDK,SANDISK CORP,0.68,Information Technology,United States
+XNAS,ASML,ASML HOLDING ADR REPRESENTING NV,0.65,Information Technology,Netherlands
 XNAS,WDC,WESTERN DIGITAL CORP,0.63,Information Technology,United States
-XNAS,MRVL,MARVELL TECHNOLOGY INC,0.59,Information Technology,United States
-XNAS,STX,SEAGATE TECHNOLOGY HOLDINGS PLC,0.59,Information Technology,United States
+XNAS,MRVL,MARVELL TECHNOLOGY INC,0.61,Information Technology,United States
+XNAS,STX,SEAGATE TECHNOLOGY HOLDINGS PLC,0.6,Information Technology,United States
 XNAS,SBUX,STARBUCKS CORP,0.57,Consumer Discretionary,United States
 XNAS,VRTX,VERTEX PHARMACEUTICALS INC,0.56,Health Care,United States
-XNAS,CEG,CONSTELLATION ENERGY CORP,0.55,Utilities,United States
-XNAS,INTU,INTUIT INC,0.55,Information Technology,United States
-XNAS,CMCSA,COMCAST CORP CLASS A,0.54,Communication,United States
-XNAS,CRWD,CROWDSTRIKE HOLDINGS INC CLASS A,0.53,Information Technology,United States
-XNAS,ADBE,ADOBE INC,0.52,Information Technology,United States
-XNAS,MAR,MARRIOTT INTERNATIONAL INC CLASS A,0.49,Consumer Discretionary,United States
+XNAS,INTU,INTUIT INC,0.54,Information Technology,United States
+XNAS,CRWD,CROWDSTRIKE HOLDINGS INC CLASS A,0.54,Information Technology,United States
+XNAS,CEG,CONSTELLATION ENERGY CORP,0.53,Utilities,United States
+XNAS,CMCSA,COMCAST CORP CLASS A,0.53,Communication,United States
+XNAS,MAR,MARRIOTT INTERNATIONAL INC CLASS A,0.5,Consumer Discretionary,United States
+XNAS,ADBE,ADOBE INC,0.5,Information Technology,United States
 XNAS,MELI,MERCADOLIBRE INC,0.47,Consumer Discretionary,United States
-XNAS,SNPS,SYNOPSYS INC,0.43,Information Technology,United States
 XNAS,CDNS,CADENCE DESIGN SYSTEMS INC,0.43,Information Technology,United States
-XNAS,ADP,AUTOMATIC DATA PROCESSING INC,0.41,Industrials,United States
+XNAS,SNPS,SYNOPSYS INC,0.43,Information Technology,United States
 XNAS,CSX,CSX CORP,0.4,Industrials,United States
-XNAS,ORLY,OREILLY AUTOMOTIVE INC,0.4,Consumer Discretionary,United States
+XNAS,ADP,AUTOMATIC DATA PROCESSING INC,0.4,Industrials,United States
+XNAS,ORLY,OREILLY AUTOMOTIVE INC,0.39,Consumer Discretionary,United States
 XNAS,REGN,REGENERON PHARMACEUTICALS INC,0.39,Health Care,United States
-XNAS,DASH,DOORDASH INC CLASS A,0.37,Consumer Discretionary,United States
-XNAS,MNST,MONSTER BEVERAGE CORP,0.37,Consumer Staples,United States
-XNAS,MDLZ,MONDELEZ INTERNATIONAL INC CLASS A,0.37,Consumer Staples,United States
-XNAS,AEP,AMERICAN ELECTRIC POWER INC,0.37,Utilities,United States
+XNAS,DASH,DOORDASH INC CLASS A,0.38,Consumer Discretionary,United States
+XNAS,MNST,MONSTER BEVERAGE CORP,0.38,Consumer Staples,United States
 XNAS,ROST,ROSS STORES INC,0.37,Consumer Discretionary,United States
+XNAS,MDLZ,MONDELEZ INTERNATIONAL INC CLASS A,0.37,Consumer Staples,United States
+XNAS,AEP,AMERICAN ELECTRIC POWER INC,0.36,Utilities,United States
 XNAS,CTAS,CINTAS CORP,0.36,Industrials,United States
-XNAS,MPWR,MONOLITHIC POWER SYSTEMS INC,0.35,Information Technology,United States
+XNAS,MPWR,MONOLITHIC POWER SYSTEMS INC,0.36,Information Technology,United States
 XNAS,PDD,PDD HOLDINGS ADS INC,0.35,Consumer Discretionary,China
 XNAS,WBD,WARNER BROS. DISCOVERY INC SERIES,0.34,Communication,United States
 XNAS,PCAR,PACCAR INC,0.33,Industrials,United States
-XNAS,FTNT,FORTINET INC,0.31,Information Technology,United States
-XNAS,BKR,BAKER HUGHES CLASS A,0.3,Energy,United States
+XNAS,FTNT,FORTINET INC,0.3,Information Technology,United States
 XNAS,ABNB,AIRBNB INC CLASS A,0.3,Consumer Discretionary,United States
-XNAS,NXPI,NXP SEMICONDUCTORS NV,0.28,Information Technology,United States
-XNAS,FANG,DIAMONDBACK ENERGY INC,0.27,Energy,United States
+XNAS,BKR,BAKER HUGHES CLASS A,0.29,Energy,United States
+XNAS,NXPI,NXP SEMICONDUCTORS NV,0.27,Information Technology,United States
+XNAS,MSTR,STRATEGY INC CLASS A,0.26,Information Technology,United States
 XNAS,FAST,FASTENAL,0.26,Industrials,United States
-XNAS,EA,ELECTRONIC ARTS INC,0.26,Communication,United States
-XNAS,ADSK,AUTODESK INC,0.26,Information Technology,United States
 XNAS,FER,FERROVIAL,0.26,Industrials,Spain
+XNAS,FANG,DIAMONDBACK ENERGY INC,0.26,Energy,United States
+XNAS,ADSK,AUTODESK INC,0.26,Information Technology,United States
 XNAS,XEL,XCEL ENERGY INC,0.26,Utilities,United States
-XNAS,EXC,EXELON CORP,0.25,Utilities,United States
-XNAS,MSTR,STRATEGY INC CLASS A,0.24,Information Technology,United States
-XNAS,PYPL,PAYPAL HOLDINGS INC,0.23,Financials,United States
+XNAS,EA,ELECTRONIC ARTS INC,0.25,Communication,United States
+XNAS,EXC,EXELON CORP,0.24,Utilities,United States
+XNAS,PYPL,PAYPAL HOLDINGS INC,0.24,Financials,United States
 XNAS,IDXX,IDEXX LABORATORIES INC,0.23,Health Care,United States
-XNAS,ODFL,OLD DOMINION FREIGHT LINE INC,0.23,Industrials,United States
 XNAS,CCEP,COCA COLA EUROPACIFIC PARTNERS PLC,0.23,Consumer Staples,Netherlands
-XNAS,ALNY,ALNYLAM PHARMACEUTICALS INC,0.22,Health Care,United States
+XNAS,ODFL,OLD DOMINION FREIGHT LINE INC,0.23,Industrials,United States
 XNAS,MCHP,MICROCHIP TECHNOLOGY INC,0.21,Information Technology,United States
 XNAS,TRI,THOMSON REUTERS CORP,0.21,Industrials,Canada
 XNAS,DDOG,DATADOG INC CLASS A,0.21,Information Technology,United States
-XNAS,TTWO,TAKE TWO INTERACTIVE SOFTWARE INC,0.2,Communication,United States
+XNAS,ALNY,ALNYLAM PHARMACEUTICALS INC,0.21,Health Care,United States
+XNAS,TTWO,TAKE TWO INTERACTIVE SOFTWARE INC,0.19,Communication,United States
 XNAS,ROP,ROPER TECHNOLOGIES INC,0.19,Information Technology,United States
 XNAS,KDP,KEURIG DR PEPPER INC,0.18,Consumer Staples,United States
 XNAS,GEHC,GE HEALTHCARE TECHNOLOGIES INC,0.17,Health Care,United States
-XNAS,PAYX,PAYCHEX INC,0.17,Industrials,United States
-XNAS,CPRT,COPART INC,0.17,Industrials,United States
+XNAS,PAYX,PAYCHEX INC,0.16,Industrials,United States
 XNAS,AXON,AXON ENTERPRISE INC,0.16,Industrials,United States
+XNAS,CPRT,COPART INC,0.16,Industrials,United States
 XNAS,INSM,INSMED INC,0.16,Health Care,United States
 XNAS,CHTR,CHARTER COMMUNICATIONS INC CLASS A,0.15,Communication,United States
 XNAS,CTSH,COGNIZANT TECHNOLOGY SOLUTIONS COR,0.15,Information Technology,United States
-XNAS,WDAY,WORKDAY INC CLASS A,0.14,Information Technology,United States
-XNAS,KHC,KRAFT HEINZ,0.14,Consumer Staples,United States
-XNAS,VRSK,VERISK ANALYTICS INC,0.13,Industrials,United States
-XNAS,DXCM,DEXCOM INC,0.12,Health Care,United States
+XNAS,KHC,KRAFT HEINZ,0.13,Consumer Staples,United States
+XNAS,WDAY,WORKDAY INC CLASS A,0.13,Information Technology,United States
+XNAS,DXCM,DEXCOM INC,0.13,Health Care,United States
+XNAS,VRSK,VERISK ANALYTICS INC,0.12,Industrials,United States
 XNAS,ARM,ARM HOLDINGS AMERICAN DEPOSITARY S,0.11,Information Technology,United Kingdom
 XNAS,ZS,ZSCALER INC,0.11,Information Technology,United States
-XNAS,CSGP,COSTAR GROUP INC,0.09,Real Estate,United States
-XNAS,EUR,EUR CASH,0.07,Cash and/or Derivatives,European Union
-XNAS,TEAM,ATLASSIAN CORP CLASS A,0.06,Information Technology,United States
+XNAS,USD,USD CASH,0.1,Cash and/or Derivatives,United States
+XNAS,CSGP,COSTAR GROUP INC,0.08,Real Estate,United States
+XNAS,EUR,EUR CASH,0.01,Cash and/or Derivatives,European Union
