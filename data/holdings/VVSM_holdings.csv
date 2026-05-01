@@ -1,27 +1,27 @@
 etf,ticker,name,weight_pct,sector,location
-VVSM,AMD,Advanced Micro Devices Inc,9.81,Information Technology,United States
-VVSM,AVGO,Broadcom Inc,9.55,Information Technology,United States
-VVSM,MU,Micron Technology Inc,9.53,Information Technology,United States
-VVSM,NVDA,Nvidia Corp,9.35,Information Technology,United States
-VVSM,TSM,Taiwan Semiconductor Manufacturing Co L,9.03,Information Technology,Taiwan
-VVSM,ASML,Asml Holding Nv,8.14,Information Technology,Europe
-VVSM,INTC,Intel Corp,7.57,Information Technology,United States
-VVSM,LRCX,Lam Research Corp,5.7,Information Technology,United States
-VVSM,AMAT,Applied Materials Inc,5.56,Information Technology,United States
-VVSM,TXN,Texas Instruments Inc,4.44,Information Technology,United States
-VVSM,KLAC,Kla Corp,3.93,Information Technology,United States
-VVSM,ADI,Analog Devices Inc,3.44,Information Technology,United States
-VVSM,QCOM,Qualcomm Inc,2.73,Information Technology,United States
-VVSM,MRVL,Marvell Technology Inc,2.09,Information Technology,United States
-VVSM,SNPS,Synopsys Inc,1.75,Information Technology,United States
-VVSM,CDNS,Cadence Design Systems Inc,1.63,Information Technology,United States
-VVSM,TER,Teradyne Inc,1.04,Information Technology,United States
-VVSM,MPWR,Monolithic Power Systems Inc,0.97,Information Technology,United States
-VVSM,NXPI,Nxp Semiconductors Nv,0.83,Information Technology,Europe
-VVSM,MCHP,Microchip Technology Inc,0.75,Information Technology,Europe
-VVSM,STM,Stmicroelectronics Nv,0.74,Information Technology,Europe
-VVSM,ON,On Semiconductor Corp,0.52,Information Technology,United States
+VVSM,AMD,Advanced Micro Devices Inc,10.33,Information Technology,United States
+VVSM,AVGO,Broadcom Inc,9.57,Information Technology,United States
+VVSM,MU,Micron Technology Inc,9.39,Information Technology,United States
+VVSM,TSM,Taiwan Semiconductor Manufacturing Co L,8.75,Information Technology,Taiwan
+VVSM,NVDA,Nvidia Corp,8.4,Information Technology,United States
+VVSM,ASML,Asml Holding Nv,8.13,Information Technology,Europe
+VVSM,INTC,Intel Corp,8.13,Information Technology,United States
+VVSM,LRCX,Lam Research Corp,5.62,Information Technology,United States
+VVSM,AMAT,Applied Materials Inc,5.53,Information Technology,United States
+VVSM,TXN,Texas Instruments Inc,4.52,Information Technology,United States
+VVSM,KLAC,Kla Corp,3.65,Information Technology,United States
+VVSM,ADI,Analog Devices Inc,3.47,Information Technology,United States
+VVSM,QCOM,Qualcomm Inc,3.13,Information Technology,United States
+VVSM,MRVL,Marvell Technology Inc,2.16,Information Technology,United States
+VVSM,SNPS,Synopsys Inc,1.67,Information Technology,United States
+VVSM,CDNS,Cadence Design Systems Inc,1.59,Information Technology,United States
+VVSM,NXPI,Nxp Semiconductors Nv,1.02,Information Technology,Europe
+VVSM,MPWR,Monolithic Power Systems Inc,1.0,Information Technology,United States
+VVSM,TER,Teradyne Inc,0.9,Information Technology,United States
+VVSM,MCHP,Microchip Technology Inc,0.79,Information Technology,Europe
+VVSM,STM,Stmicroelectronics Nv,0.79,Information Technology,Europe
+VVSM,ON,On Semiconductor Corp,0.54,Information Technology,United States
 VVSM,ALAB,Astera Labs Inc,0.43,Information Technology,United States
-VVSM,ENTG,Entegris Inc,0.33,Information Technology,United States
-VVSM,SWKS,Skyworks Solutions Inc,0.14,Information Technology,United States
-VVSM,--,Other/Cash,0.02,Information Technology,United States
+VVSM,ENTG,Entegris Inc,0.31,Information Technology,United States
+VVSM,SWKS,Skyworks Solutions Inc,0.15,Information Technology,United States
+VVSM,--,Other/Cash,0.01,Information Technology,United States
