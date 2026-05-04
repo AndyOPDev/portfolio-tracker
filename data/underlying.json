@@ -3,16 +3,16 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "value": 3590.28,
-      "pct": 15.33,
+      "value": 3668.2,
+      "pct": 15.61,
       "sector": "Crypto",
       "location": "Global"
     },
     {
       "ticker": "NVDA",
       "name": "Nvidia Corp",
-      "value": 1415.75,
-      "pct": 6.04,
+      "value": 1413.49,
+      "pct": 6.01,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -20,7 +20,7 @@
       "ticker": "AAPL",
       "name": "APPLE INC",
       "value": 1033.48,
-      "pct": 4.41,
+      "pct": 4.4,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -28,7 +28,7 @@
       "ticker": "MSFT",
       "name": "MICROSOFT CORP",
       "value": 785.8,
-      "pct": 3.35,
+      "pct": 3.34,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -36,7 +36,7 @@
       "ticker": "AMZN",
       "name": "AMAZON.COM INC",
       "value": 737.14,
-      "pct": 3.15,
+      "pct": 3.14,
       "sector": "Consumer Discretionary",
       "location": "United States"
     },
@@ -44,22 +44,22 @@
       "ticker": "AVGO",
       "name": "Broadcom Inc",
       "value": 693.27,
-      "pct": 2.96,
+      "pct": 2.95,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "TSM",
       "name": "Taiwan Semiconductor Manufacturing Co L",
-      "value": 619.79,
-      "pct": 2.65,
+      "value": 618.85,
+      "pct": 2.63,
       "sector": "Information Technology",
       "location": "Taiwan"
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices Inc",
-      "value": 608.8,
+      "value": 610.31,
       "pct": 2.6,
       "sector": "Information Technology",
       "location": "United States"
@@ -67,8 +67,8 @@
     {
       "ticker": "MU",
       "name": "Micron Technology Inc",
-      "value": 594.05,
-      "pct": 2.54,
+      "value": 600.83,
+      "pct": 2.56,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -76,7 +76,7 @@
       "ticker": "GOOGL",
       "name": "ALPHABET INC CLASS A",
       "value": 580.87,
-      "pct": 2.48,
+      "pct": 2.47,
       "sector": "Communication",
       "location": "United States"
     },
@@ -84,31 +84,31 @@
       "ticker": "GOOG",
       "name": "ALPHABET INC CLASS C",
       "value": 538.12,
-      "pct": 2.3,
+      "pct": 2.29,
       "sector": "Communication",
+      "location": "United States"
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel Corp",
+      "value": 497.49,
+      "pct": 2.12,
+      "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "TSLA",
       "name": "TESLA INC",
       "value": 493.89,
-      "pct": 2.11,
+      "pct": 2.1,
       "sector": "Consumer Discretionary",
-      "location": "United States"
-    },
-    {
-      "ticker": "INTC",
-      "name": "Intel Corp",
-      "value": 490.71,
-      "pct": 2.09,
-      "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "META",
       "name": "META PLATFORMS INC CLASS A",
       "value": 467.35,
-      "pct": 2.0,
+      "pct": 1.99,
       "sector": "Communication",
       "location": "United States"
     },
@@ -116,23 +116,23 @@
       "ticker": "WMT",
       "name": "WALMART INC",
       "value": 461.45,
-      "pct": 1.97,
+      "pct": 1.96,
       "sector": "Consumer Staples",
       "location": "United States"
     },
     {
       "ticker": "LRCX",
       "name": "Lam Research Corp",
-      "value": 335.82,
-      "pct": 1.43,
+      "value": 334.31,
+      "pct": 1.42,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "AMAT",
       "name": "Applied Materials Inc",
-      "value": 328.23,
-      "pct": 1.4,
+      "value": 325.78,
+      "pct": 1.39,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -140,7 +140,7 @@
       "ticker": "COST",
       "name": "COSTCO WHOLESALE CORP",
       "value": 322.87,
-      "pct": 1.38,
+      "pct": 1.37,
       "sector": "Consumer Staples",
       "location": "United States"
     },
@@ -148,14 +148,14 @@
       "ticker": "NFLX",
       "name": "NETFLIX INC",
       "value": 283.06,
-      "pct": 1.21,
+      "pct": 1.2,
       "sector": "Communication",
       "location": "United States"
     },
     {
       "ticker": "TXN",
       "name": "Texas Instruments Inc",
-      "value": 267.93,
+      "value": 267.18,
       "pct": 1.14,
       "sector": "Information Technology",
       "location": "United States"
@@ -171,16 +171,16 @@
     {
       "ticker": "ASML",
       "name": "Asml Holding Nv",
-      "value": 244.51,
-      "pct": 1.04,
+      "value": 241.68,
+      "pct": 1.03,
       "sector": "Information Technology",
       "location": "Europe"
     },
     {
       "ticker": "KLAC",
       "name": "Kla Corp",
-      "value": 232.38,
-      "pct": 0.99,
+      "value": 230.87,
+      "pct": 0.98,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -188,23 +188,23 @@
       "ticker": "PLTR",
       "name": "PALANTIR TECHNOLOGIES INC CLASS A",
       "value": 228.51,
-      "pct": 0.98,
+      "pct": 0.97,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "ADI",
       "name": "Analog Devices Inc",
-      "value": 205.4,
-      "pct": 0.88,
+      "value": 204.08,
+      "pct": 0.87,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "QCOM",
       "name": "Qualcomm Inc",
-      "value": 196.05,
-      "pct": 0.84,
+      "value": 194.73,
+      "pct": 0.83,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -243,7 +243,7 @@
     {
       "ticker": "MRVL",
       "name": "Marvell Technology Inc",
-      "value": 143.88,
+      "value": 143.5,
       "pct": 0.61,
       "sector": "Information Technology",
       "location": "United States"
@@ -324,7 +324,7 @@
       "ticker": "TENCENT",
       "name": "TENCENT HOLDINGS LTD",
       "value": 104.29,
-      "pct": 0.45,
+      "pct": 0.44,
       "sector": "Communication",
       "location": "China"
     },
@@ -339,7 +339,7 @@
     {
       "ticker": "SNPS",
       "name": "Synopsys Inc",
-      "value": 97.79,
+      "value": 97.98,
       "pct": 0.42,
       "sector": "Information Technology",
       "location": "United States"
@@ -348,7 +348,7 @@
       "ticker": "HON",
       "name": "HONEYWELL INTERNATIONAL INC",
       "value": 97.3,
-      "pct": 0.42,
+      "pct": 0.41,
       "sector": "Industrials",
       "location": "United States"
     },
@@ -363,8 +363,8 @@
     {
       "ticker": "CDNS",
       "name": "Cadence Design Systems Inc",
-      "value": 94.81,
-      "pct": 0.4,
+      "value": 95.38,
+      "pct": 0.41,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -419,7 +419,7 @@
     {
       "ticker": "MPWR",
       "name": "Monolithic Power Systems Inc",
-      "value": 74.85,
+      "value": 74.29,
       "pct": 0.32,
       "sector": "Information Technology",
       "location": "United States"
@@ -444,7 +444,7 @@
       "ticker": "CMCSA",
       "name": "COMCAST CORP CLASS A",
       "value": 69.29,
-      "pct": 0.3,
+      "pct": 0.29,
       "sector": "Communication",
       "location": "United States"
     },
@@ -1241,6 +1241,14 @@
       "location": "Korea"
     },
     {
+      "ticker": "ALAB",
+      "name": "Astera Labs Inc",
+      "value": 8.47,
+      "pct": 0.04,
+      "sector": "Information Technology",
+      "location": "United States"
+    },
+    {
       "ticker": "DELTA.R",
       "name": "DELTA ELECTRONICS (THAILAND) NON-V",
       "value": 8.34,
@@ -1295,14 +1303,6 @@
       "pct": 0.04,
       "sector": "Information Technology",
       "location": "Taiwan"
-    },
-    {
-      "ticker": "ALAB",
-      "name": "Astera Labs Inc",
-      "value": 8.1,
-      "pct": 0.03,
-      "sector": "Information Technology",
-      "location": "United States"
     },
     {
       "ticker": "055550",
@@ -9217,6 +9217,6 @@
       "location": "China"
     }
   ],
-  "total_value": 23425.17,
-  "updated": "2026-05-03T05:49:14.844264"
+  "total_value": 23503.09,
+  "updated": "2026-05-04T05:54:14.712223"
 }
