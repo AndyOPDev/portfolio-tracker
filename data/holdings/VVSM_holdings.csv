@@ -1,27 +1,27 @@
 etf,ticker,name,weight_pct,sector,location
-VVSM,MU,Micron Technology Inc,11.81,Information Technology,United States
-VVSM,AMD,Advanced Micro Devices Inc,11.09,Information Technology,United States
-VVSM,AVGO,Broadcom Inc,8.75,Information Technology,United States
-VVSM,NVDA,Nvidia Corp,8.51,Information Technology,United States
-VVSM,INTC,Intel Corp,8.4,Information Technology,United States
+VVSM,MU,Micron Technology Inc,11.34,Information Technology,United States
+VVSM,AMD,Advanced Micro Devices Inc,11.25,Information Technology,United States
+VVSM,AVGO,Broadcom Inc,8.84,Information Technology,United States
+VVSM,NVDA,Nvidia Corp,8.58,Information Technology,United States
+VVSM,INTC,Intel Corp,8.53,Information Technology,United States
 VVSM,TSM,Taiwan Semiconductor Manufacturing Co L,8.02,Information Technology,Taiwan
-VVSM,ASML,Asml Holding Nv,7.61,Information Technology,Europe
-VVSM,LRCX,Lam Research Corp,5.56,Information Technology,United States
-VVSM,AMAT,Applied Materials Inc,5.49,Information Technology,United States
-VVSM,TXN,Texas Instruments Inc,4.37,Information Technology,United States
-VVSM,KLAC,Kla Corp,3.38,Information Technology,United States
-VVSM,ADI,Analog Devices Inc,3.23,Information Technology,United States
-VVSM,QCOM,Qualcomm Inc,3.15,Information Technology,United States
-VVSM,MRVL,Marvell Technology Inc,2.08,Information Technology,United States
-VVSM,SNPS,Synopsys Inc,1.56,Information Technology,United States
-VVSM,CDNS,Cadence Design Systems Inc,1.5,Information Technology,United States
-VVSM,NXPI,Nxp Semiconductors Nv,0.91,Information Technology,Europe
-VVSM,MPWR,Monolithic Power Systems Inc,0.86,Information Technology,United States
-VVSM,TER,Teradyne Inc,0.8,Information Technology,United States
-VVSM,STM,Stmicroelectronics Nv,0.79,Information Technology,Europe
+VVSM,ASML,Asml Holding Nv,7.62,Information Technology,Europe
+VVSM,LRCX,Lam Research Corp,5.55,Information Technology,United States
+VVSM,AMAT,Applied Materials Inc,5.31,Information Technology,United States
+VVSM,TXN,Texas Instruments Inc,4.43,Information Technology,United States
+VVSM,KLAC,Kla Corp,3.36,Information Technology,United States
+VVSM,ADI,Analog Devices Inc,3.31,Information Technology,United States
+VVSM,QCOM,Qualcomm Inc,3.26,Information Technology,United States
+VVSM,MRVL,Marvell Technology Inc,2.03,Information Technology,United States
+VVSM,SNPS,Synopsys Inc,1.58,Information Technology,United States
+VVSM,CDNS,Cadence Design Systems Inc,1.53,Information Technology,United States
+VVSM,NXPI,Nxp Semiconductors Nv,0.93,Information Technology,Europe
+VVSM,MPWR,Monolithic Power Systems Inc,0.85,Information Technology,United States
+VVSM,STM,Stmicroelectronics Nv,0.8,Information Technology,Europe
+VVSM,TER,Teradyne Inc,0.77,Information Technology,United States
 VVSM,MCHP,Microchip Technology Inc,0.72,Information Technology,Europe
-VVSM,ON,On Semiconductor Corp,0.54,Information Technology,United States
-VVSM,ALAB,Astera Labs Inc,0.46,Information Technology,United States
-VVSM,ENTG,Entegris Inc,0.27,Information Technology,United States
-VVSM,SWKS,Skyworks Solutions Inc,0.13,Information Technology,United States
+VVSM,ON,On Semiconductor Corp,0.53,Information Technology,United States
+VVSM,ALAB,Astera Labs Inc,0.44,Information Technology,United States
+VVSM,ENTG,Entegris Inc,0.26,Information Technology,United States
+VVSM,SWKS,Skyworks Solutions Inc,0.14,Information Technology,United States
 VVSM,--,Other/Cash,0.01,Information Technology,United States
