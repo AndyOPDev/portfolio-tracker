@@ -1,8 +1,8 @@
 {
   "precios": [
     {
-      "ticker": "BTC",
-      "precio": 64458.78,
+      "ticker": "IE00BYWYCC39",
+      "precio": 19.31,
       "moneda": "EUR"
     },
     {
@@ -11,13 +11,13 @@
       "moneda": "EUR"
     },
     {
-      "ticker": "VVSM",
-      "precio": 90.04,
+      "ticker": "BTC",
+      "precio": 64389.38,
       "moneda": "EUR"
     },
     {
-      "ticker": "IE00BYWYCC39",
-      "precio": 19.31,
+      "ticker": "VVSM",
+      "precio": 90.04,
       "moneda": "EUR"
     }
   ]
