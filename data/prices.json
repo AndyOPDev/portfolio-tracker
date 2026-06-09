@@ -11,13 +11,13 @@
       "moneda": "EUR"
     },
     {
-      "ticker": "BTC",
-      "precio": 53535.17,
+      "ticker": "IE00BYWYCC39",
+      "precio": 19.19,
       "moneda": "EUR"
     },
     {
-      "ticker": "IE00BYWYCC39",
-      "precio": 19.19,
+      "ticker": "BTC",
+      "precio": 53557.41,
       "moneda": "EUR"
     }
   ]
