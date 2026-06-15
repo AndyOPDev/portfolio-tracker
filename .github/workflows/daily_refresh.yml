@@ -30,13 +30,13 @@ jobs:
       - name: Fetch prices
         run: python scripts/fetch_prices.py
       
-      # Calculate underlying portfolio
-      - name: Calculate underlying
-        run: python scripts/calculate_underlying.py
-      
       # Fetch ETF holdings (diario porque los pesos cambian con precios)
       - name: Fetch ETF holdings
         run: python scripts/fetch_holdings.py
+      
+      # Calculate underlying portfolio
+      - name: Calculate underlying
+        run: python scripts/calculate_underlying.py
       
       # Commit all changes
       - name: Commit and push
