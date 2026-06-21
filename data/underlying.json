@@ -3,8 +3,8 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "value": 2989.14,
-      "pct": 11.27,
+      "value": 3009.45,
+      "pct": 11.34,
       "sector": "Crypto",
       "location": "Global"
     },
@@ -28,7 +28,7 @@
       "ticker": "AAPL",
       "name": "APPLE INC",
       "value": 1142.27,
-      "pct": 4.31,
+      "pct": 4.3,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -52,7 +52,7 @@
       "ticker": "AVGO",
       "name": "BROADCOM INC",
       "value": 810.73,
-      "pct": 3.06,
+      "pct": 3.05,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -84,7 +84,7 @@
       "ticker": "GOOGL",
       "name": "ALPHABET INC CLASS A",
       "value": 558.63,
-      "pct": 2.11,
+      "pct": 2.1,
       "sector": "Communication",
       "location": "United States"
     },
@@ -100,7 +100,7 @@
       "ticker": "LRCX",
       "name": "LAM RESEARCH CORP",
       "value": 526.45,
-      "pct": 1.99,
+      "pct": 1.98,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -268,7 +268,7 @@
       "ticker": "PANW",
       "name": "PALO ALTO NETWORKS INC",
       "value": 168.42,
-      "pct": 0.64,
+      "pct": 0.63,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -324,7 +324,7 @@
       "ticker": "GILD",
       "name": "GILEAD SCIENCES INC",
       "value": 110.06,
-      "pct": 0.42,
+      "pct": 0.41,
       "sector": "Health Care",
       "location": "United States"
     },
@@ -1476,7 +1476,7 @@
       "ticker": "KOTAKBANK",
       "name": "KOTAK MAHINDRA BANK LTD",
       "value": 6.63,
-      "pct": 0.03,
+      "pct": 0.02,
       "sector": "Financials",
       "location": "India"
     },
@@ -1484,7 +1484,7 @@
       "ticker": "2885",
       "name": "YUANTA FINANCIAL HOLDING LTD",
       "value": 6.63,
-      "pct": 0.03,
+      "pct": 0.02,
       "sector": "Financials",
       "location": "Taiwan"
     },
@@ -1492,7 +1492,7 @@
       "ticker": "012330",
       "name": "HYUNDAI MOBIS LTD",
       "value": 6.63,
-      "pct": 0.03,
+      "pct": 0.02,
       "sector": "Consumer Discretionary",
       "location": "Korea"
     },
@@ -1500,7 +1500,7 @@
       "ticker": "3968",
       "name": "CHINA MERCHANTS BANK LTD H",
       "value": 6.63,
-      "pct": 0.03,
+      "pct": 0.02,
       "sector": "Financials",
       "location": "China"
     },
@@ -1508,7 +1508,7 @@
       "ticker": "992",
       "name": "LENOVO GROUP LTD",
       "value": 6.63,
-      "pct": 0.03,
+      "pct": 0.02,
       "sector": "Information Technology",
       "location": "China"
     },
@@ -1516,7 +1516,7 @@
       "ticker": "NBK",
       "name": "NATIONAL BANK OF KUWAIT",
       "value": 6.63,
-      "pct": 0.03,
+      "pct": 0.02,
       "sector": "Financials",
       "location": "Middle East"
     },
@@ -8721,6 +8721,6 @@
       "location": "United States"
     }
   ],
-  "total_value": 26518.3,
-  "updated": "2026-06-20T06:53:48.173435"
+  "total_value": 26538.61,
+  "updated": "2026-06-21T07:23:45.501850"
 }
