@@ -620,9 +620,27 @@
       "feeAmt": 0,
       "feeCur": "EUR",
       "date": "2026-07-02"
+    },
+    {
+      "ticker": "BTC",
+      "way": "BUY",
+      "baseAmt": 3.723e-05,
+      "quoteAmt": 2.0,
+      "feeAmt": 0,
+      "feeCur": "EUR",
+      "date": "2026-07-05"
+    },
+    {
+      "ticker": "BTC",
+      "way": "BUY",
+      "baseAmt": 0.00014215,
+      "quoteAmt": 7.81,
+      "feeAmt": 0,
+      "feeCur": "EUR",
+      "date": "2026-07-05"
     }
   ],
-  "updated": "2026-07-05T14:14:39.113457",
+  "updated": "2026-07-05T15:43:20.497814",
   "source": "google_sheets",
-  "total_movements": 69
+  "total_movements": 71
 }
