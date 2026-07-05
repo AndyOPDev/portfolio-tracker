@@ -3,8 +3,8 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "value": 2941.46,
-      "pct": 11.35,
+      "value": 2953.08,
+      "pct": 11.39,
       "sector": "Crypto",
       "location": "Global"
     },
@@ -20,7 +20,7 @@
       "ticker": "AAPL",
       "name": "APPLE INC",
       "value": 1196.05,
-      "pct": 4.62,
+      "pct": 4.61,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -52,7 +52,7 @@
       "ticker": "MSFT",
       "name": "MICROSOFT CORP",
       "value": 765.86,
-      "pct": 2.96,
+      "pct": 2.95,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -131,7 +131,7 @@
     {
       "ticker": "ASML",
       "name": "ASML HOLDING ADR REPRESENTING NV",
-      "value": 427.18,
+      "value": 427.5,
       "pct": 1.65,
       "sector": "Information Technology",
       "location": "Europe"
@@ -8857,6 +8857,6 @@
       "location": "China"
     }
   ],
-  "total_value": 25912.73,
-  "updated": "2026-07-04T06:08:42.657464"
+  "total_value": 25924.36,
+  "updated": "2026-07-05T06:28:44.094363"
 }
