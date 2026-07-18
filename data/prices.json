@@ -1,8 +1,8 @@
 {
   "precios": [
     {
-      "ticker": "BTC",
-      "precio": 56191.64,
+      "ticker": "XNAS",
+      "precio": 57.89,
       "moneda": "EUR"
     },
     {
@@ -16,8 +16,8 @@
       "moneda": "EUR"
     },
     {
-      "ticker": "XNAS",
-      "precio": 57.89,
+      "ticker": "BTC",
+      "precio": 56424.03,
       "moneda": "EUR"
     }
   ]
