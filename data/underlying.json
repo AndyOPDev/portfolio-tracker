@@ -3,8 +3,8 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "value": 3016.2,
-      "pct": 12.04,
+      "value": 3053.1,
+      "pct": 12.17,
       "sector": "Crypto",
       "location": "Global"
     },
@@ -12,7 +12,7 @@
       "ticker": "NVDA",
       "name": "NVIDIA CORP",
       "value": 1569.36,
-      "pct": 6.27,
+      "pct": 6.26,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -44,7 +44,7 @@
       "ticker": "TSM",
       "name": "TAIWAN SEMICONDUCTOR MANUFACTURING",
       "value": 826.06,
-      "pct": 3.3,
+      "pct": 3.29,
       "sector": "Information Technology",
       "location": "Taiwan"
     },
@@ -60,7 +60,7 @@
       "ticker": "AVGO",
       "name": "BROADCOM INC",
       "value": 740.28,
-      "pct": 2.96,
+      "pct": 2.95,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -68,7 +68,7 @@
       "ticker": "AMZN",
       "name": "AMAZON.COM INC",
       "value": 682.9,
-      "pct": 2.73,
+      "pct": 2.72,
       "sector": "Consumer Discretionary",
       "location": "United States"
     },
@@ -92,7 +92,7 @@
       "ticker": "META",
       "name": "META PLATFORMS INC CLASS A",
       "value": 500.37,
-      "pct": 2.0,
+      "pct": 1.99,
       "sector": "Communication",
       "location": "United States"
     },
@@ -180,7 +180,7 @@
       "ticker": "SMSN",
       "name": "SAMSUNG ELECTRONICS LTD",
       "value": 231.75,
-      "pct": 0.93,
+      "pct": 0.92,
       "sector": "Information Technology",
       "location": "Korea"
     },
@@ -492,7 +492,7 @@
       "ticker": "DDOG",
       "name": "DATADOG INC CLASS A",
       "value": 61.37,
-      "pct": 0.25,
+      "pct": 0.24,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -8777,6 +8777,6 @@
       "location": "India"
     }
   ],
-  "total_value": 25045.97,
-  "updated": "2026-07-18T05:14:49.777138"
+  "total_value": 25082.88,
+  "updated": "2026-07-19T05:40:46.982515"
 }
