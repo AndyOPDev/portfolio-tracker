@@ -638,9 +638,27 @@
       "feeAmt": 0,
       "feeCur": "EUR",
       "date": "2026-07-05"
+    },
+    {
+      "ticker": "VVSM",
+      "way": "BUY",
+      "baseAmt": 2.303882,
+      "quoteAmt": 200.0,
+      "feeAmt": 0,
+      "feeCur": "EUR",
+      "date": "2026-08-03"
+    },
+    {
+      "ticker": "VVSM",
+      "way": "BUY",
+      "baseAmt": 0.084322,
+      "quoteAmt": 7.32,
+      "feeAmt": 0,
+      "feeCur": "EUR",
+      "date": "2026-08-03"
     }
   ],
-  "updated": "2026-08-03T18:42:47.407250",
+  "updated": "2026-08-03T19:43:03.947000",
   "source": "google_sheets",
-  "total_movements": 71
+  "total_movements": 73
 }
