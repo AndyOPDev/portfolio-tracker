@@ -3,8 +3,8 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "value": 3036.77,
-      "pct": 11.78,
+      "value": 3026.48,
+      "pct": 11.74,
       "sector": "Crypto",
       "location": "Global"
     },
@@ -20,7 +20,7 @@
       "ticker": "AAPL",
       "name": "APPLE INC",
       "value": 1181.82,
-      "pct": 4.58,
+      "pct": 4.59,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -948,7 +948,7 @@
       "ticker": "STM",
       "name": "Stmicroelectronics Nv",
       "value": 19.33,
-      "pct": 0.07,
+      "pct": 0.08,
       "sector": "Information Technology",
       "location": "Europe"
     },
@@ -8721,6 +8721,6 @@
       "location": "China"
     }
   ],
-  "total_value": 25781.38,
-  "updated": "2026-08-08T04:02:47.616733"
+  "total_value": 25771.09,
+  "updated": "2026-08-09T04:08:57.808546"
 }
