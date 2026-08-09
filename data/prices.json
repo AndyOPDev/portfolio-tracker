@@ -1,23 +1,23 @@
 {
   "precios": [
     {
+      "ticker": "XNAS",
+      "precio": 59.48,
+      "moneda": "EUR"
+    },
+    {
+      "ticker": "BTC",
+      "precio": 56134.19,
+      "moneda": "EUR"
+    },
+    {
       "ticker": "IE00BYWYCC39",
       "precio": 19.32,
       "moneda": "EUR"
     },
     {
-      "ticker": "BTC",
-      "precio": 56078.57,
-      "moneda": "EUR"
-    },
-    {
       "ticker": "VVSM",
       "precio": 93.59,
-      "moneda": "EUR"
-    },
-    {
-      "ticker": "XNAS",
-      "precio": 59.48,
       "moneda": "EUR"
     }
   ]
