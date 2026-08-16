@@ -3,8 +3,8 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "value": 2942.08,
-      "pct": 11.32,
+      "value": 2944.53,
+      "pct": 11.33,
       "sector": "Crypto",
       "location": "Global"
     },
@@ -84,7 +84,7 @@
       "ticker": "GOOGL",
       "name": "ALPHABET CLASS A",
       "value": 513.45,
-      "pct": 1.98,
+      "pct": 1.97,
       "sector": "Communication",
       "location": "United States"
     },
@@ -8721,6 +8721,6 @@
       "location": "China"
     }
   ],
-  "total_value": 25996.81,
-  "updated": "2026-08-15T03:32:47.496887"
+  "total_value": 25999.27,
+  "updated": "2026-08-16T03:38:17.587466"
 }
