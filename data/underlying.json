@@ -3,8 +3,8 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "value": 2944.53,
-      "pct": 11.33,
+      "value": 2952.86,
+      "pct": 11.35,
       "sector": "Crypto",
       "location": "Global"
     },
@@ -12,7 +12,7 @@
       "ticker": "NVDA",
       "name": "Nvidia Corp",
       "value": 1735.88,
-      "pct": 6.68,
+      "pct": 6.67,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -28,7 +28,7 @@
       "ticker": "MU",
       "name": "Micron Technology Inc",
       "value": 1090.8,
-      "pct": 4.2,
+      "pct": 4.19,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -44,7 +44,7 @@
       "ticker": "AMD",
       "name": "Advanced Micro Devices Inc",
       "value": 906.11,
-      "pct": 3.49,
+      "pct": 3.48,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -348,7 +348,7 @@
       "ticker": "CDNS",
       "name": "Cadence Design Systems Inc",
       "value": 100.12,
-      "pct": 0.39,
+      "pct": 0.38,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -8721,6 +8721,6 @@
       "location": "China"
     }
   ],
-  "total_value": 25999.27,
-  "updated": "2026-08-16T03:38:17.587466"
+  "total_value": 26007.6,
+  "updated": "2026-08-17T03:39:26.792330"
 }
