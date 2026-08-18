@@ -2,12 +2,12 @@
   "precios": [
     {
       "ticker": "BTC",
-      "precio": 55820.74,
+      "precio": 55792.2,
       "moneda": "EUR"
     },
     {
       "ticker": "VVSM",
-      "precio": 91.94,
+      "precio": 91.93,
       "moneda": "EUR"
     },
     {
