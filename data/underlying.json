@@ -3,8 +3,8 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "value": 3543.65,
-      "pct": 13.7,
+      "value": 3557.22,
+      "pct": 13.74,
       "sector": "Crypto",
       "location": "Global"
     },
@@ -20,7 +20,7 @@
       "ticker": "AAPL",
       "name": "APPLE",
       "value": 1160.55,
-      "pct": 4.49,
+      "pct": 4.48,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -28,7 +28,7 @@
       "ticker": "MU",
       "name": "Micron Technology Inc",
       "value": 1103.53,
-      "pct": 4.27,
+      "pct": 4.26,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -60,7 +60,7 @@
       "ticker": "AVGO",
       "name": "Broadcom Inc",
       "value": 743.77,
-      "pct": 2.88,
+      "pct": 2.87,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -132,7 +132,7 @@
       "ticker": "META",
       "name": "META PLATFORMS CLASS A",
       "value": 410.07,
-      "pct": 1.59,
+      "pct": 1.58,
       "sector": "Communication",
       "location": "United States"
     },
@@ -204,7 +204,7 @@
       "ticker": "SMSN",
       "name": "SAMSUNG ELECTRONICS LTD",
       "value": 213.46,
-      "pct": 0.83,
+      "pct": 0.82,
       "sector": "Information Technology",
       "location": "Korea"
     },
@@ -8721,6 +8721,6 @@
       "location": "China"
     }
   ],
-  "total_value": 25867.4,
-  "updated": "2026-08-23T03:40:16.875200"
+  "total_value": 25880.96,
+  "updated": "2026-08-24T03:43:19.037258"
 }
