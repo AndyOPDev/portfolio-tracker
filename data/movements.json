@@ -656,9 +656,27 @@
       "feeAmt": 0,
       "feeCur": "EUR",
       "date": "2026-08-03"
+    },
+    {
+      "ticker": "VVSM",
+      "way": "BUY",
+      "baseAmt": 33.196857,
+      "quoteAmt": 2999.34,
+      "feeAmt": 1.0,
+      "feeCur": "EUR",
+      "date": "2026-08-28"
+    },
+    {
+      "ticker": "XNAS",
+      "way": "BUY",
+      "baseAmt": 50.916496,
+      "quoteAmt": 3000.0,
+      "feeAmt": 1.0,
+      "feeCur": "EUR",
+      "date": "2026-08-28"
     }
   ],
-  "updated": "2026-08-28T01:33:50.958995",
+  "updated": "2026-08-28T11:40:36.698804",
   "source": "google_sheets",
-  "total_movements": 73
+  "total_movements": 75
 }
