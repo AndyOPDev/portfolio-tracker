@@ -3,7 +3,7 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "value": 3691.06,
+      "value": 3690.73,
       "pct": 11.46,
       "sector": "Crypto",
       "location": "Global"
@@ -8721,6 +8721,6 @@
       "location": "China"
     }
   ],
-  "total_value": 32198.03,
-  "updated": "2026-08-29T18:06:47.983719"
+  "total_value": 32197.7,
+  "updated": "2026-08-30T08:38:04.384588"
 }
