@@ -710,9 +710,18 @@
       "feeAmt": 0,
       "feeCur": "EUR",
       "date": "2026-09-02"
+    },
+    {
+      "ticker": "EMM",
+      "way": "BUY",
+      "baseAmt": 2.53171,
+      "quoteAmt": 50.0,
+      "feeAmt": 0,
+      "feeCur": "EUR",
+      "date": "2026-09-02"
     }
   ],
-  "updated": "2026-09-04T13:52:30.366441",
+  "updated": "2026-09-04T16:19:12.592021",
   "source": "google_sheets",
-  "total_movements": 79
+  "total_movements": 80
 }
