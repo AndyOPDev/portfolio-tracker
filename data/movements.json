@@ -712,16 +712,16 @@
       "date": "2026-09-02"
     },
     {
-      "ticker": "EMM",
+      "ticker": "IE00BYWYCC39",
       "way": "BUY",
       "baseAmt": 2.53171,
       "quoteAmt": 50.0,
       "feeAmt": 0,
       "feeCur": "EUR",
-      "date": "2026-09-02"
+      "date": "2026-09-04"
     }
   ],
-  "updated": "2026-09-04T16:19:12.592021",
+  "updated": "2026-09-04T16:33:35.968648",
   "source": "google_sheets",
   "total_movements": 80
 }
