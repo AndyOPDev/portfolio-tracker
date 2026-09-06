@@ -3,8 +3,8 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "value": 3757.82,
-      "pct": 11.46,
+      "value": 3764.04,
+      "pct": 11.48,
       "sector": "Crypto",
       "location": "Global"
     },
@@ -68,7 +68,7 @@
       "ticker": "AMZN",
       "name": "AMAZON.COM INC",
       "value": 854.21,
-      "pct": 2.61,
+      "pct": 2.6,
       "sector": "Consumer Discretionary",
       "location": "United States"
     },
@@ -212,7 +212,7 @@
       "ticker": "QCOM",
       "name": "QUALCOMM",
       "value": 290.19,
-      "pct": 0.89,
+      "pct": 0.88,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -8721,6 +8721,6 @@
       "location": "China"
     }
   ],
-  "total_value": 32786.24,
-  "updated": "2026-09-05T07:11:10.629365"
+  "total_value": 32792.46,
+  "updated": "2026-09-06T07:23:29.962132"
 }
