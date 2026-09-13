@@ -3,8 +3,8 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "value": 3650.3,
-      "pct": 11.11,
+      "value": 3641.7,
+      "pct": 11.09,
       "sector": "Crypto",
       "location": "Global"
     },
@@ -20,7 +20,7 @@
       "ticker": "MU",
       "name": "MICRON TECHNOLOGY",
       "value": 1630.38,
-      "pct": 4.96,
+      "pct": 4.97,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -44,7 +44,7 @@
       "ticker": "TSM",
       "name": "TAIWAN SEMICONDUCTOR MANUFACTURING",
       "value": 1216.61,
-      "pct": 3.7,
+      "pct": 3.71,
       "sector": "Information Technology",
       "location": "Taiwan"
     },
@@ -468,7 +468,7 @@
       "ticker": "CSX",
       "name": "CSX",
       "value": 77.17,
-      "pct": 0.23,
+      "pct": 0.24,
       "sector": "Industrials",
       "location": "United States"
     },
@@ -476,7 +476,7 @@
       "ticker": "CMCSA",
       "name": "COMCAST CLASS A",
       "value": 77.17,
-      "pct": 0.23,
+      "pct": 0.24,
       "sector": "Communication",
       "location": "United States"
     },
@@ -8721,6 +8721,6 @@
       "location": "China"
     }
   ],
-  "total_value": 32844.8,
-  "updated": "2026-09-12T07:25:22.286332"
+  "total_value": 32836.2,
+  "updated": "2026-09-13T07:43:58.895227"
 }
