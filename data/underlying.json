@@ -3,8 +3,8 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "value": 3854.64,
-      "pct": 11.57,
+      "value": 3822.53,
+      "pct": 11.49,
       "sector": "Crypto",
       "location": "Global"
     },
@@ -12,7 +12,7 @@
       "ticker": "NVDA",
       "name": "NVIDIA",
       "value": 2342.52,
-      "pct": 7.03,
+      "pct": 7.04,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -20,7 +20,7 @@
       "ticker": "MU",
       "name": "MICRON TECHNOLOGY",
       "value": 1656.67,
-      "pct": 4.97,
+      "pct": 4.98,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -28,7 +28,7 @@
       "ticker": "AAPL",
       "name": "APPLE",
       "value": 1538.87,
-      "pct": 4.62,
+      "pct": 4.63,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -36,7 +36,7 @@
       "ticker": "AMD",
       "name": "ADVANCED MICRO DEVICES",
       "value": 1535.95,
-      "pct": 4.61,
+      "pct": 4.62,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -44,7 +44,7 @@
       "ticker": "TSM",
       "name": "TAIWAN SEMICONDUCTOR MANUFACTURING",
       "value": 1203.11,
-      "pct": 3.61,
+      "pct": 3.62,
       "sector": "Information Technology",
       "location": "Taiwan"
     },
@@ -148,7 +148,7 @@
       "ticker": "TXN",
       "name": "TEXAS INSTRUMENT INC",
       "value": 407.88,
-      "pct": 1.22,
+      "pct": 1.23,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -8713,6 +8713,6 @@
       "location": "China"
     }
   ],
-  "total_value": 33303.82,
-  "updated": "2026-09-19T07:37:16.638527"
+  "total_value": 33271.71,
+  "updated": "2026-09-20T08:00:19.336017"
 }
