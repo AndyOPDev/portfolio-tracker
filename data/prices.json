@@ -2,7 +2,7 @@
   "precios": [
     {
       "ticker": "VVSM",
-      "precio": 98.47,
+      "precio": 98.65,
       "moneda": "EUR"
     },
     {
@@ -12,12 +12,12 @@
     },
     {
       "ticker": "XNAS",
-      "precio": 61.87,
+      "precio": 61.88,
       "moneda": "EUR"
     },
     {
       "ticker": "BTC",
-      "precio": 72997.35,
+      "precio": 72709.82,
       "moneda": "EUR"
     }
   ]
