@@ -3,23 +3,23 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "value": 4029.09,
-      "pct": 11.6,
+      "value": 4093.53,
+      "pct": 11.72,
       "sector": "Crypto",
       "location": "Global"
     },
     {
       "ticker": "NVDA",
       "name": "NVIDIA",
-      "value": 2305.34,
-      "pct": 6.64,
+      "value": 2317.65,
+      "pct": 6.63,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "MU",
       "name": "MICRON TECHNOLOGY",
-      "value": 1708.7,
+      "value": 1720.23,
       "pct": 4.92,
       "sector": "Information Technology",
       "location": "United States"
@@ -27,47 +27,47 @@
     {
       "ticker": "AMD",
       "name": "ADVANCED MICRO DEVICES",
-      "value": 1631.29,
-      "pct": 4.7,
+      "value": 1643.72,
+      "pct": 4.71,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "AAPL",
       "name": "APPLE",
-      "value": 1521.75,
-      "pct": 4.38,
+      "value": 1524.7,
+      "pct": 4.36,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "TSM",
       "name": "TAIWAN SEMICONDUCTOR MANUFACTURING",
-      "value": 1223.21,
-      "pct": 3.52,
+      "value": 1232.57,
+      "pct": 3.53,
       "sector": "Information Technology",
       "location": "Taiwan"
     },
     {
       "ticker": "MSFT",
       "name": "MICROSOFT",
-      "value": 1172.76,
-      "pct": 3.38,
+      "value": 1175.04,
+      "pct": 3.36,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "AVGO",
       "name": "BROADCOM INC",
-      "value": 1134.69,
-      "pct": 3.27,
+      "value": 1144.44,
+      "pct": 3.28,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "INTC",
       "name": "INTEL CORPORATION",
-      "value": 1009.46,
+      "value": 1017.05,
       "pct": 2.91,
       "sector": "Information Technology",
       "location": "United States"
@@ -75,39 +75,39 @@
     {
       "ticker": "AMZN",
       "name": "AMAZON.COM INC",
-      "value": 823.77,
-      "pct": 2.37,
+      "value": 825.37,
+      "pct": 2.36,
       "sector": "Consumer Discretionary",
-      "location": "United States"
-    },
-    {
-      "ticker": "META",
-      "name": "META PLATFORMS CLASS A",
-      "value": 683.77,
-      "pct": 1.97,
-      "sector": "Communication",
       "location": "United States"
     },
     {
       "ticker": "ASML",
       "name": "ASML HOLDING ADR REPRESENTING",
-      "value": 683.17,
-      "pct": 1.97,
+      "value": 691.12,
+      "pct": 1.98,
       "sector": "Information Technology",
       "location": "Europe"
     },
     {
+      "ticker": "META",
+      "name": "META PLATFORMS CLASS A",
+      "value": 685.1,
+      "pct": 1.96,
+      "sector": "Communication",
+      "location": "United States"
+    },
+    {
       "ticker": "SKHY",
       "name": "Sk Hynix Inc",
-      "value": 618.66,
-      "pct": 1.78,
+      "value": 627.38,
+      "pct": 1.8,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "LRCX",
       "name": "LAM RESEARCH",
-      "value": 617.82,
+      "value": 622.49,
       "pct": 1.78,
       "sector": "Information Technology",
       "location": "United States"
@@ -115,15 +115,15 @@
     {
       "ticker": "GOOGL",
       "name": "ALPHABET CLASS A",
-      "value": 616.82,
-      "pct": 1.78,
+      "value": 618.01,
+      "pct": 1.77,
       "sector": "Communication",
       "location": "United States"
     },
     {
       "ticker": "AMAT",
       "name": "APPLIED MATERIAL INC",
-      "value": 606.34,
+      "value": 610.94,
       "pct": 1.75,
       "sector": "Information Technology",
       "location": "United States"
@@ -131,7 +131,7 @@
     {
       "ticker": "TSLA",
       "name": "TESLA INC",
-      "value": 598.55,
+      "value": 599.72,
       "pct": 1.72,
       "sector": "Consumer Discretionary",
       "location": "United States"
@@ -139,39 +139,39 @@
     {
       "ticker": "GOOG",
       "name": "ALPHABET CLASS C",
-      "value": 576.24,
-      "pct": 1.66,
+      "value": 577.35,
+      "pct": 1.65,
       "sector": "Communication",
       "location": "United States"
     },
     {
       "ticker": "SPCX",
       "name": "SPACE EXPLORATION TECHNOLOGIES COR",
-      "value": 537.68,
-      "pct": 1.55,
+      "value": 538.73,
+      "pct": 1.54,
       "sector": "Communication",
       "location": "United States"
     },
     {
       "ticker": "WMT",
       "name": "WALMART",
-      "value": 444.35,
-      "pct": 1.28,
+      "value": 445.21,
+      "pct": 1.27,
       "sector": "Consumer Staples",
       "location": "United States"
     },
     {
       "ticker": "TXN",
       "name": "TEXAS INSTRUMENT INC",
-      "value": 401.08,
-      "pct": 1.15,
+      "value": 404.11,
+      "pct": 1.16,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "KLAC",
       "name": "KLA",
-      "value": 373.42,
+      "value": 376.16,
       "pct": 1.08,
       "sector": "Information Technology",
       "location": "United States"
@@ -179,7 +179,7 @@
     {
       "ticker": "PLTR",
       "name": "PALANTIR TECHNOLOGIES CLASS A",
-      "value": 369.28,
+      "value": 369.99,
       "pct": 1.06,
       "sector": "Information Technology",
       "location": "United States"
@@ -187,7 +187,7 @@
     {
       "ticker": "CSCO",
       "name": "CISCO SYSTEMS INC",
-      "value": 355.07,
+      "value": 355.76,
       "pct": 1.02,
       "sector": "Information Technology",
       "location": "United States"
@@ -195,7 +195,7 @@
     {
       "ticker": "MRVL",
       "name": "MARVELL TECHNOLOGY",
-      "value": 350.46,
+      "value": 353.03,
       "pct": 1.01,
       "sector": "Information Technology",
       "location": "United States"
@@ -203,7 +203,7 @@
     {
       "ticker": "COST",
       "name": "COSTCO WHOLESALE CORP",
-      "value": 344.93,
+      "value": 345.6,
       "pct": 0.99,
       "sector": "Consumer Staples",
       "location": "United States"
@@ -211,7 +211,7 @@
     {
       "ticker": "QCOM",
       "name": "QUALCOMM",
-      "value": 322.1,
+      "value": 324.47,
       "pct": 0.93,
       "sector": "Information Technology",
       "location": "United States"
@@ -219,7 +219,7 @@
     {
       "ticker": "ADI",
       "name": "ANALOG DEVICES",
-      "value": 301.81,
+      "value": 304.12,
       "pct": 0.87,
       "sector": "Information Technology",
       "location": "United States"
@@ -227,7 +227,7 @@
     {
       "ticker": "PANW",
       "name": "PALO ALTO NETWORKS",
-      "value": 257.68,
+      "value": 258.18,
       "pct": 0.74,
       "sector": "Information Technology",
       "location": "United States"
@@ -235,7 +235,7 @@
     {
       "ticker": "NFLX",
       "name": "NETFLIX",
-      "value": 249.57,
+      "value": 250.05,
       "pct": 0.72,
       "sector": "Communication",
       "location": "United States"
@@ -251,7 +251,7 @@
     {
       "ticker": "SNDK",
       "name": "SANDISK",
-      "value": 219.13,
+      "value": 219.56,
       "pct": 0.63,
       "sector": "Information Technology",
       "location": "United States"
@@ -259,9 +259,17 @@
     {
       "ticker": "CRWD",
       "name": "CROWDSTRIKE HOLDINGS CLASS A",
-      "value": 219.13,
+      "value": 219.56,
       "pct": 0.63,
       "sector": "Information Technology",
+      "location": "United States"
+    },
+    {
+      "ticker": "AMGN",
+      "name": "AMGEN INC",
+      "value": 189.06,
+      "pct": 0.54,
+      "sector": "Health Care",
       "location": "United States"
     },
     {
@@ -273,25 +281,17 @@
       "location": "Korea"
     },
     {
-      "ticker": "AMGN",
-      "name": "AMGEN INC",
-      "value": 188.7,
-      "pct": 0.54,
-      "sector": "Health Care",
-      "location": "United States"
-    },
-    {
       "ticker": "LIN",
       "name": "LINDE PLC",
-      "value": 182.61,
-      "pct": 0.53,
+      "value": 182.96,
+      "pct": 0.52,
       "sector": "Materials",
       "location": "United States"
     },
     {
       "ticker": "STX",
       "name": "SEAGATE TECHNOLOGY HOLDINGS PLC",
-      "value": 174.49,
+      "value": 174.83,
       "pct": 0.5,
       "sector": "Information Technology",
       "location": "United States"
@@ -299,15 +299,15 @@
     {
       "ticker": "GILD",
       "name": "GILEAD SCIENCES",
-      "value": 158.26,
-      "pct": 0.46,
+      "value": 158.57,
+      "pct": 0.45,
       "sector": "Health Care",
       "location": "United States"
     },
     {
       "ticker": "TMUS",
       "name": "T MOBILE US INC",
-      "value": 150.15,
+      "value": 150.44,
       "pct": 0.43,
       "sector": "Communication",
       "location": "United States"
@@ -315,15 +315,15 @@
     {
       "ticker": "PEP",
       "name": "PEPSICO",
-      "value": 148.12,
-      "pct": 0.43,
+      "value": 148.4,
+      "pct": 0.42,
       "sector": "Consumer Staples",
       "location": "United States"
     },
     {
       "ticker": "SHOP",
       "name": "SHOPIFY SUBORDINATE VOTING CLASS A",
-      "value": 146.09,
+      "value": 146.37,
       "pct": 0.42,
       "sector": "Information Technology",
       "location": "Canada"
@@ -331,7 +331,7 @@
     {
       "ticker": "CDNS",
       "name": "CADENCE DESIGN SYSTEMS",
-      "value": 141.79,
+      "value": 142.88,
       "pct": 0.41,
       "sector": "Information Technology",
       "location": "United States"
@@ -339,7 +339,7 @@
     {
       "ticker": "WDC",
       "name": "WESTERN DIGITAL CORP",
-      "value": 140.0,
+      "value": 140.27,
       "pct": 0.4,
       "sector": "Information Technology",
       "location": "United States"
@@ -347,7 +347,7 @@
     {
       "ticker": "SNPS",
       "name": "SYNOPSYS",
-      "value": 130.31,
+      "value": 131.31,
       "pct": 0.38,
       "sector": "Information Technology",
       "location": "United States"
@@ -355,7 +355,7 @@
     {
       "ticker": "ISRG",
       "name": "INTUITIVE SURGICAL",
-      "value": 121.74,
+      "value": 121.98,
       "pct": 0.35,
       "sector": "Health Care",
       "location": "United States"
@@ -363,7 +363,7 @@
     {
       "ticker": "ARM",
       "name": "ARM HOLDINGS AMERICAN DEPOSITARY S",
-      "value": 113.62,
+      "value": 113.84,
       "pct": 0.33,
       "sector": "Information Technology",
       "location": "United Kingdom"
@@ -371,7 +371,7 @@
     {
       "ticker": "VRTX",
       "name": "VERTEX PHARMACEUTICALS",
-      "value": 113.62,
+      "value": 113.84,
       "pct": 0.33,
       "sector": "Health Care",
       "location": "United States"
@@ -380,14 +380,14 @@
       "ticker": "TENCENT",
       "name": "TENCENT HOLDINGS LTD",
       "value": 113.2,
-      "pct": 0.33,
+      "pct": 0.32,
       "sector": "Communication",
       "location": "China"
     },
     {
       "ticker": "FTNT",
       "name": "FORTINET",
-      "value": 107.54,
+      "value": 107.75,
       "pct": 0.31,
       "sector": "Information Technology",
       "location": "United States"
@@ -395,7 +395,7 @@
     {
       "ticker": "BKNG",
       "name": "BOOKING HOLDINGS",
-      "value": 103.48,
+      "value": 103.68,
       "pct": 0.3,
       "sector": "Consumer Discretionary",
       "location": "United States"
@@ -403,7 +403,7 @@
     {
       "ticker": "MPWR",
       "name": "MONOLITHIC POWER SYSTEMS INC",
-      "value": 99.27,
+      "value": 99.98,
       "pct": 0.29,
       "sector": "Information Technology",
       "location": "United States"
@@ -411,7 +411,7 @@
     {
       "ticker": "TER",
       "name": "TERADYNE",
-      "value": 96.56,
+      "value": 97.28,
       "pct": 0.28,
       "sector": "Information Technology",
       "location": "United States"
@@ -419,7 +419,7 @@
     {
       "ticker": "ALAB",
       "name": "ASTERA LABS",
-      "value": 93.19,
+      "value": 93.86,
       "pct": 0.27,
       "sector": "Information Technology",
       "location": "United States"
@@ -427,7 +427,7 @@
     {
       "ticker": "SBUX",
       "name": "STARBUCKS CORP",
-      "value": 91.3,
+      "value": 91.48,
       "pct": 0.26,
       "sector": "Consumer Discretionary",
       "location": "United States"
@@ -435,7 +435,7 @@
     {
       "ticker": "ADP",
       "name": "AUTOMATIC DATA PROCESSING INC",
-      "value": 89.28,
+      "value": 89.45,
       "pct": 0.26,
       "sector": "Industrials",
       "location": "United States"
@@ -443,7 +443,7 @@
     {
       "ticker": "NXPI",
       "name": "NXP SEMICONDUCTORS NV",
-      "value": 86.44,
+      "value": 87.04,
       "pct": 0.25,
       "sector": "Information Technology",
       "location": "United States"
@@ -451,7 +451,7 @@
     {
       "ticker": "APP",
       "name": "APPLOVIN CLASS A",
-      "value": 79.13,
+      "value": 79.28,
       "pct": 0.23,
       "sector": "Communication",
       "location": "United States"
@@ -459,7 +459,7 @@
     {
       "ticker": "ADBE",
       "name": "ADOBE INC",
-      "value": 79.13,
+      "value": 79.28,
       "pct": 0.23,
       "sector": "Information Technology",
       "location": "United States"
@@ -467,9 +467,17 @@
     {
       "ticker": "CEG",
       "name": "CONSTELLATION ENERGY CORP",
-      "value": 79.13,
+      "value": 79.28,
       "pct": 0.23,
       "sector": "Utilities",
+      "location": "United States"
+    },
+    {
+      "ticker": "MAR",
+      "name": "MARRIOTT INTERNATIONAL CLASS A",
+      "value": 77.25,
+      "pct": 0.22,
+      "sector": "Consumer Discretionary",
       "location": "United States"
     },
     {
@@ -481,17 +489,9 @@
       "location": "China"
     },
     {
-      "ticker": "MAR",
-      "name": "MARRIOTT INTERNATIONAL CLASS A",
-      "value": 77.1,
-      "pct": 0.22,
-      "sector": "Consumer Discretionary",
-      "location": "United States"
-    },
-    {
       "ticker": "DDOG",
       "name": "DATADOG INC CLASS A",
-      "value": 75.07,
+      "value": 75.22,
       "pct": 0.22,
       "sector": "Information Technology",
       "location": "United States"
@@ -499,7 +499,7 @@
     {
       "ticker": "MELI",
       "name": "MERCADOLIBRE",
-      "value": 75.07,
+      "value": 75.22,
       "pct": 0.22,
       "sector": "Consumer Discretionary",
       "location": "United States"
@@ -507,7 +507,7 @@
     {
       "ticker": "CSX",
       "name": "CSX",
-      "value": 73.04,
+      "value": 73.19,
       "pct": 0.21,
       "sector": "Industrials",
       "location": "United States"
@@ -515,7 +515,7 @@
     {
       "ticker": "LITE",
       "name": "LUMENTUM HOLDINGS",
-      "value": 71.01,
+      "value": 71.15,
       "pct": 0.2,
       "sector": "Information Technology",
       "location": "United States"
@@ -523,7 +523,7 @@
     {
       "ticker": "MNST",
       "name": "MONSTER BEVERAGE",
-      "value": 71.01,
+      "value": 71.15,
       "pct": 0.2,
       "sector": "Consumer Staples",
       "location": "United States"
@@ -531,7 +531,7 @@
     {
       "ticker": "CTAS",
       "name": "CINTAS",
-      "value": 66.96,
+      "value": 67.09,
       "pct": 0.19,
       "sector": "Industrials",
       "location": "United States"
@@ -539,7 +539,7 @@
     {
       "ticker": "REGN",
       "name": "REGENERON PHARMACEUTICALS",
-      "value": 66.96,
+      "value": 67.09,
       "pct": 0.19,
       "sector": "Health Care",
       "location": "United States"
@@ -547,7 +547,7 @@
     {
       "ticker": "DASH",
       "name": "DOORDASH CLASS A",
-      "value": 66.96,
+      "value": 67.09,
       "pct": 0.19,
       "sector": "Consumer Discretionary",
       "location": "United States"
@@ -555,7 +555,7 @@
     {
       "ticker": "CMCSA",
       "name": "COMCAST CLASS A",
-      "value": 64.93,
+      "value": 65.05,
       "pct": 0.19,
       "sector": "Communication",
       "location": "United States"
@@ -563,7 +563,7 @@
     {
       "ticker": "WBD",
       "name": "WARNER BROS. DISCOVERY SERIES A",
-      "value": 64.93,
+      "value": 65.05,
       "pct": 0.19,
       "sector": "Communication",
       "location": "United States"
@@ -571,7 +571,7 @@
     {
       "ticker": "MDLZ",
       "name": "MONDELEZ INTERNATIONAL CLASS A",
-      "value": 64.93,
+      "value": 65.05,
       "pct": 0.19,
       "sector": "Consumer Staples",
       "location": "United States"
@@ -579,7 +579,7 @@
     {
       "ticker": "ROST",
       "name": "ROSS STORES INC",
-      "value": 64.93,
+      "value": 65.05,
       "pct": 0.19,
       "sector": "Consumer Discretionary",
       "location": "United States"
@@ -587,7 +587,7 @@
     {
       "ticker": "MCHP",
       "name": "MICROCHIP TECHNOLOGY INC",
-      "value": 64.15,
+      "value": 64.61,
       "pct": 0.18,
       "sector": "Information Technology",
       "location": "United States"
@@ -595,7 +595,7 @@
     {
       "ticker": "INTU",
       "name": "INTUIT",
-      "value": 62.9,
+      "value": 63.02,
       "pct": 0.18,
       "sector": "Information Technology",
       "location": "United States"
@@ -603,7 +603,7 @@
     {
       "ticker": "PDD",
       "name": "PDD HOLDINGS ADS",
-      "value": 60.44,
+      "value": 60.53,
       "pct": 0.17,
       "sector": "Consumer Discretionary",
       "location": "China"
@@ -611,7 +611,7 @@
     {
       "ticker": "ORLY",
       "name": "OREILLY AUTOMOTIVE INC",
-      "value": 58.84,
+      "value": 58.96,
       "pct": 0.17,
       "sector": "Consumer Discretionary",
       "location": "United States"
@@ -619,7 +619,7 @@
     {
       "ticker": "HON",
       "name": "HONEYWELL INTERNATIONAL INC",
-      "value": 56.81,
+      "value": 56.92,
       "pct": 0.16,
       "sector": "Industrials",
       "location": "United States"
@@ -627,7 +627,7 @@
     {
       "ticker": "ABNB",
       "name": "AIRBNB CLASS A",
-      "value": 56.81,
+      "value": 56.92,
       "pct": 0.16,
       "sector": "Consumer Discretionary",
       "location": "United States"
@@ -635,7 +635,7 @@
     {
       "ticker": "AEP",
       "name": "AMERICAN ELECTRIC POWER INC",
-      "value": 54.78,
+      "value": 54.89,
       "pct": 0.16,
       "sector": "Utilities",
       "location": "United States"
@@ -643,7 +643,7 @@
     {
       "ticker": "PCAR",
       "name": "PACCAR INC",
-      "value": 50.72,
+      "value": 50.82,
       "pct": 0.15,
       "sector": "Industrials",
       "location": "United States"
@@ -651,7 +651,7 @@
     {
       "ticker": "MSTR",
       "name": "STRATEGY INC CLASS A",
-      "value": 48.7,
+      "value": 48.79,
       "pct": 0.14,
       "sector": "Information Technology",
       "location": "United States"
@@ -659,7 +659,7 @@
     {
       "ticker": "FAST",
       "name": "FASTENAL",
-      "value": 48.7,
+      "value": 48.79,
       "pct": 0.14,
       "sector": "Industrials",
       "location": "United States"
@@ -667,7 +667,7 @@
     {
       "ticker": "BKR",
       "name": "BAKER HUGHES CLASS A",
-      "value": 48.7,
+      "value": 48.79,
       "pct": 0.14,
       "sector": "Energy",
       "location": "United States"
@@ -675,7 +675,7 @@
     {
       "ticker": "NBIS",
       "name": "NEBIUS NV CLASS A",
-      "value": 48.7,
+      "value": 48.79,
       "pct": 0.14,
       "sector": "Information Technology",
       "location": "Europe"
@@ -691,7 +691,7 @@
     {
       "ticker": "FANG",
       "name": "DIAMONDBACK ENERGY",
-      "value": 44.64,
+      "value": 44.72,
       "pct": 0.13,
       "sector": "Energy",
       "location": "United States"
@@ -699,7 +699,7 @@
     {
       "ticker": "HONA",
       "name": "HONEYWELL AEROSPACE INC",
-      "value": 42.61,
+      "value": 42.69,
       "pct": 0.12,
       "sector": "Industrials",
       "location": "United States"
@@ -707,7 +707,7 @@
     {
       "ticker": "PYPL",
       "name": "PAYPAL HOLDINGS",
-      "value": 40.58,
+      "value": 40.66,
       "pct": 0.12,
       "sector": "Financials",
       "location": "United States"
@@ -715,55 +715,55 @@
     {
       "ticker": "CCEP",
       "name": "COCA COLA EUROPACIFIC PARTNERS PLC",
-      "value": 36.52,
-      "pct": 0.11,
+      "value": 36.59,
+      "pct": 0.1,
       "sector": "Consumer Staples",
       "location": "Europe"
     },
     {
       "ticker": "XEL",
       "name": "XCEL ENERGY INC",
-      "value": 36.52,
-      "pct": 0.11,
+      "value": 36.59,
+      "pct": 0.1,
       "sector": "Utilities",
       "location": "United States"
     },
     {
       "ticker": "ADSK",
       "name": "AUTODESK",
-      "value": 36.52,
-      "pct": 0.11,
+      "value": 36.59,
+      "pct": 0.1,
       "sector": "Information Technology",
       "location": "United States"
     },
     {
       "ticker": "KDP",
       "name": "KEURIG DR PEPPER INC",
-      "value": 36.52,
-      "pct": 0.11,
+      "value": 36.59,
+      "pct": 0.1,
       "sector": "Consumer Staples",
       "location": "United States"
     },
     {
       "ticker": "RKLB",
       "name": "ROCKET LAB CORP",
-      "value": 36.52,
-      "pct": 0.11,
+      "value": 36.59,
+      "pct": 0.1,
       "sector": "Industrials",
       "location": "United States"
     },
     {
       "ticker": "EXC",
       "name": "EXELON CORP",
-      "value": 36.52,
-      "pct": 0.11,
+      "value": 36.59,
+      "pct": 0.1,
       "sector": "Utilities",
       "location": "United States"
     },
     {
       "ticker": "FER",
       "name": "FERROVIAL NV",
-      "value": 34.49,
+      "value": 34.56,
       "pct": 0.1,
       "sector": "Industrials",
       "location": "Europe"
@@ -771,7 +771,7 @@
     {
       "ticker": "IDXX",
       "name": "IDEXX LABORATORIES",
-      "value": 34.49,
+      "value": 34.56,
       "pct": 0.1,
       "sector": "Health Care",
       "location": "United States"
@@ -779,7 +779,7 @@
     {
       "ticker": "CRWV",
       "name": "COREWEAVE CLASS A",
-      "value": 32.46,
+      "value": 32.53,
       "pct": 0.09,
       "sector": "Information Technology",
       "location": "United States"
@@ -787,7 +787,7 @@
     {
       "ticker": "TTWO",
       "name": "TAKE TWO INTERACTIVE SOFTWARE",
-      "value": 32.46,
+      "value": 32.53,
       "pct": 0.09,
       "sector": "Communication",
       "location": "United States"
@@ -795,7 +795,7 @@
     {
       "ticker": "TRI",
       "name": "THOMSON REUTERS CORP",
-      "value": 32.46,
+      "value": 32.53,
       "pct": 0.09,
       "sector": "Industrials",
       "location": "Canada"
@@ -811,7 +811,7 @@
     {
       "ticker": "STM",
       "name": "Stmicroelectronics Nv",
-      "value": 31.0,
+      "value": 31.44,
       "pct": 0.09,
       "sector": "Information Technology",
       "location": "Europe"
@@ -827,7 +827,7 @@
     {
       "ticker": "WDAY",
       "name": "WORKDAY CLASS A",
-      "value": 30.43,
+      "value": 30.49,
       "pct": 0.09,
       "sector": "Information Technology",
       "location": "United States"
@@ -835,7 +835,7 @@
     {
       "ticker": "ODFL",
       "name": "OLD DOMINION FREIGHT LINE",
-      "value": 30.43,
+      "value": 30.49,
       "pct": 0.09,
       "sector": "Industrials",
       "location": "United States"
@@ -843,7 +843,7 @@
     {
       "ticker": "PAYX",
       "name": "PAYCHEX",
-      "value": 30.43,
+      "value": 30.49,
       "pct": 0.09,
       "sector": "Industrials",
       "location": "United States"
@@ -851,7 +851,7 @@
     {
       "ticker": "AXON",
       "name": "AXON ENTERPRISE",
-      "value": 30.43,
+      "value": 30.49,
       "pct": 0.09,
       "sector": "Industrials",
       "location": "United States"
@@ -859,7 +859,7 @@
     {
       "ticker": "ROP",
       "name": "ROPER TECHNOLOGIES",
-      "value": 30.43,
+      "value": 30.49,
       "pct": 0.09,
       "sector": "Information Technology",
       "location": "United States"
@@ -875,7 +875,7 @@
     {
       "ticker": "ALNY",
       "name": "ALNYLAM PHARMACEUTICALS",
-      "value": 28.41,
+      "value": 28.46,
       "pct": 0.08,
       "sector": "Health Care",
       "location": "United States"
@@ -883,7 +883,7 @@
     {
       "ticker": "DXCM",
       "name": "DEXCOM INC",
-      "value": 28.41,
+      "value": 28.46,
       "pct": 0.08,
       "sector": "Health Care",
       "location": "United States"
@@ -907,7 +907,7 @@
     {
       "ticker": "GEHC",
       "name": "GE HEALTHCARE TECHNOLOGIES",
-      "value": 26.38,
+      "value": 26.43,
       "pct": 0.08,
       "sector": "Health Care",
       "location": "United States"
@@ -916,7 +916,7 @@
       "ticker": "RELIANCE",
       "name": "RELIANCE INDUSTRIES LTD",
       "value": 26.1,
-      "pct": 0.08,
+      "pct": 0.07,
       "sector": "Energy",
       "location": "India"
     },
@@ -939,7 +939,7 @@
     {
       "ticker": "CPRT",
       "name": "COPART INC",
-      "value": 20.29,
+      "value": 20.33,
       "pct": 0.06,
       "sector": "Industrials",
       "location": "United States"
@@ -956,7 +956,7 @@
       "ticker": "1211",
       "name": "BYD LTD H",
       "value": 19.11,
-      "pct": 0.06,
+      "pct": 0.05,
       "sector": "Consumer Discretionary",
       "location": "China"
     },
@@ -1001,20 +1001,20 @@
       "location": "Latin America"
     },
     {
+      "ticker": "ON",
+      "name": "On Semiconductor Corp",
+      "value": 17.09,
+      "pct": 0.05,
+      "sector": "Information Technology",
+      "location": "United States"
+    },
+    {
       "ticker": "VALE3",
       "name": "CIA VALE DO RIO DOCE SH",
       "value": 16.91,
       "pct": 0.05,
       "sector": "Materials",
       "location": "Latin America"
-    },
-    {
-      "ticker": "ON",
-      "name": "On Semiconductor Corp",
-      "value": 16.85,
-      "pct": 0.05,
-      "sector": "Information Technology",
-      "location": "United States"
     },
     {
       "ticker": "1120",
@@ -1073,6 +1073,14 @@
       "location": "Middle East"
     },
     {
+      "ticker": "ENTG",
+      "name": "Entegris Inc",
+      "value": 12.98,
+      "pct": 0.04,
+      "sector": "Information Technology",
+      "location": "United States"
+    },
+    {
       "ticker": "105560",
       "name": "KB FINANCIAL GROUP INC",
       "value": 12.86,
@@ -1095,14 +1103,6 @@
       "pct": 0.04,
       "sector": "Materials",
       "location": "Africa"
-    },
-    {
-      "ticker": "ENTG",
-      "name": "Entegris Inc",
-      "value": 12.8,
-      "pct": 0.04,
-      "sector": "Information Technology",
-      "location": "United States"
     },
     {
       "ticker": "2383",
@@ -8699,12 +8699,12 @@
     {
       "ticker": "USD",
       "name": "USD CASH",
-      "value": -2.16,
+      "value": -2.14,
       "pct": -0.01,
       "sector": "Cash",
       "location": "United States"
     }
   ],
-  "total_value": 34733.73,
-  "updated": "2026-09-28T09:04:13.723051"
+  "total_value": 34932.47,
+  "updated": "2026-09-29T09:12:56.827457"
 }
