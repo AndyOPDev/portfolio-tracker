@@ -3,8 +3,8 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "value": 4168.99,
-      "pct": 11.64,
+      "value": 4193.32,
+      "pct": 11.7,
       "sector": "Crypto",
       "location": "Global"
     },
@@ -28,7 +28,7 @@
       "ticker": "AMD",
       "name": "ADVANCED MICRO DEVICES",
       "value": 1653.31,
-      "pct": 4.62,
+      "pct": 4.61,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -36,7 +36,7 @@
       "ticker": "AAPL",
       "name": "APPLE",
       "value": 1520.43,
-      "pct": 4.25,
+      "pct": 4.24,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -76,7 +76,7 @@
       "ticker": "AMZN",
       "name": "AMAZON.COM INC",
       "value": 843.52,
-      "pct": 2.36,
+      "pct": 2.35,
       "sector": "Consumer Discretionary",
       "location": "United States"
     },
@@ -228,7 +228,7 @@
       "ticker": "PANW",
       "name": "PALO ALTO NETWORKS",
       "value": 281.17,
-      "pct": 0.79,
+      "pct": 0.78,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -268,7 +268,7 @@
       "ticker": "AMGN",
       "name": "AMGEN INC",
       "value": 191.62,
-      "pct": 0.54,
+      "pct": 0.53,
       "sector": "Health Care",
       "location": "United States"
     },
@@ -852,7 +852,7 @@
       "ticker": "2308",
       "name": "DELTA ELECTRONICS INC",
       "value": 30.45,
-      "pct": 0.09,
+      "pct": 0.08,
       "sector": "Information Technology",
       "location": "Taiwan"
     },
@@ -8705,6 +8705,6 @@
       "location": "United States"
     }
   ],
-  "total_value": 35801.11,
-  "updated": "2026-10-03T08:41:03.394077"
+  "total_value": 35825.44,
+  "updated": "2026-10-04T08:56:05.092122"
 }
