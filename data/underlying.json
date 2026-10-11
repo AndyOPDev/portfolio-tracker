@@ -3,8 +3,8 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "value": 4101.86,
-      "pct": 11.53,
+      "value": 4107.4,
+      "pct": 11.55,
       "sector": "Crypto",
       "location": "Global"
     },
@@ -20,7 +20,7 @@
       "ticker": "MU",
       "name": "MICRON TECHNOLOGY",
       "value": 1680.58,
-      "pct": 4.73,
+      "pct": 4.72,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -60,7 +60,7 @@
       "ticker": "AVGO",
       "name": "BROADCOM INC",
       "value": 1197.03,
-      "pct": 3.37,
+      "pct": 3.36,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -124,7 +124,7 @@
       "ticker": "TSLA",
       "name": "TESLA INC",
       "value": 620.67,
-      "pct": 1.75,
+      "pct": 1.74,
       "sector": "Consumer Discretionary",
       "location": "United States"
     },
@@ -8708,11 +8708,11 @@
       "ticker": "USD",
       "name": "USD CASH",
       "value": -37.35,
-      "pct": -0.11,
+      "pct": -0.1,
       "sector": "Cash",
       "location": "United States"
     }
   ],
-  "total_value": 35567.66,
-  "updated": "2026-10-10T09:11:24.811600"
+  "total_value": 35573.2,
+  "updated": "2026-10-11T09:26:17.637568"
 }
