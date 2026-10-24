@@ -1,13 +1,13 @@
 {
   "precios": [
     {
-      "ticker": "IE00BYWYCC39",
-      "precio": 19.01,
+      "ticker": "BTC",
+      "precio": 71764.0,
       "moneda": "EUR"
     },
     {
-      "ticker": "BTC",
-      "precio": 71855.3,
+      "ticker": "IE00BYWYCC39",
+      "precio": 19.01,
       "moneda": "EUR"
     },
     {
