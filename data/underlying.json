@@ -3,8 +3,8 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "value": 3996.23,
-      "pct": 12.11,
+      "value": 3989.22,
+      "pct": 12.09,
       "sector": "Crypto",
       "location": "Global"
     },
@@ -52,7 +52,7 @@
       "ticker": "TSM",
       "name": "TAIWAN SEMICONDUCTOR MANUFACTURING",
       "value": 1156.29,
-      "pct": 3.5,
+      "pct": 3.51,
       "sector": "Information Technology",
       "location": "Taiwan"
     },
@@ -164,7 +164,7 @@
       "ticker": "TXN",
       "name": "TEXAS INSTRUMENT",
       "value": 417.34,
-      "pct": 1.26,
+      "pct": 1.27,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -8697,6 +8697,6 @@
       "location": "United States"
     }
   ],
-  "total_value": 32993.88,
-  "updated": "2026-10-24T07:41:53.405872"
+  "total_value": 32986.87,
+  "updated": "2026-10-25T07:53:47.308311"
 }
