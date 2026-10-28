@@ -746,9 +746,54 @@
       "feeAmt": 0.2,
       "feeCur": "EUR",
       "date": "2026-09-25"
+    },
+    {
+      "ticker": "BTC",
+      "way": "BUY",
+      "baseAmt": 0.0006906,
+      "quoteAmt": 50.0,
+      "feeAmt": 0.2,
+      "feeCur": "EUR",
+      "date": "2026-10-28"
+    },
+    {
+      "ticker": "EMM",
+      "way": "BUY",
+      "baseAmt": 2.382495,
+      "quoteAmt": 50.0,
+      "feeAmt": 0,
+      "feeCur": "EUR",
+      "date": "2026-10-02"
+    },
+    {
+      "ticker": "VVSM",
+      "way": "BUY",
+      "baseAmt": 0.95712,
+      "quoteAmt": 100.0,
+      "feeAmt": 0,
+      "feeCur": "EUR",
+      "date": "2026-10-02"
+    },
+    {
+      "ticker": "XNAS",
+      "way": "BUY",
+      "baseAmt": 4.705144,
+      "quoteAmt": 300.0,
+      "feeAmt": 0,
+      "feeCur": "EUR",
+      "date": "2026-10-02"
+    },
+    {
+      "ticker": "VVSM",
+      "way": "BUY",
+      "baseAmt": 0.11629,
+      "quoteAmt": 12.15,
+      "feeAmt": 0,
+      "feeCur": "EUR",
+      "date": "2026-10-02"
     }
   ],
-  "updated": "2026-10-28T16:10:43.429631",
+  "updated": "2026-10-28T18:31:58.724893",
   "source": "google_sheets",
-  "total_movements": 83
+  "total_movements": 88
 }
