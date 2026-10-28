@@ -757,7 +757,7 @@
       "date": "2026-10-28"
     },
     {
-      "ticker": "EMM",
+      "ticker": "IE00BYWYCC39",
       "way": "BUY",
       "baseAmt": 2.382495,
       "quoteAmt": 50.0,
@@ -793,7 +793,7 @@
       "date": "2026-10-02"
     }
   ],
-  "updated": "2026-10-28T18:31:58.724893",
+  "updated": "2026-10-28T18:46:18.420204",
   "source": "google_sheets",
   "total_movements": 88
 }
