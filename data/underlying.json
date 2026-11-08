@@ -3,8 +3,8 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "value": 3831.43,
-      "pct": 12.14,
+      "value": 3821.48,
+      "pct": 12.11,
       "sector": "Crypto",
       "location": "Global"
     },
@@ -204,7 +204,7 @@
       "ticker": "KLAC",
       "name": "KLA",
       "value": 285.73,
-      "pct": 0.9,
+      "pct": 0.91,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -8705,6 +8705,6 @@
       "location": "United States"
     }
   ],
-  "total_value": 31571.9,
-  "updated": "2026-11-07T09:23:24.165832"
+  "total_value": 31561.94,
+  "updated": "2026-11-08T09:40:31.792279"
 }
