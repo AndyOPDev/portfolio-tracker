@@ -818,9 +818,18 @@
       "feeAmt": 0,
       "feeCur": "EUR",
       "date": "2026-11-02"
+    },
+    {
+      "ticker": "IE00BYWYCC39",
+      "way": "BUY",
+      "baseAmt": 2.675514,
+      "quoteAmt": 50.0,
+      "feeAmt": 0,
+      "feeCur": "EUR",
+      "date": "2026-11-09"
     }
   ],
-  "updated": "2026-11-09T10:33:07.658783",
+  "updated": "2026-11-09T17:04:38.282107",
   "source": "google_sheets",
-  "total_movements": 91
+  "total_movements": 92
 }
