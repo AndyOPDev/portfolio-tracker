@@ -3,8 +3,8 @@
     {
       "ticker": "BTC",
       "name": "Bitcoin",
-      "value": 3419.48,
-      "pct": 10.5,
+      "value": 3340.75,
+      "pct": 10.28,
       "sector": "Crypto",
       "location": "Global"
     },
@@ -12,7 +12,7 @@
       "ticker": "NVDA",
       "name": "NVIDIA",
       "value": 1796.55,
-      "pct": 5.51,
+      "pct": 5.53,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -20,7 +20,7 @@
       "ticker": "AAPL",
       "name": "APPLE",
       "value": 1676.9,
-      "pct": 5.15,
+      "pct": 5.16,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -28,7 +28,7 @@
       "ticker": "AMD",
       "name": "ADVANCED MICRO DEVICES",
       "value": 1593.8,
-      "pct": 4.89,
+      "pct": 4.9,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -36,7 +36,7 @@
       "ticker": "MU",
       "name": "MICRON TECHNOLOGY",
       "value": 1327.12,
-      "pct": 4.07,
+      "pct": 4.08,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -44,7 +44,7 @@
       "ticker": "MSFT",
       "name": "MICROSOFT",
       "value": 1258.17,
-      "pct": 3.86,
+      "pct": 3.87,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -52,7 +52,7 @@
       "ticker": "AVGO",
       "name": "BROADCOM INC",
       "value": 1232.75,
-      "pct": 3.78,
+      "pct": 3.79,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -60,7 +60,7 @@
       "ticker": "TSM",
       "name": "TAIWAN SEMICONDUCTOR MANUFACTURING",
       "value": 1156.36,
-      "pct": 3.55,
+      "pct": 3.56,
       "sector": "Information Technology",
       "location": "Taiwan"
     },
@@ -68,7 +68,7 @@
       "ticker": "AMZN",
       "name": "AMAZON.COM INC",
       "value": 932.71,
-      "pct": 2.86,
+      "pct": 2.87,
       "sector": "Consumer Discretionary",
       "location": "United States"
     },
@@ -100,7 +100,7 @@
       "ticker": "GOOGL",
       "name": "ALPHABET CLASS A",
       "value": 567.57,
-      "pct": 1.74,
+      "pct": 1.75,
       "sector": "Communication",
       "location": "United States"
     },
@@ -108,7 +108,7 @@
       "ticker": "WMT",
       "name": "WALMART",
       "value": 547.72,
-      "pct": 1.68,
+      "pct": 1.69,
       "sector": "Consumer Staples",
       "location": "United States"
     },
@@ -116,7 +116,7 @@
       "ticker": "SPCX",
       "name": "SPACE EXPLORATION TECHNOLOGIES COR",
       "value": 535.81,
-      "pct": 1.64,
+      "pct": 1.65,
       "sector": "Communication",
       "location": "United States"
     },
@@ -124,7 +124,7 @@
       "ticker": "INTC",
       "name": "INTEL CORPORATION",
       "value": 528.94,
-      "pct": 1.62,
+      "pct": 1.63,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -148,7 +148,7 @@
       "ticker": "LRCX",
       "name": "LAM RESEARCH",
       "value": 483.34,
-      "pct": 1.48,
+      "pct": 1.49,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -180,7 +180,7 @@
       "ticker": "CSCO",
       "name": "CISCO SYSTEMS INC",
       "value": 359.19,
-      "pct": 1.1,
+      "pct": 1.11,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -188,7 +188,7 @@
       "ticker": "PLTR",
       "name": "PALANTIR TECHNOLOGIES CLASS A",
       "value": 353.24,
-      "pct": 1.08,
+      "pct": 1.09,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -196,7 +196,7 @@
       "ticker": "ADI",
       "name": "ANALOG DEVICES",
       "value": 330.42,
-      "pct": 1.01,
+      "pct": 1.02,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -420,7 +420,7 @@
       "ticker": "WDC",
       "name": "WESTERN DIGITAL CORP",
       "value": 99.22,
-      "pct": 0.3,
+      "pct": 0.31,
       "sector": "Information Technology",
       "location": "United States"
     },
@@ -428,7 +428,7 @@
       "ticker": "MAR",
       "name": "MARRIOTT INTERNATIONAL CLASS A",
       "value": 99.22,
-      "pct": 0.3,
+      "pct": 0.31,
       "sector": "Consumer Discretionary",
       "location": "United States"
     },
@@ -532,7 +532,7 @@
       "ticker": "ALIBABA",
       "name": "ALIBABA GROUP HOLDING LTD",
       "value": 73.3,
-      "pct": 0.22,
+      "pct": 0.23,
       "sector": "Consumer Discretionary",
       "location": "China"
     },
@@ -580,7 +580,7 @@
       "ticker": "HON",
       "name": "HONEYWELL INTERNATIONAL INC",
       "value": 63.5,
-      "pct": 0.19,
+      "pct": 0.2,
       "sector": "Industrials",
       "location": "United States"
     },
@@ -588,7 +588,7 @@
       "ticker": "DASH",
       "name": "DOORDASH CLASS A",
       "value": 63.5,
-      "pct": 0.19,
+      "pct": 0.2,
       "sector": "Consumer Discretionary",
       "location": "United States"
     },
@@ -1028,7 +1028,7 @@
       "ticker": "2318",
       "name": "PING AN INSURANCE (GROUP) CO OF CH",
       "value": 14.66,
-      "pct": 0.04,
+      "pct": 0.05,
       "sector": "Financials",
       "location": "China"
     },
@@ -1756,7 +1756,7 @@
       "ticker": "MAYBANK",
       "name": "MALAYAN BANKING",
       "value": 4.89,
-      "pct": 0.01,
+      "pct": 0.02,
       "sector": "Financials",
       "location": "Asia"
     },
@@ -1764,7 +1764,7 @@
       "ticker": "006400",
       "name": "SAMSUNG SDI LTD",
       "value": 4.89,
-      "pct": 0.01,
+      "pct": 0.02,
       "sector": "Information Technology",
       "location": "Korea"
     },
@@ -1772,7 +1772,7 @@
       "ticker": "2412",
       "name": "CHUNGHWA TELECOM LTD",
       "value": 4.89,
-      "pct": 0.01,
+      "pct": 0.02,
       "sector": "Communication",
       "location": "Taiwan"
     },
@@ -1780,7 +1780,7 @@
       "ticker": "SCCO",
       "name": "SOUTHERN COPPER CORP",
       "value": 4.89,
-      "pct": 0.01,
+      "pct": 0.02,
       "sector": "Materials",
       "location": "Latin America"
     },
@@ -1788,7 +1788,7 @@
       "ticker": "175",
       "name": "GEELY AUTOMOBILE HOLDINGS LTD",
       "value": 4.89,
-      "pct": 0.01,
+      "pct": 0.02,
       "sector": "Consumer Discretionary",
       "location": "China"
     },
@@ -1796,7 +1796,7 @@
       "ticker": "B3SA3",
       "name": "B3 BRASIL BOLSA BALCAO SA",
       "value": 4.89,
-      "pct": 0.01,
+      "pct": 0.02,
       "sector": "Financials",
       "location": "Latin America"
     },
@@ -1804,7 +1804,7 @@
       "ticker": "2884",
       "name": "E.SUN FINANCIAL HOLDING LTD",
       "value": 4.89,
-      "pct": 0.01,
+      "pct": 0.02,
       "sector": "Financials",
       "location": "Taiwan"
     },
@@ -1812,7 +1812,7 @@
       "ticker": "TWD",
       "name": "TWD CASH",
       "value": 4.89,
-      "pct": 0.01,
+      "pct": 0.02,
       "sector": "Cash",
       "location": "Taiwan"
     },
@@ -1820,7 +1820,7 @@
       "ticker": "3231",
       "name": "WISTRON CORP",
       "value": 4.89,
-      "pct": 0.01,
+      "pct": 0.02,
       "sector": "Information Technology",
       "location": "Taiwan"
     },
@@ -1828,7 +1828,7 @@
       "ticker": "ITSA4",
       "name": "ITAUSA INVESTIMENTOS ITAU PREF SA",
       "value": 4.89,
-      "pct": 0.01,
+      "pct": 0.02,
       "sector": "Financials",
       "location": "Latin America"
     },
@@ -1836,7 +1836,7 @@
       "ticker": "NTPC",
       "name": "NTPC LTD",
       "value": 4.89,
-      "pct": 0.01,
+      "pct": 0.02,
       "sector": "Utilities",
       "location": "India"
     },
@@ -1844,7 +1844,7 @@
       "ticker": "032830",
       "name": "SAMSUNG LIFE LTD",
       "value": 4.89,
-      "pct": 0.01,
+      "pct": 0.02,
       "sector": "Financials",
       "location": "Korea"
     },
@@ -8705,6 +8705,6 @@
       "location": "United States"
     }
   ],
-  "total_value": 32580.72,
-  "updated": "2026-11-14T09:36:29.858795"
+  "total_value": 32501.99,
+  "updated": "2026-11-15T10:05:52.590044"
 }
